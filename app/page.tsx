@@ -68,7 +68,6 @@ export default function Home() {
          
 
           <div className="absolute top-[55%]  md:top-[75%] gap-32 md:right-0 flex items-end text-gray-400">
-            {/* <div className="hidden md:flex absolute bottom-40  lg:left-[57%] text-gray-400 text-base "> */}
             <div className="hidden md:flex text-base ">
               {" "}
               <h6 className="">[ SCROLL ] </h6>

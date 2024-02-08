@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`relative overflow-hidden bg-blue h-screen text-white w-full p-2 font-MyFont`}>
+    <body className={`relative overflow-hidden h-screen text-white w-full md:p-2 font-MyFont`}>
      <div className="relative sec-bg h-full w-full rounded-3xl z-0">
      <NavBar />
        {children}
