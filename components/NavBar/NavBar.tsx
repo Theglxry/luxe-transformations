@@ -1,6 +1,6 @@
 const NavBar: React.FC = () => {
   return (
-    <nav className="relative flex items-center justify-between p-10 h-[10vh] w-full">
+    <nav className="relative flex items-center justify-between p-10 h-[10vh] w-full" data-aos="fade-down">
       {/* logo */}
       <div className="absolute top-10 w-14 h-14 left-4  lg:w-16 lg:h-16">
         <a href="/">
@@ -21,9 +21,9 @@ const NavBar: React.FC = () => {
 
       {/* center nav */}
       <div className=" m-auto text-center md:w-full  md:ml-40 flex w-auto lg:gap-[30%] items-center md:text-lg tracking-widest text-lg  z-1 ">
-        <h6 className="hidden lg:block">BUZZWORTHY STUDIO</h6>
+        <h6 className="hidden lg:block cursor-pointer">BUZZWORTHY STUDIO</h6>
 
-        <div className=" relative flex items-center justify-center sm:mt-10 md:mt-0 md:gap-8 flex-col gap-2 md:flex-row  text-base md:text-lg">
+        <div className=" relative cursor-pointer flex items-center justify-center sm:mt-10 md:mt-0 md:gap-8 flex-col gap-2 md:flex-row  text-base md:text-lg">
           <h4 className="relative z-10 px-4 py-2 md:px-0 md:py-1 rounded mb-2 bg-white text-black font-bold md:font-thin md:text-white md:bg-transparent ">
             WE
           </h4>

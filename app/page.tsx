@@ -7,22 +7,22 @@ export default function Home() {
         {/* parent div */}
         <div className="w-full">
           {/* hero-text */}
-          <div className="sm:w-full mt-70 md:mt-0 leading-none lg:leading-[-10rem] z-10 ">
+          <div className="sm:w-full mt-70 md:mt-0 leading-none lg:leading-[-10rem] z-10 " >
             <h1 className="text-8xl sm:text-9xl lg:text-[12rem] 2xl:text-[18rem]  -mb-2 lg:-mb-10 font-extrabold">
-              <div className="flex flex-col md:flex-row  justify-between ">
+              <div className="flex flex-col md:flex-row  justify-between " data-aos="fade-right">
                 CREATIVE
                 <span className="red-text">WEB</span>
               </div>
             </h1>
 
             <div className="relative flex flex-col gap-2  md:float-right z-10">
-              <h1 className=" md:relative text-8xl sm:text-9xl lg:text-[12rem] xl:text-[16rem] font-extrabold">
+              <h1 className=" md:relative text-8xl sm:text-9xl lg:text-[12rem] xl:text-[16rem] font-extrabold" data-aos="fade-left">
                 STUDIO
               </h1>
 
-              <div className="button w-full sm:w-3/4 md:w-full relative font-thin flex items-center justify-between text-lg px-8 py-4 rounded-md cursor-pointer border-[1px] border-gray-500">
+              <div className="button w-full sm:w-3/4 md:w-full relative font-thin flex items-center justify-between text-lg px-8 py-4 rounded-md cursor-pointer border-[1px] border-gray-500" data-aos="fade-up" data-aos-delay="100">
                 <h4>LATEST PROJECT</h4>
-                <div className="w-10 lg:w-16">
+                <div className="w-10 lg:w-16" data-aos="fade-right" data-aos-delay="200">
                   <i>
                     <svg
                       viewBox="0 0 56 12"
