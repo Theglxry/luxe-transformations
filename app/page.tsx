@@ -8,15 +8,15 @@ export default function Home() {
         <div className="w-full">
           {/* hero-text */}
           <div className="sm:w-full mt-70 md:mt-0 leading-none lg:leading-[-10rem] z-10 ">
-            <h1 className="text-9xl lg:text-[14rem] xl:text-[18rem]  -mb-2 lg:-mb-10 font-extrabold">
+            <h1 className="text-6xl sm:text-9xl lg:text-[14rem] xl:text-[18rem]  -mb-2 lg:-mb-10 font-extrabold">
               <div className="flex flex-col md:flex-row  justify-between ">
                 CREATIVE
-                <span className="text-red-600">WEB</span>
+                <span className="red-text">WEB</span>
               </div>
             </h1>
 
             <div className="relative flex flex-col gap-2  md:float-right z-10">
-              <h1 className=" md:relative text-9xl lg:text-[14rem] xl:text-[16rem] font-extrabold">
+              <h1 className=" md:relative text-6xl sm:text-9xl lg:text-[14rem] xl:text-[16rem] font-extrabold">
                 STUDIO
               </h1>
 
@@ -61,11 +61,14 @@ export default function Home() {
 
           {/* blurb cirlce */}
           <div
-            className="absolute top-0  sm:h-[50vw] sm:w-[60vw] z-0 rounded-full bg-gradient-radial from-blue-600 via-transparent to-transparent opacity-100  lg:top-10 left-48 lg:left-0 ml-[-20rem]  "
+            className="absolute top-50 sm:top-0  sm:h-[50vw] sm:w-[60vw] z-0 rounded-full bg-gradient-radial from-blue-600 via-transparent to-transparent opacity-100  lg:top-10 sm:left-48 lg:left-0 ml-[-20rem]  "
             style={{ opacity: 0.3 }}
           ></div>
 
-          <div className="hidden md:flex absolute bottom-52  left-[65%] lg:left-[57%] text-gray-400 text-base">
+          <div >
+
+
+          <div className="hidden md:flex absolute bottom-52  md: lg:left-[57%] text-gray-400 text-base border-2 ">
             {" "}
             <h6>[ SCROLL ] </h6>
           </div>
@@ -74,7 +77,7 @@ export default function Home() {
             <div className="md:hidden flex gap-6 w-full items-center">
               <div>
                 <span className="flex absolute inset-y-0  top-1  items-center justify-center w-4 h-4 border-[1px] rounded-full">
-                  <div className=" w-2 h-2 bg-red-600  rounded-full"></div>
+                  <div className="red w-2 h-2  rounded-full"></div>
                 </span>{" "}
               </div>
 
@@ -82,18 +85,20 @@ export default function Home() {
             </div>
 
             <span className="sm:text-2xl ">
-            <h4>
+              <h4>
                 WE SPECIALIZE IN CREATING MEANINGFUL DIGITAL EXPERIENCES INFUSED
-              WITH EMOTION, DRIVEN BY INNOVATION, EVOKING A SENSE OF AWE AND
-              WONDER.
+                WITH EMOTION, DRIVEN BY INNOVATION, EVOKING A SENSE OF AWE AND
+                WONDER.
               </h4>
             </span>
           </div>
+          </div>
+
         </div>
       </section>
 
       {/* pencil */}
-      <div className="absolute  top-[65%] lg:top-[70%] right-10  rounded-full bg-red-600 z-10 ">
+      <div className="red absolute  top-[65%] lg:top-[70%] right-2 sm:right-10  rounded-full  z-10 ">
         <svg
           id="pencil"
           width="80"

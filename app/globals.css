@@ -69,8 +69,13 @@ body {
   background: rgb(29, 33, 69);
 }
  
+.red {
+  background: #D62E49;
+}
+.red-text{
+  color: #D62E49;
 
-
+}
 /* 
 #webglBubble {
   width: 100%;
