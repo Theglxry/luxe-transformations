@@ -3,12 +3,12 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="relative w-full h-full">
-      <section className="relative  px-4 md:w-9/12 mt-10 md:mt-8  h-full lg:h-full m-auto z-10">
+      <section className="relative  px-4  md:w-9/12 mt-10 mt-14 md:mt-8  h-full lg:h-full m-auto z-10">
         {/* parent div */}
         <div className="w-full">
           {/* hero-text */}
           <div className="sm:w-full mt-70 md:mt-0 leading-none lg:leading-[-10rem] z-10 ">
-            <h1 className="text-6xl sm:text-9xl lg:text-[14rem] xl:text-[18rem]  -mb-2 lg:-mb-10 font-extrabold">
+            <h1 className="text-8xl sm:text-9xl lg:text-[12rem] 2xl:text-[18rem]  -mb-2 lg:-mb-10 font-extrabold">
               <div className="flex flex-col md:flex-row  justify-between ">
                 CREATIVE
                 <span className="red-text">WEB</span>
@@ -16,11 +16,11 @@ export default function Home() {
             </h1>
 
             <div className="relative flex flex-col gap-2  md:float-right z-10">
-              <h1 className=" md:relative text-6xl sm:text-9xl lg:text-[14rem] xl:text-[16rem] font-extrabold">
+              <h1 className=" md:relative text-8xl sm:text-9xl lg:text-[12rem] xl:text-[16rem] font-extrabold">
                 STUDIO
               </h1>
 
-              <div className="button w-3/4 md:w-full relative font-thin flex items-center justify-between text-lg px-8 py-4 rounded-md cursor-pointer border-[1px] border-gray-500">
+              <div className="button w-full sm:w-3/4 md:w-full relative font-thin flex items-center justify-between text-lg px-8 py-4 rounded-md cursor-pointer border-[1px] border-gray-500">
                 <h4>LATEST PROJECT</h4>
                 <div className="w-10 lg:w-16">
                   <i>
@@ -65,34 +65,39 @@ export default function Home() {
             style={{ opacity: 0.3 }}
           ></div>
 
-          <div >
+         
 
-
-          <div className="hidden md:flex absolute bottom-52  md: lg:left-[57%] text-gray-400 text-base border-2 ">
-            {" "}
-            <h6>[ SCROLL ] </h6>
-          </div>
-
-          <div className="absolute flex md:right-0 bottom-52 text-gray-400  flex-col gap-4 w-48  md:w-[20rem]">
-            <div className="md:hidden flex gap-6 w-full items-center">
-              <div>
-                <span className="flex absolute inset-y-0  top-1  items-center justify-center w-4 h-4 border-[1px] rounded-full">
-                  <div className="red w-2 h-2  rounded-full"></div>
-                </span>{" "}
-              </div>
-
-              <h6> ABOUT</h6>
+          <div className="absolute top-[55%]  md:top-[75%] gap-32 md:right-0 flex items-end text-gray-400">
+            {/* <div className="hidden md:flex absolute bottom-40  lg:left-[57%] text-gray-400 text-base "> */}
+            <div className="hidden md:flex text-base ">
+              {" "}
+              <h6 className="">[ SCROLL ] </h6>
             </div>
 
-            <span className="sm:text-2xl ">
-              <h4>
-                WE SPECIALIZE IN CREATING MEANINGFUL DIGITAL EXPERIENCES INFUSED
-                WITH EMOTION, DRIVEN BY INNOVATION, EVOKING A SENSE OF AWE AND
-                WONDER.
-              </h4>
-            </span>
+            <div className=" flex flex-col gap-4 w-48  md:w-96">
+              {/* about - mobile */}
+              <div className="md:hidden flex gap-6 w-full items-center">
+                <div>
+                  <span className="flex absolute inset-y-0  top-1  items-center justify-center w-4 h-4 border-[1px] rounded-full">
+                    <div className="red w-2 h-2  rounded-full"></div>
+                  </span>{" "}
+                </div>
+
+                <h6> ABOUT</h6>
+              </div>
+
+
+                    {/* about company */}
+              <span className="sm:text-xl ">
+                <h4>
+                  WE SPECIALIZE IN CREATING MEANINGFUL DIGITAL EXPERIENCES
+                  INFUSED WITH EMOTION, DRIVEN BY INNOVATION, EVOKING A SENSE OF
+                  AWE AND WONDER.
+                </h4>
+              </span>
+            </div>
           </div>
-          </div>
+
 
         </div>
       </section>

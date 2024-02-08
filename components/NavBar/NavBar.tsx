@@ -1,6 +1,6 @@
 const NavBar: React.FC = () => {
   return (
-    <nav className="relative flex items-center justify-between p-10 h-[15vh] w-full">
+    <nav className="relative flex items-center justify-between p-10 h-[10vh] w-full">
       {/* logo */}
       <div className="absolute top-10 w-14 h-14 left-4  lg:w-16 lg:h-16">
         <a href="/">
@@ -43,7 +43,7 @@ const NavBar: React.FC = () => {
 
 
       {/* hamburger */}
-      <div className="right-4 md:right-20 top-10 absolute h-[5px]  lg:w-30 md:h-30">
+      <div className="right-4 md:right-20 top-10 absolute h-[5px]  lg:w-30 md:h-30 cursor-pointer">
         <svg
           width="30"
           height="61"
