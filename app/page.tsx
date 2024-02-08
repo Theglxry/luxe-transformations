@@ -11,7 +11,7 @@ export default function Home() {
             <h1 className="text-9xl lg:text-[14rem] xl:text-[18rem]  -mb-2 lg:-mb-10 font-extrabold">
               <div className="flex flex-col md:flex-row  justify-between ">
                 CREATIVE
-                <span className="text-red-500">WEB</span>
+                <span className="text-red-600">WEB</span>
               </div>
             </h1>
 
@@ -70,7 +70,7 @@ export default function Home() {
             <h6>[ SCROLL ] </h6>
           </div>
 
-          <div className="absolute flex md:right-0 bottom-52 text-gray-400  flex-col gap-4 w-48  lg:w-[20rem]">
+          <div className="absolute flex md:right-0 bottom-52 text-gray-400  flex-col gap-4 w-48  md:w-[20rem]">
             <div className="md:hidden flex gap-6 w-full items-center">
               <div>
                 <span className="flex absolute inset-y-0  top-1  items-center justify-center w-4 h-4 border-[1px] rounded-full">
@@ -82,17 +82,18 @@ export default function Home() {
             </div>
 
             <span className="sm:text-2xl ">
-              WE SPECIALIZE IN CREATING MEANINGFUL DIGITAL EXPERIENCES INFUSED
+            <h4>
+                WE SPECIALIZE IN CREATING MEANINGFUL DIGITAL EXPERIENCES INFUSED
               WITH EMOTION, DRIVEN BY INNOVATION, EVOKING A SENSE OF AWE AND
               WONDER.
+              </h4>
             </span>
           </div>
         </div>
       </section>
 
       {/* pencil */}
-      {/* <div className="absolute bottom-30 right-0 mb-10 mr-10 border-2 border-red-400"> */}
-      <div className="absolute top-[70%] right-28  rounded-full bg-red-500 z-10 ">
+      <div className="absolute  top-[65%] lg:top-[70%] right-10  rounded-full bg-red-600 z-10 ">
         <svg
           id="pencil"
           width="80"
