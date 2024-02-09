@@ -8,20 +8,19 @@ export default function Home() {
 
 
       {/* center nav */} 
-      <div className="absolute top-10 sm:top-0 md:top-10 left-[35%] md:left-[15%] m-auto text-center md:w-full   flex w-auto lg:gap-[30%] items-center md:text-lg tracking-widest text-lg  z-1 ">
-        <h6 className="hidden lg:block cursor-pointer">BUZZWORTHY STUDIO</h6>
+      <div className="absolute top-10 sm:top-0 md:top-10 left-40 sm:left-52  md:left-1/2 m-auto text-center md:w-full   flex w-auto items-center md:text-lg tracking-widest text-lg  z-10">
 
         <div className=" relative cursor-pointer flex items-center justify-center sm:mt-10 md:mt-0 md:gap-8 flex-col gap-2 md:flex-row  text-base md:text-lg">
           <h4 className="relative z-10 px-4 py-2 md:px-0 md:py-1 rounded mb-2 bg-white text-black font-bold md:font-thin md:text-white md:bg-transparent ">
             WE
           </h4>
           <span className="hidden md:flex absolute inset-y-0 left-6 top-2  items-center justify-center w-5 h-5 border-[1px] rounded-full">
-            <div className=" w-2 h-2 bg-red-600  rounded-full"></div>
+            <div className=" w-2 h-2 bg-yellow-600  rounded-full"></div>
           </span>
 
           {/* slides */}
           <div className="-mt-2 ml-2">
-            <h6>TURN VISIONS INTO VALUE</h6>
+            <h6>PROVIDE COMFORT AND ELEGANCE </h6>
           </div>
         </div>
       </div>
@@ -42,18 +41,21 @@ export default function Home() {
                 data-aos="fade-right"
                 data-aos-delay="300"
               >
-                CREATIVE
-                <span className="red-text">WEB</span>
+                {/* CREATIVE */}
+                LUXE
+                <span className="text-yellow-600">WEB</span>
               </div>
             </h1>
 
             <div className="relative flex flex-col gap-2  md:float-right z-10">
               <h1
-                className=" md:relative text-8xl sm:text-9xl lg:text-[12rem] xl:text-[16rem] font-extrabold"
+                // className=" md:relative text-8xl sm:text-9xl lg:text-[12rem] xl:text-[16rem] font-extrabold"
+                className=" md:relative text-6xl sm:text-8xl    xl:text-[10rem] font-extrabold"
                 data-aos="fade-left"
                 data-aos-delay="400"
               >
-                STUDIO
+                {/* STUDIO */}
+                TRANSFORMATIONS
               </h1>
 
               <div
@@ -109,43 +111,12 @@ export default function Home() {
             style={{ opacity: 0.3 }}
           ></div>
 
-          <div className="absolute top-[55%]  md:top-[75%] gap-32 md:right-0 flex items-end text-gray-400">
-            <div className="hidden md:flex text-base ">
-              {" "}
-              <h6 className="">[ SCROLL ] </h6>
-            </div>
-
-
-
-
-            <div className=" flex flex-col gap-4 w-48  md:w-96">
-              {/* about - mobile */}
-              <div className="md:hidden flex gap-6 w-full items-center">
-                <div>
-                  <span className="flex absolute inset-y-0  top-1  items-center justify-center w-4 h-4 border-[1px] rounded-full">
-                    <div className="red w-2 h-2  rounded-full"></div>
-                  </span>{" "}
-                </div>
-
-                <h6> ABOUT</h6>
-              </div>
-
-              {/* about company */}
-              <span className="sm:text-xl ">
-                <h4>
-                  WE SPECIALIZE IN CREATING MEANINGFUL DIGITAL EXPERIENCES
-                  INFUSED WITH EMOTION, DRIVEN BY INNOVATION, EVOKING A SENSE OF
-                  AWE AND WONDER.
-                </h4>
-              </span>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* pencil */}
-      <Link href={"/contact"}>
-        <div className="red absolute  top-[80%] lg:top-[85%] right-2 sm:right-10  rounded-full  z-10 ">
+      <Link href={"contact"}>
+        <div className="bg-yellow-600 absolute  top-[80%] lg:top-[85%] right-2 sm:right-10  rounded-full  z-10 ">
           <svg
             id="pencil"
             width="80"

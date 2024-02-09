@@ -35,13 +35,13 @@ const page = () => {
   };
 
   return (
-    <section className="relative w-full h-full  md:px-4">
-      <form className="w-full h-full py-5 xl:py-10 xl:px-40 flex flex-col items-center justify-between">
+    <section className="contact-bg relative rounded-3xl w-full h-full  md:px-4 z-0">
+      <form className=" w-full h-full py-5 xl:py-10 xl:px-40 flex flex-col items-center justify-between">
         <div className="flex  flex-wrap  items-center gap-5">
           {selectedOptions.map((option, index) => (
             <button
               key={index}
-              className="thin flex items-center gap-2 text-lg btn-bg px-6 py-3 text-white rounded-full relative"
+              className="thin flex items-center gap-2 text-lg bg-gray-700 px-6 py-3 text-white rounded-full relative"
               data-aos="fade-up-right"
             >
               {option}
@@ -59,7 +59,7 @@ const page = () => {
                 {helpSelect.map((item, index) => (
                   <div key={item.id} className="mb-4 relative">
                     <button
-                      className="thin flex  items-center gap-2 text-lg xl:text-3xl btn-bg px-12 py-3 xl:py-6 text-white rounded-full relative"
+                      className="thin flex  items-center gap-2 text-lg xl:text-3xl bg-gray-700 px-12 py-3 xl:py-6 text-white rounded-full relative"
                       onClick={() => {
                         handleStepChange(2);
                       }}
@@ -86,7 +86,7 @@ const page = () => {
                 {stepOne.map((item, index) => (
                   <div key={item.id} className="mb-4 relative">
                     <button
-                      className="thin flex items-center gap-2 text-lg xl:text-3xl btn-bg px-12 py-3 xl:py-6 text-white rounded-full relative"
+                      className="thin flex items-center gap-2 text-lg xl:text-3xl bg-gray-700 px-12 py-3 xl:py-6 text-white rounded-full relative"
                       onClick={() => {
                         handleStepChange(3);
                         handleOptionSelect(item.label);
@@ -112,7 +112,7 @@ const page = () => {
                 {stepTwo.map((item, index) => (
                   <div key={item.id} className="mb-4 relative">
                     <button
-                      className="thin flex  items-center gap-2 text-lg xl:text-3xl btn-bg px-12 py-3 xl:py-6 text-white rounded-full relative"
+                      className="thin flex  items-center gap-2 text-lg xl:text-3xl bg-gray-700 px-12 py-3 xl:py-6 text-white rounded-full relative"
                       onClick={() => {
                         handleStepChange(4);
                         handleOptionSelect(item.label);
@@ -141,7 +141,7 @@ const page = () => {
                 {stepThree.map((item, index) => (
                   <div key={item.id} className="mb-4 relative">
                     <button
-                      className="thin flex  items-center gap-2 text-lg xl:text-3xl btn-bg px-12 py-3 xl:py-6 text-white rounded-full relative"
+                      className="thin flex  items-center gap-2 text-lg xl:text-3xl bg-gray-700 px-12 py-3 xl:py-6 text-white rounded-full relative"
                       onClick={() => {
                         handleStepChange(5);
                         handleOptionSelect(item.label);
@@ -178,8 +178,8 @@ const page = () => {
             <svg width="11" height="9" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="m10.407 4.5-2.555 4H3.148l-2.555-4 2.555-4h4.704l2.555 4Z"
-                fill="#D62E49"
-                stroke="#D62E49"
+                fill="gold"
+                stroke="gold"
                 fillRule="evenodd"
               ></path>
             </svg>
@@ -188,7 +188,7 @@ const page = () => {
             <div className="progress-step  h-[2px] bg-gray-300 w-48 sm:w-[30rem]">
               <div
                 className="active h-[2px]"
-                style={{ width: `${progressWidth}%`, backgroundColor: "red" }}
+                style={{ width: `${progressWidth}%`, backgroundColor: "gold" }}
               ></div>
             </div>
 
