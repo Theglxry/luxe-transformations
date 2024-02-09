@@ -1,6 +1,6 @@
 const NavBar: React.FC = () => {
   return (
-    <nav className="relative flex items-center justify-between p-10 h-[10vh] w-full" data-aos="fade-down">
+    <nav className="absolute flex items-center justify-between p-10 w-full" data-aos="fade-down">
       {/* logo */}
       <div className="absolute top-10 w-14 h-14 left-4  lg:w-16 lg:h-16">
         <a href="/">
@@ -20,7 +20,7 @@ const NavBar: React.FC = () => {
       </div>
 
       {/* center nav */}
-      <div className=" m-auto text-center md:w-full  md:ml-40 flex w-auto lg:gap-[30%] items-center md:text-lg tracking-widest text-lg  z-1 ">
+      {/* <div className=" m-auto text-center md:w-full  md:ml-40 flex w-auto lg:gap-[30%] items-center md:text-lg tracking-widest text-lg  z-1 ">
         <h6 className="hidden lg:block cursor-pointer">BUZZWORTHY STUDIO</h6>
 
         <div className=" relative cursor-pointer flex items-center justify-center sm:mt-10 md:mt-0 md:gap-8 flex-col gap-2 md:flex-row  text-base md:text-lg">
@@ -29,14 +29,14 @@ const NavBar: React.FC = () => {
           </h4>
           <span className="hidden md:flex absolute inset-y-0 left-6 top-2  items-center justify-center w-5 h-5 border-[1px] rounded-full">
             <div className=" w-2 h-2 bg-red-600  rounded-full"></div>
-          </span>
+          </span> */}
 
           {/* slides */}
-          <div className="-mt-2 ml-2">
+          {/* <div className="-mt-2 ml-2">
             <h6>TURN VISIONS INTO VALUE</h6>
           </div>
         </div>
-      </div>
+      </div> */}
  
 
 
