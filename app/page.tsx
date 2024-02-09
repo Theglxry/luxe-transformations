@@ -145,7 +145,7 @@ export default function Home() {
 
       {/* pencil */}
       <Link href={"/contact"}>
-        <div className="red absolute  top-[80%] lg:top-[70%] right-2 sm:right-10  rounded-full  z-10 ">
+        <div className="red absolute  top-[80%] lg:top-[85%] right-2 sm:right-10  rounded-full  z-10 ">
           <svg
             id="pencil"
             width="80"
