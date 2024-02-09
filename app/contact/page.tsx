@@ -53,9 +53,9 @@ const page = () => {
           {/* FORM ONE */}
           {activeStep === 1 && (
             <div className="flex flex-col gap-10 text-center">
-              <h1 className="text-5xl xl:text-7xl">HOW CAN WE HELP? </h1>
+              <h1 className="text-5xl xl:text-7xl" data-aos="fade-up-right">HOW CAN WE HELP? </h1>
               {/* OPTIONS */}
-              <div className="flex sm:flex-wrap flex-col sm:flex-row   sm:gap-10 justify-center items-center">
+              <div className="flex sm:flex-wrap flex-col sm:flex-row   sm:gap-10 justify-center items-center" data-aos="fade-left">
                 {helpSelect.map((item, index) => (
                   <div key={item.id} className="mb-4 relative">
                     <button
@@ -79,10 +79,10 @@ const page = () => {
 
           {/* FORM TWO */}
           {activeStep === 2 && (
-            <div className="flex flex-col gap-10 text-center  ">
+            <div className="flex flex-col gap-10 text-center" data-aos="fade-left">
               <h1 className="text-5xl xl:text-7xl"> WHAT TYPE OF PROJECT? </h1>
               {/* OPTIONS */}
-              <div className="flex sm:flex-wrap flex-col sm:flex-row   sm:gap-10 justify-center items-center">
+              <div className="flex sm:flex-wrap flex-col sm:flex-row   sm:gap-10 justify-center items-center" >
                 {stepOne.map((item, index) => (
                   <div key={item.id} className="mb-4 relative">
                     <button
@@ -105,8 +105,8 @@ const page = () => {
 
           {/* FORM THREE */}
           {activeStep === 3 && (
-            <div className="flex flex-col gap-10 text-center  ">
-              <h1 className="text-5xl xl:text-7xl"> BUDGET RANGE </h1>
+            <div className="flex flex-col gap-10 text-center" data-aos="fade-left">
+              <h1 className="text-5xl xl:text-7xl" > BUDGET RANGE </h1>
               {/* OPTIONS */}
               <div className="flex sm:flex-wrap flex-col sm:flex-row   sm:gap-10 justify-center items-center">
                 {stepTwo.map((item, index) => (
@@ -132,7 +132,7 @@ const page = () => {
 
           {/* FORM FOUR */}
           {activeStep === 4 && (
-            <div className="flex flex-col gap-10 text-center  ">
+            <div className="flex flex-col gap-10 text-center" data-aos="fade-left">
               <h1 className="text-4xl xl:text-7xl">
                 HOW DID YOU HEAR ABOUT US?{" "}
               </h1>
@@ -159,6 +159,12 @@ const page = () => {
             </div>
           )}
         </section>
+
+
+      {/* FORM FIVE */}
+      <section>{activeStep === 5 && <ContactForm />}</section>
+
+
 
         {/* ------------ progress bar --------------- */}
         <div className="progress flex items-center gap-4 sm:gap-10">
@@ -210,8 +216,6 @@ const page = () => {
 
 
 
-      {/* FORM FIVE */}
-      <section>{activeStep === 5 && <ContactForm />}</section>
 
       {/* back button */}
       <div
