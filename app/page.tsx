@@ -8,10 +8,10 @@ export default function Home() {
 
 
       {/* center nav */} 
-      <div className="absolute top-10 sm:top-0 md:top-10 left-40 sm:left-52  md:left-1/2 m-auto text-center md:w-full   flex w-auto items-center md:text-lg tracking-widest text-lg  z-10">
+      <div className="absolute top-10 sm:top-0 md:top-10 left-36 sm:left-52  md:left-1/2 m-auto text-center md:w-full   flex w-auto items-center md:text-lg tracking-widest text-lg  z-10">
 
         <div className=" relative cursor-pointer flex items-center justify-center sm:mt-10 md:mt-0 md:gap-8 flex-col gap-2 md:flex-row  text-base md:text-lg">
-          <h4 className="relative z-10 px-4 py-2 md:px-0 md:py-1 rounded mb-2 bg-white text-black font-bold md:font-thin md:text-white md:bg-transparent ">
+          <h4 className="relative z-10 px-4  md:px-0 md:py-1 rounded mb-2 bg-white text-black font-bold md:font-thin md:text-white md:bg-transparent ">
             WE
           </h4>
           <span className="hidden md:flex absolute inset-y-0 left-6 top-2  items-center justify-center w-5 h-5 border-[1px] rounded-full">
@@ -20,7 +20,7 @@ export default function Home() {
 
           {/* slides */}
           <div className="-mt-2 ml-2">
-            <h6>PROVIDE COMFORT AND ELEGANCE </h6>
+            <h6 >PROVIDE COMFORT AND ELEGANCE </h6>
           </div>
         </div>
       </div>

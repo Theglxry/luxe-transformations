@@ -4,22 +4,9 @@ const NavBar: React.FC = () => {
   return (
     <nav className="absolute flex items-center justify-between p-10 w-full z-10" data-aos="fade-down">
       {/* logo */}
-      <div className="absolute top-10 w-14 h-14 md:w-[10rem] h-[30rem] left-4 lg:left-8  lg:w-[30rem] lg:h-[30vh">
-        {/* <a href="/">
-          <svg
-            viewBox="0 0 60 60"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M30 60.0371C46.5652 60.0371 60 46.6117 60 30.0371C60 13.4625 46.5652 0.0371094 30 0.0371094C13.4348 0.0371094 0 13.4625 0 30.0371C0 46.6117 13.4348 60.0371 30 60.0371ZM15.1902 35.6029L19.4911 9.18965L25.8292 16.5129C27.3329 18.0928 29.548 19.3106 32.7009 19.36H35.7406C35.9831 19.3435 36.2256 19.3435 36.4519 19.3435H36.452C45.1507 19.3435 48.2713 23.6717 46.5413 34.3357C45.1346 43.0085 39.5887 48.6038 32.0541 48.8507H30.8253H25.6998C16.322 48.8507 14.3009 42.5641 15.1902 35.6029ZM36.8655 34.1049C36.2242 38.0439 33.6587 40.7151 30.4013 40.7151C27.2452 40.7151 25.4899 38.027 26.1312 34.1049C26.7726 30.1658 29.3886 27.4947 32.5448 27.4947C35.8191 27.4947 37.5069 30.1658 36.8655 34.1049Z"
-              fill=" #D62E49"
-            ></path>
-          </svg>
-        </a> */}
-        <Image src='/images/logo.svg' alt="logo" width={100} height={100}/>
+      <div className="absolute top-10 w-24 h-24 md:w-[10rem] h-[30rem] left-4 lg:left-8  lg:w-[30rem] lg:h-[30vh">
+        
+        <Image src='/images/logo.svg' alt="logo" width={160} height={160}/>
       </div>
 
       {/* <div className="absolute top-10 w-14 h-14  lg:left-4 lg:top-10">
