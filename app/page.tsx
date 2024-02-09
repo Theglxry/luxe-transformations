@@ -107,7 +107,7 @@ export default function Home() {
 
           {/* blurb cirlce */}
           <div
-            className="absolute top-50 sm:top-0  sm:h-[50vw] sm:w-[60vw] z-0 rounded-full bg-gradient-radial from-gray-500 via-transparent to-transparent opacity-100  lg:top-10 sm:left-48 lg:left-0 ml-[-20rem]  "
+            className="absolute top-50 sm:top-0  sm:h-[50vw] sm:w-[60vw] z-0 rounded-full bg-gradient-radial from-gray-600 via-transparent to-transparent opacity-100  lg:top-10 sm:left-48 lg:left-0 ml-[-20rem]  "
             style={{ opacity: 0.3 }}
           ></div>
 
