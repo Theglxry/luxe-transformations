@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body className={`relative overflow-hidden h-screen text-white w-full md:p-2 font-MyFont`}>
-     <div className="contact-bg relative h-full w-full rounded-3xl  z-0">
+     <div className="bg-black relative h-full w-full rounded-3xl  z-0">
       <AOSInit />
      <NavBar />
        {children}

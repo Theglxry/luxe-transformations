@@ -35,13 +35,13 @@ const page = () => {
   };
 
   return (
-    <section className="contact-bg relative rounded-3xl w-full h-full  md:px-4 z-0">
+    <section className="bg-black relative rounded-3xl w-full h-full  md:px-4 z-0">
       <form className=" w-full h-full py-5 xl:py-10 xl:px-40 flex flex-col items-center justify-between">
         <div className="flex  flex-wrap  items-center gap-5">
           {selectedOptions.map((option, index) => (
             <button
               key={index}
-              className="thin flex items-center gap-2 text-lg bg-gray-700 px-6 py-3 text-white rounded-full relative"
+              className="contact-bg thin flex items-center gap-2 text-lg  px-6 py-3 text-white rounded-full relative"
               data-aos="fade-up-right"
             >
               {option}
@@ -59,7 +59,7 @@ const page = () => {
                 {helpSelect.map((item, index) => (
                   <div key={item.id} className="mb-4 relative">
                     <button
-                      className="thin flex  items-center gap-2 text-lg xl:text-3xl bg-gray-700 px-12 py-3 xl:py-6 text-white rounded-full relative"
+                      className="contact-bg thin  flex  items-center gap-2 text-lg xl:text-3xl px-12 py-3 xl:py-6 text-white rounded-full relative"
                       onClick={() => {
                         handleStepChange(2);
                       }}
@@ -86,7 +86,7 @@ const page = () => {
                 {stepOne.map((item, index) => (
                   <div key={item.id} className="mb-4 relative">
                     <button
-                      className="thin flex items-center gap-2 text-lg xl:text-3xl bg-gray-700 px-12 py-3 xl:py-6 text-white rounded-full relative"
+                      className="contact-bg thin flex items-center gap-2 text-lg xl:text-3xl   px-12 py-3 xl:py-6 text-white rounded-full relative"
                       onClick={() => {
                         handleStepChange(3);
                         handleOptionSelect(item.label);
@@ -112,7 +112,7 @@ const page = () => {
                 {stepTwo.map((item, index) => (
                   <div key={item.id} className="mb-4 relative">
                     <button
-                      className="thin flex  items-center gap-2 text-lg xl:text-3xl bg-gray-700 px-12 py-3 xl:py-6 text-white rounded-full relative"
+                      className="contact-bg thin flex  items-center gap-2 text-lg xl:text-3xl  px-12 py-3 xl:py-6 text-white rounded-full relative"
                       onClick={() => {
                         handleStepChange(4);
                         handleOptionSelect(item.label);
@@ -141,7 +141,7 @@ const page = () => {
                 {stepThree.map((item, index) => (
                   <div key={item.id} className="mb-4 relative">
                     <button
-                      className="thin flex  items-center gap-2 text-lg xl:text-3xl bg-gray-700 px-12 py-3 xl:py-6 text-white rounded-full relative"
+                      className="contact-bg thin flex  items-center gap-2 text-lg xl:text-3xl   px-12 py-3 xl:py-6 text-white rounded-full relative"
                       onClick={() => {
                         handleStepChange(5);
                         handleOptionSelect(item.label);

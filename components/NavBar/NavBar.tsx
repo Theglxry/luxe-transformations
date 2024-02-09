@@ -4,7 +4,7 @@ const NavBar: React.FC = () => {
   return (
     <nav className="absolute flex items-center justify-between p-10 w-full z-10" data-aos="fade-down">
       {/* logo */}
-      <div className="absolute top-10 w-14 h-14 left-4  lg:w-16 lg:h-16">
+      <div className="absolute top-10 w-14 h-14 md:w-[10rem] h-[30rem] left-4 lg:left-8  lg:w-[30rem] lg:h-[30vh">
         {/* <a href="/">
           <svg
             viewBox="0 0 60 60"
@@ -19,8 +19,12 @@ const NavBar: React.FC = () => {
             ></path>
           </svg>
         </a> */}
-        <Image src='/images/luxe-01.svg' alt="logo" width={100} height={100}/>
+        <Image src='/images/logo.svg' alt="logo" width={100} height={100}/>
       </div>
+
+      {/* <div className="absolute top-10 w-14 h-14  lg:left-4 lg:top-10">
+  <Image src="/images/logo.svg" alt="logo" width={160} height={160} />
+</div> */}
 
 
 

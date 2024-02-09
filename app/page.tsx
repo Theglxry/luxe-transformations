@@ -34,7 +34,7 @@ export default function Home() {
         {/* parent div */}
         <div className="w-full">
           {/* hero-text */}
-          <div className="sm:w-full mt-70 md:mt-0 leading-none lg:leading-[-10rem] z-10 ">
+          <div className="sm:w-full mt-70 md:mt-0 leading-none lg:leading-[-10rem] z-10  ">
             <h1 className="text-8xl sm:text-9xl lg:text-[12rem] 2xl:text-[18rem]  -mb-2 lg:-mb-10 font-extrabold">
               <div
                 className="flex flex-col md:flex-row  justify-between "
@@ -50,7 +50,7 @@ export default function Home() {
             <div className="relative flex flex-col gap-2  md:float-right z-10">
               <h1
                 // className=" md:relative text-8xl sm:text-9xl lg:text-[12rem] xl:text-[16rem] font-extrabold"
-                className=" md:relative text-6xl sm:text-8xl    xl:text-[10rem] font-extrabold"
+                className=" md:relative text-6xl sm:text-8xl  xl:text-[8rem] font-extrabold"
                 data-aos="fade-left"
                 data-aos-delay="400"
               >
@@ -107,7 +107,7 @@ export default function Home() {
 
           {/* blurb cirlce */}
           <div
-            className="absolute top-50 sm:top-0  sm:h-[50vw] sm:w-[60vw] z-0 rounded-full bg-gradient-radial from-blue-600 via-transparent to-transparent opacity-100  lg:top-10 sm:left-48 lg:left-0 ml-[-20rem]  "
+            className="absolute top-50 sm:top-0  sm:h-[50vw] sm:w-[60vw] z-0 rounded-full bg-gradient-radial from-gray-500 via-transparent to-transparent opacity-100  lg:top-10 sm:left-48 lg:left-0 ml-[-20rem]  "
             style={{ opacity: 0.3 }}
           ></div>
 

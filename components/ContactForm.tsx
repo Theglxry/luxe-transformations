@@ -17,13 +17,13 @@ const ContactForm: React.FC = () => {
               <input
                 type="text"
                 placeholder="First Name *"
-                className="bg-gray-700 w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
                 required
               />
               <input
                 type="text"
                 placeholder="Last Name *"
-                className="bg-gray-700 w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
                 required
               />
             </div>
@@ -32,13 +32,13 @@ const ContactForm: React.FC = () => {
               <input
                 type="text"
                 placeholder="Phone [optional] "
-                className="bg-gray-700 w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
                 required
               />
               <input
                 type="text"
                 placeholder="Email*"
-                className="bg-gray-700 w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
                 required
               />
             </div>
@@ -47,13 +47,13 @@ const ContactForm: React.FC = () => {
               <input
                 type="text"
                 placeholder="Company*"
-                className="bg-gray-700 w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
                 required
               />
               <input
                 type="text"
                 placeholder="Dealine in weeks*"
-                className="bg-gray-700 w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
                 required
               />
             </div>
@@ -61,7 +61,7 @@ const ContactForm: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-2 sm:gap-5 items-center justify-center">
               <textarea
                 placeholder="Your message here...."
-                className="bg-gray-700 w-full md:min-h-[200px] rounded-md px-6 py-3 text-base focus:outline-none"
+                className="contact-bg w-full md:min-h-[200px] rounded-md px-6 py-3 text-base focus:outline-none"
               ></textarea>
 
               <button
