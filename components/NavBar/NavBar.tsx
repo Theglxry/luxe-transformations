@@ -1,17 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const NavBar: React.FC = () => {
   return (
     <nav className="absolute flex items-center justify-between p-10 w-full z-10" data-aos="fade-down">
-      {/* logo */}
+      <Link href={'/'}>
       <div className="absolute top-10 w-24 h-24 md:w-[10rem] h-[30rem] left-4 lg:left-8  lg:w-[30rem] lg:h-[30vh">
-        
         <Image src='/images/logo.svg' alt="logo" width={160} height={160}/>
       </div>
-
-      {/* <div className="absolute top-10 w-14 h-14  lg:left-4 lg:top-10">
-  <Image src="/images/logo.svg" alt="logo" width={160} height={160} />
-</div> */}
+      </Link>
+     
+ 
 
 
 
