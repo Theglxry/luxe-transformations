@@ -15,32 +15,40 @@ export const navLinks = [
       {
         label: "CONTACT",
         url: "/contact",
-      },
+      }
 ]
 
-export const socialLinks = [
+// ts for social links
+interface SocialLink {
+    label: string;
+    url: string;
+  }
+  
+  export const socialLinks: SocialLink[] = [
     {
-        label: "LINKEDIN",
-        url: "#",
-      },
-      {
-        label: "INSTAGRAM",
-        url: "#",
-      },
-      {
-        label: "TWITTER",
-        url: "#",
-      },
-      {
-        label: "BEHANCE",
-        url: "#",
-      },
-      ,
-      {
-        label: "DRIBBLE",
-        url: "#",
-      },
-]
+      label: "LINKEDIN",
+      url: "#",
+    },
+    {
+      label: "INSTAGRAM",
+      url: "#",
+    },
+    {
+      label: "TWITTER",
+      url: "#",
+    },
+    {
+      label: "BEHANCE",
+      url: "#",
+    },
+    {
+      label: "DRIBBLE",
+      url: "#",
+    },
+  ];
+  
+
+
 
 export const formData = [
     {

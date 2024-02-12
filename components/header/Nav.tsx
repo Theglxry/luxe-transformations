@@ -52,7 +52,7 @@ const Nav = ({ toggleMenu, isOpen }: NavProps) => {
                 <span className="w-3 h-3 lg:w-5 lg:h-5  mt-4 lg:mt-6 xl:mt-8 2xl:mt-10 ">
                   <svg
                     viewBox="0 0 10 11"
-                    fill="gold"
+                    fill="goldenrod"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -70,13 +70,13 @@ const Nav = ({ toggleMenu, isOpen }: NavProps) => {
         {/* social links */}
         <div className="absolute inset-x-0 flex items-center top-[60%] justify-center flex-1 text-black boder-2 border-green-400">
           <ul className="thin flex items-center gap-5 sm:gap-10  sm:text-2xl">
-            {socialLinks.map((link, idx) => (
+            {socialLinks.map((item, idx) => (
               <li key={idx}>
                 <Link
-                  href={link.url}
+                  href={item.url}
                   className="hover:text-blue-900 hover:line-through transition-colors relative block after:block after:absolute after:left-0 after:h-0.5 after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition  after:duration-300 after:origin-right after:hover:origin-left"
                 >
-                  {link.label}
+                  {item.label}
                 </Link>
               </li>
             ))}
