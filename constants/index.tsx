@@ -1,4 +1,66 @@
 
+export const navLinks = [
+    {
+        label: "WORK",
+        url: "#",
+      },
+      {
+        label: "SERVICES",
+        url: "#",
+      },
+      {
+        label: "STUDIO",
+        url: "#",
+      },
+      {
+        label: "CONTACT",
+        url: "/contact",
+      },
+]
+
+export const socialLinks = [
+    {
+        label: "LINKEDIN",
+        url: "#",
+      },
+      {
+        label: "INSTAGRAM",
+        url: "#",
+      },
+      {
+        label: "TWITTER",
+        url: "#",
+      },
+      {
+        label: "BEHANCE",
+        url: "#",
+      },
+      ,
+      {
+        label: "DRIBBLE",
+        url: "#",
+      },
+]
+
+export const formData = [
+    {
+        tag: "default"
+    },
+    {
+        tag: "formOne"
+    },
+    {
+        tag: "formTwo"
+    },
+    {
+        tag: "formThree"
+    }, {
+        tag: "formFour"
+    },
+]
+
+
+
 // form 1
 export const helpSelect = [
     // DEFAULT

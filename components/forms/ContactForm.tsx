@@ -6,7 +6,7 @@ const ContactForm: React.FC = () => {
     <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-5 md:px-36">
       <div className="content w-full flex flex-col xl:flex-row gap-5 xl:gap-24">
         <div>
-          <h1 className="text-4xl  text-center md:text-left xl:text-7xl">
+          <h1 className="bold text-4xl  text-center md:text-left xl:text-7xl">
             READY TO CREATE MAGIC?
           </h1>
         </div>
@@ -43,7 +43,7 @@ const ContactForm: React.FC = () => {
               />
             </div>
 
-            <div className="flex gap-2 sm:gap-2 sm:gap-5 max-tablet:flex-col">
+            <div className="flex gap-2 sm:gap-5 max-tablet:flex-col">
               <input
                 type="text"
                 placeholder="Company*"

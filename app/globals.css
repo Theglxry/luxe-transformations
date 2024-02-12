@@ -17,21 +17,45 @@
   src: url("/fonts/TT-Tunnels-Trial-Regular.otf") format("opentype");
 }
 
-h4,
-h6 {
-  font-family: "CustomFont2", sans-serif;
+@font-face {
+  font-family: "CustomFont4";
+  src: url("/fonts/TT-Tunnels-Trial-Thin.otf") format("opentype");
 }
 
-.thin {
+@font-face {
+  font-family: "CustomFont5";
+  src: url("/fonts/TT-Tunnels-Trial-Heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "CustomFont6";
+  src: url("/fonts/TT-Lakes-Neue-Italic.ttf") format("opentype");
+}
+
+.bold {
+  font-family: "CustomFont1", sans-serif;
+}
+
+.light {
   font-family: "CustomFont2", sans-serif;
 }
 .regular {
   font-family: "CustomFont3", sans-serif;
 }
-body {
-  font-family: "CustomFont1";
+
+.thin {
+  font-family: "CustomFont4", sans-serif;
 }
 
+.heavy {
+  font-family: "CustomFont5", sans-serif;
+}
+
+.italic {
+  font-family: "CustomFont6", sans-serif;
+  font-weight: 100;
+}
+
+/* fill button background on hero */
 .button {
   letter-spacing: 1px;
   color: white;
@@ -72,10 +96,20 @@ body {
   transform: translateY(-50%) translateX(50%);
   font-size: 1.75em;
 }
+.popUpWord {
+  color: transparent;
+  background-image: linear-gradient(90deg, black 50%, goldenrod 50%);
+  background-position: 0;
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
 
-.button {
-  padding: 0.9375rem 1.875rem;
+  transition: background-position 0.2s ease-in-out;
 }
+.popUpWord:hover {
+  background-position: 100%;
+}
+
 
 .sec-bg {
   background: rgb(29, 33, 69);
@@ -85,14 +119,22 @@ body {
   background-color: #272b4d;
 }
 
-.red {
-  background: #d62e49;
-}
-.red-text {
-  color: #d62e49;
-}
 .contact-bg {
-  /* background: #212121; */
   background: #212121;
-
 }
+
+/* nav hover effect */
+/* .popUpWord{
+  color: transparent;
+  background-image: linear-gradient(90deg, goldenrod 50%, black 50%);
+  background-position:100%;
+  background-size:200% 100%;
+  background-clip:text;
+  -webkit-background-clip:text;
+  
+  transition: background-position 1s ease;
+}
+.popUpWord:hover{
+  background-position:0;
+} */
+
