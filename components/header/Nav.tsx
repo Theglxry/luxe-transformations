@@ -17,7 +17,7 @@ const Nav = ({ toggleMenu, isOpen }: NavProps) => {
   return (
     <>
       <div
-        className={`w-screen h-screen overflow-hidden flex flex-col bg-white fixed top-0 left-0 z-50 transition-all duration-1000 ease-in-out  transform border-x-8 border-white ${
+        className={`w-screen h-screen overflow-hidden flex flex-col items-center bg-white fixed top-0 left-0 z-50 transition-all duration-1000 ease-in-out  transform sm:border-x-8 border-white ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -29,7 +29,7 @@ const Nav = ({ toggleMenu, isOpen }: NavProps) => {
 
         {/* close button*/}
         <button
-          className="right-0 sm:right-10 md:right-5 xl:right-20 absolute top-4 xl:top-10 w-30 md:h-30 cursor-pointer z-50"
+          className="right-5 sm:right-10 md:right-5 xl:right-20 absolute  xl:top-10 w-30 md:h-30 cursor-pointer z-50"
           onClick={(e) => {
             e.stopPropagation();
             toggleMenu();
