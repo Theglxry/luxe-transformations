@@ -1,3 +1,4 @@
+ 
 export const navLinks = [
   {
     label: "WORK",
@@ -17,6 +18,7 @@ export const navLinks = [
   },
 ];
 
+
 export const socialLinks = [
   {
     label: "LINKEDIN",
@@ -34,12 +36,14 @@ export const socialLinks = [
     label: "BEHANCE",
     url: "#",
   },
-  ,
   {
     label: "DRIBBLE",
     url: "#",
   },
 ];
+
+
+
 
 export const formData = [
   {
