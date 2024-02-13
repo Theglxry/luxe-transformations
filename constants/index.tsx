@@ -120,9 +120,6 @@ export const commercialForm = [
   },
 ];
 
-
-
-
 //form4 residential form 1
 export const residentialForm = [
   // budeget range option
@@ -148,7 +145,6 @@ export const residentialForm = [
 
 //  FROM FORM 5 - 7 ARE RESIDENTIAL SECTION
 //form5-> residential subform-0ne ->Full/partialrefurbishment
- 
 
 // form5
 export const residentialFormOne = [
@@ -166,32 +162,28 @@ export const residentialFormOne = [
 
 // form6
 export const residentialFormTwo = [
-  { title: "HOW MANY BEDROOMS ARE THERE", id: 1, label: "1 Bedroom " },
-
   {
-    id: 2,
     label: "2 Bedrooms",
+    id: 1,
   },
-
   {
-    id: 3,
     label: "3 Bedrooms",
+    id: 2,
   },
   {
-    id: 4,
     label: "4 Bedrooms",
+    id: 3,
   },
-  ,
   {
-    id: 5,
     label: "5 Bedrooms",
+    id: 4,
   },
 ];
 
 //form 7
 export const residentialFormThree = [
   {
-    label: "1", // Add a label for each item
+    label: "1",
     id: 1,
   },
   {
@@ -212,36 +204,21 @@ export const residentialFormThree = [
   },
 ];
 
-
 // --------------------------- COMMERCIAL FORM SECTION  cont'----------------
-
-
-
-
-
-
-
-
 
 //todo: FIRST FORM CHECK POINT
 export const checkPointOne = [
-  { 
+  {
     title: "ARE ARCHITECTURE SERVICES REQUIRED ?",
-   id: 1, 
-   label: "yes"
- },
+    id: 1,
+    label: "yes",
+  },
 
   {
     id: 2,
     label: "no",
   },
 ];
-
-
-
-
-
-
 
 // form 6->
 export const stepTwo = [
@@ -298,5 +275,3 @@ export const stepThree = [
     label: "ARTICLE",
   },
 ];
-
- 
