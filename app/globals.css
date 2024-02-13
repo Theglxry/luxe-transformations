@@ -50,9 +50,8 @@
   font-family: "CustomFont5", sans-serif;
 }
 
-.italic {
+.slant {
   font-family: "CustomFont6", sans-serif;
-  font-weight: 100;
 }
 
 /* fill button background on hero */

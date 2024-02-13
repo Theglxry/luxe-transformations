@@ -1,209 +1,301 @@
-
 export const navLinks = [
-    {
-        label: "WORK",
-        url: "#",
-      },
-      {
-        label: "SERVICES",
-        url: "#",
-      },
-      {
-        label: "STUDIO",
-        url: "#",
-      },
-      {
-        label: "CONTACT",
-        url: "/contact",
-      }
-]
+  {
+    label: "WORK",
+    url: "#",
+  },
+  {
+    label: "SERVICES",
+    url: "#",
+  },
+  {
+    label: "STUDIO",
+    url: "#",
+  },
+  {
+    label: "CONTACT",
+    url: "/contact",
+  },
+];
 
-// ts for social links
-interface SocialLink {
-    label: string;
-    url: string;
-  }
-  
-  export const socialLinks: SocialLink[] = [
-    {
-      label: "LINKEDIN",
-      url: "#",
-    },
-    {
-      label: "INSTAGRAM",
-      url: "#",
-    },
-    {
-      label: "TWITTER",
-      url: "#",
-    },
-    {
-      label: "BEHANCE",
-      url: "#",
-    },
-    {
-      label: "DRIBBLE",
-      url: "#",
-    },
-  ];
-  
-
-
+export const socialLinks = [
+  {
+    label: "LINKEDIN",
+    url: "#",
+  },
+  {
+    label: "INSTAGRAM",
+    url: "#",
+  },
+  {
+    label: "TWITTER",
+    url: "#",
+  },
+  {
+    label: "BEHANCE",
+    url: "#",
+  },
+  ,
+  {
+    label: "DRIBBLE",
+    url: "#",
+  },
+];
 
 export const formData = [
-    {
-        tag: "default"
-    },
-    {
-        tag: "formOne"
-    },
-    {
-        tag: "formTwo"
-    },
-    {
-        tag: "formThree"
-    }, {
-        tag: "formFour"
-    },
-]
+  {
+    tag: "default",
+  },
+  {
+    tag: "formOne",
+  },
+  {
+    tag: "formTwo",
+  },
+  {
+    tag: "formThree",
+  },
+  {
+    tag: "formFour",
+  },
+  {
+    tag: "formFive",
+  },
+  {
+    tag: "form",
+  },
+];
 
-
-
-// form 1
+// form 1 - how can we help
 export const helpSelect = [
-    // DEFAULT
-    {
-        id:1,
-        label: 'START A PROJECT',
-    },
+  // DEFAULT
+  {
+    id: 1,
+    label: "START A PROJECT",
+  },
 
-    {
-        id:2,
-        label: 'JOIN THE TEAM',
-    },
+  {
+    id: 2,
+    label: "JOIN THE TEAM",
+  },
 
-
-    {
-        id:3,
-        label: 'DROP US A LINE',
-    }
+  {
+    id: 3,
+    label: "DROP US A LINE",
+  },
 ];
 
-
-
-// form 2
+// form 2 - what type of project
 export const stepOne = [
-    // type of project
-    {        
-        id:1,
-        label: 'FULL WEBSITE',
-    },
+  // type of project
+  {
+    id: 1,
+    label: "COMMERCIAL",
+  },
 
-    {
-        id:2,
-        label: 'UI/UX DESIGN',
-    },
+  {
+    id: 2,
+    label: "RESIDENTIAL",
+  },
+];
 
+//form3 commercial form 1
+export const commercialForm = [
+  {
+    id: 1,
+    label: "Hotel ",
+  },
 
-    {
-        id:3,
-        label: 'WEB DEVELOPMENT',
-    },
-    {
-        id:4,
-        label: 'BRANDING',
-    },
+  {
+    id: 2,
+    label: "Office block",
+  },
 
-
-    {
-        id:5,
-        label: 'MARKETING',
-    },
-
+  {
+    id: 3,
+    label: "Aparmtnet  block",
+  },
+  {
+    id: 4,
+    label: "Restaurant/Francise/Others",
+  },
 ];
 
 
 
-// form 3
+
+//form4 residential form 1
+export const residentialForm = [
+  // budeget range option
+  {
+    id: 1,
+    label: "Full refurbishment ",
+  },
+
+  {
+    id: 2,
+    label: "Partial refurbishment",
+  },
+
+  {
+    id: 3,
+    label: "Loft conversion",
+  },
+  {
+    id: 4,
+    label: "Loft Extension",
+  },
+];
+
+//  FROM FORM 5 - 7 ARE RESIDENTIAL SECTION
+//form5-> residential subform-0ne ->Full/partialrefurbishment
+ 
+
+// form5
+export const residentialFormOne = [
+  {
+    title: "WHAT KIND OF PROPERTY",
+    id: 1,
+    label: "Apartment ",
+  },
+
+  {
+    id: 2,
+    label: "House",
+  },
+];
+
+// form6
+export const residentialFormTwo = [
+  { title: "HOW MANY BEDROOMS ARE THERE", id: 1, label: "1 Bedroom " },
+
+  {
+    id: 2,
+    label: "2 Bedrooms",
+  },
+
+  {
+    id: 3,
+    label: "3 Bedrooms",
+  },
+  {
+    id: 4,
+    label: "4 Bedrooms",
+  },
+  ,
+  {
+    id: 5,
+    label: "5 Bedrooms",
+  },
+];
+
+//form 7
+export const residentialFormThree = [
+  {
+    title: "HOW MANY EN-SUITS",
+    id: 1,
+  },
+
+  {
+    id: 2,
+  },
+
+  {
+    id: 3,
+  },
+  {
+    id: 4,
+  },
+  ,
+  {
+    id: 5,
+  },
+];
+
+
+// --------------------------- COMMERCIAL FORM SECTION  cont'----------------
+
+
+
+
+
+
+
+
+
+//todo: FIRST FORM CHECK POINT
+export const checkPointOne = [
+  { 
+    title: "ARE ARCHITECTURE SERVICES REQUIRED ?",
+   id: 1, 
+   label: "yes"
+ },
+
+  {
+    id: 2,
+    label: "no",
+  },
+];
+
+
+
+
+
+
+
+// form 6->
 export const stepTwo = [
-    // budeget range option
-    {
-        id:1,
-        label: '15k - 30k ',
-    },
+  // budeget range option
+  {
+    id: 1,
+    label: "15k - 30k ",
+  },
 
-    {
-        id:2,
-        label: '30k - 50k',
-    },
+  {
+    id: 2,
+    label: "30k - 50k",
+  },
 
+  {
+    id: 3,
+    label: "50k - 75k",
+  },
+  {
+    id: 4,
+    label: "75k - 100k",
+  },
 
-    {
-        id:3,
-        label: '50k - 75k',
-    },
-    {
-        id:4,
-        label: '75k - 100k',
-    },
-
-
-    {
-        id:5,
-        label: '100k',
-    },
+  {
+    id: 5,
+    label: "100k",
+  },
 ];
-
 
 // form four
 export const stepThree = [
-     // How did you hear about us 
-     {
-        id:1,
-        label: 'AWWWARDS',
-    },
+  // How did you hear about us
+  {
+    id: 1,
+    label: "AWWWARDS",
+  },
 
-    {
-        id:2,
-        label: 'FRIEND REFERRAL',
-    },
+  {
+    id: 2,
+    label: "FRIEND REFERRAL",
+  },
 
+  {
+    id: 3,
+    label: "WE DID A PROJECT",
+  },
+  {
+    id: 4,
+    label: "GOOGLE",
+  },
 
-    {
-        id:3,
-        label: 'WE DID A PROJECT',
-    },
-    {
-        id:4,
-        label: 'GOOGLE',
-    },
+  {
+    id: 5,
+    label: "ARTICLE",
+  },
+];
 
-
-    {
-        id:5,
-        label: 'ARTICLE',
-    },
-]
-
-
-
-// form 5
-// step four
-export const contactForm = [
-
-]
-
-
- //  a container that holds the each selected button . when a button is selected it should appear here
-  // 5 steps selection form where all the buttons/options are displayed
-  //   step one (the headding and 3 button selection option .. by default the progress bar fill up a little for step one)
-
-  // step 2 -> (anthoer set of 5 buttons  options beased on the previous selection)
-
-  //step3 -> displays another set of 5 button options based on step 2 selection
-
-  //step4 -> same with 4
-
-  //step 5 displayed the contact form
-
-  //time progressbar that shows step count and a timeline which fills up based on the form step. (step count) -----fill up color----- (total number of steps)
+ 

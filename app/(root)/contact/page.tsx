@@ -1,12 +1,12 @@
 "use client";
 
 import {
-  // formData,
+  formData,
   helpSelect,
   stepOne,
   stepTwo,
   stepThree,
-  contactForm,
+  // contactForm,
 } from "@/constants";
 import { YellowButton } from "@/components/button/YellowButton";
 import { useState } from "react";
@@ -16,6 +16,10 @@ import FormOne from "@/components/forms/FormOne";
 import FormTwo from "@/components/forms/FormTwo";
 import FormThree from "@/components/forms/FormThree";
 import FormFour from "@/components/forms/FormFour";
+import FormFive from "@/components/forms/FormFive";
+import FormSix from "@/components/forms/FormSix";
+import CheckPointFormOne from "@/components/forms/CheckPointFormOne";
+import FormSeven from "@/components/forms/FormSeven";
 
 const page = () => {
   // const [activeStep, setActiveStep] = useState(1);
@@ -26,7 +30,22 @@ const page = () => {
   //   setActiveStep(step);
   // };
 
-  const formTags = ["formOne", "formTwo", "formThree", "formFour", "formFive"];
+  // const formTags = ["formOne", "formTwo", "formThree", "formFour", "formFive"];
+  const formTags = [
+    "formOne",
+    "formTwo",
+    "formThree",
+    "formFour",
+    "formFive",
+    "formSix",
+    "formSeven",
+    "formSeven",
+    "formEight",
+    "formNine",
+    "formTen",
+    "checkPointFormOne",
+    "lastForm",
+  ];
   const [activeStep, setActiveStep] = useState("formOne");
 
   //selected options
@@ -81,7 +100,6 @@ const page = () => {
               handleStepChange={handleStepChange}
             />
           )}
-
           {/* FORM TWO = STEP ONE */}
           {activeStep === "formTwo" && (
             <FormTwo
@@ -90,7 +108,6 @@ const page = () => {
               handleOptionSelect={handleOptionSelect}
             />
           )}
-
           {/* FORM THREE = STEP TWO */}
           {activeStep === "formThree" && (
             <FormThree
@@ -99,7 +116,6 @@ const page = () => {
               handleOptionSelect={handleOptionSelect}
             />
           )}
-
           {/* FORM FOUR = STEP THREE */}
           {activeStep === "formFour" && (
             <FormFour
@@ -108,10 +124,88 @@ const page = () => {
               handleOptionSelect={handleOptionSelect}
             />
           )}
+          {/* FORM FOUR = STEP THREE */}
+          {activeStep === "formFive" && (
+            <FormFive
+              stepThree={stepThree}
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+          {activeStep === "formSix" && (
+            <FormSix
+            stepThree={stepThree}
+            handleStepChange={handleStepChange}
+            handleOptionSelect={handleOptionSelect}
+            />
+          )}
+          {activeStep === "formSeven" && (
+            <FormSeven
+              stepThree={stepThree}
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+         
+
+
+          {/* check points */}
+          {activeStep === "checkPointFormOne" && (
+            <CheckPointFormOne
+              stepThree={stepThree}
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )} 
         </section>
 
+
         {/* FORM FIVE = STEP FOUR */}
-        <section>{activeStep === "formFive" && <ContactForm />}</section>
+        <section>{activeStep === "lastForm" && <ContactForm />}</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         {/* ------------ progress bar --------------- */}
         <div className="italic flex items-center gap-4 sm:gap-10">
@@ -137,7 +231,7 @@ const page = () => {
             </svg>
 
             {/* fill with color red when steps are clicked */}
-            <div className="progress-step  h-[2px] bg-gray-300 w-48 sm:w-[30rem]">
+            <div className="progress-step  h-[2px] bg-gray-300 w-48 sm:w-[100%]]">
               <div
                 className="active h-[2px]"
                 style={{ width: `${progressWidth}%`, backgroundColor: "gold" }}
