@@ -191,22 +191,23 @@ export const residentialFormTwo = [
 //form 7
 export const residentialFormThree = [
   {
-    title: "HOW MANY EN-SUITS",
+    label: "1", // Add a label for each item
     id: 1,
   },
-
   {
+    label: "2",
     id: 2,
   },
-
   {
+    label: "3",
     id: 3,
   },
   {
+    label: "4",
     id: 4,
   },
-  ,
   {
+    label: "5",
     id: 5,
   },
 ];
