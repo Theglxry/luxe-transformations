@@ -1,85 +1,123 @@
 "use client";
-
 import {
-  formData,
-  helpSelect,
-  stepOne,
-  stepTwo,
-  stepThree,
-  // contactForm,
-} from "@/constants";
-import { YellowButton } from "@/components/button/YellowButton";
-import { useState } from "react";
-import ContactForm from "@/components/forms/ContactForm";
+  setActiveStep,
+  setSelectedOptions,
+} from "@/libs/state/features/FormSlice";
+import { helpSelect } from "@/constants";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/libs/state/store";
 import Image from "next/image";
-import FormOne from "@/components/forms/FormOne";
-import FormTwo from "@/components/forms/FormTwo";
-import FormThree from "@/components/forms/FormThree";
-import FormFour from "@/components/forms/FormFour";
-import FormFive from "@/components/forms/FormFive";
-import FormSix from "@/components/forms/FormSix";
-import CheckPointFormOne from "@/components/forms/CheckPointFormOne";
-import FormSeven from "@/components/forms/FormSeven";
+import {
+  FormOne,
+  FormTwo,
+  Commercial,
+  Residential,
+  ResidentialFormOne,
+  ResidentialFormTwo,
+
+  EnSuitForm,
+
+  CommercialFormOne,
+  CommercialFormTwo,
+  CommercialFormThree,
+  CommercialFormFour,
+  CommercialFormFive,
+  CommercialFormSix,
+ 
+
+  CheckPointFormOne,
+  CheckPointFormTwo,
+  CheckPointFormThree,
+  CheckPointFormFour,
+  CheckPointFormFive,
+  CheckPointFormSix,
+  CheckPointFormSeven,
+  ContactForm,
+} from "@/components/forms";
 
 const page = () => {
-  // const [activeStep, setActiveStep] = useState(1);
-
-  // const progressWidth = ((activeStep - 1) / (totalSteps - 1)) * 100;
-
-  // const handleStepChange = (step: number) => {
-  //   setActiveStep(step);
-  // };
-
-  // const formTags = ["formOne", "formTwo", "formThree", "formFour", "formFive"];
+  //-------- using REDUX to manage state ------------
+  // Define types for activeStep and selectedOptions
+  const dispatch = useDispatch();
+  const activeStep = useSelector(
+    (state: RootState) => state.formReducer.activeStep
+  );
+  const selectedOptions = useSelector(
+    (state: RootState) => state.formReducer.selectedOptions
+  );
   const formTags = [
     "formOne",
     "formTwo",
     "formThree",
+
+
     "formFour",
     "formFive",
     "formSix",
     "formSeven",
-    "formSeven",
+
+
     "formEight",
     "formNine",
     "formTen",
+    "form11",
+    "form12",
+    "form13",
+
     "checkPointFormOne",
+    "checkPointFormThree",
+    "checkPointFormFour",
+    "checkPointFormFive",
+    "checkPointFormSix",
+    "checkPointFormSeven",
+
     "lastForm",
   ];
-  const [activeStep, setActiveStep] = useState("formOne");
 
-  //selected options
-  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
-  // to store selected optons
   const handleOptionSelect = (option: string) => {
-    setSelectedOptions([...selectedOptions, option]);
+    dispatch(setSelectedOptions([...selectedOptions, option]));
   };
 
-  const totalSteps = 5;
+  const handleStepChange = (step: string) => {
+    dispatch(setActiveStep(step));
+  };
 
+  //-------------progress bar------------
+  const totalSteps = 5;
   const progressWidth = (formTags.indexOf(activeStep) / (totalSteps - 1)) * 100;
 
-  // update state
-  const handleStepChange = (step: string) => {
-    setActiveStep(step);
-  };
-
-  // prev button
+  //----------------- prev button
   const handleBackButtonClick = () => {
     const currentIndex = formTags.indexOf(activeStep);
-
+  
     // Navigate to the previous form if not at the beginning
     if (currentIndex > 0) {
-      setActiveStep(formTags[currentIndex - 1]);
-      setSelectedOptions([]); // Reset selected options if needed
+      const prevStep = formTags[currentIndex - 1];
+      dispatch(setActiveStep(prevStep));
+  
+
+      // Remove the last selected option
+      const updatedOptions = [...selectedOptions];
+      updatedOptions.pop(); // Remove the last element
+      dispatch(setSelectedOptions(updatedOptions));
     }
+  
+    console.log(currentIndex);
   };
+  
+  
+
+
+
+
+
+  
 
   return (
-    <section className="bg-black relative rounded-3xl w-full h-full  md:px-4 z-0">
-      <section className="w-full h-full py-5 xl:py-10 xl:px-40 flex flex-col items-center justify-between">
+    <section className="bg-black relative  overflow-hidden rounded-3xl w-full h-full  md:px-4 z-0">
+      <section className="w-full h-full  pt-32  sm:pt-10 xl:px-40 flex flex-col items-center justify-between">
         {/* selected options */}
-        <div className="flex flex-wrap  items-center gap-5">
+        <div className="flex overflow-x-hidden sm:flex-wrap items-center  gap-5">
           {selectedOptions.map((option, index) => (
             <button
               type="button"
@@ -94,166 +132,94 @@ const page = () => {
 
         <section className="w-full ">
           {/* FORM ONE = DEFALUT DISPLAY */}
-          {activeStep === "formOne" && (
-            <FormOne
-              helpSelect={helpSelect}
-              handleStepChange={handleStepChange}
-            />
-          )}
-          {/* FORM TWO = STEP ONE */}
-          {activeStep === "formTwo" && (
-            <FormTwo
-              stepOne={stepOne}
-              handleStepChange={handleStepChange}
-              handleOptionSelect={handleOptionSelect}
-            />
-          )}
-          {/* FORM THREE = STEP TWO */}
-          {activeStep === "formThree" && (
-            <FormThree
-              stepTwo={stepTwo}
-              handleStepChange={handleStepChange}
-              handleOptionSelect={handleOptionSelect}
-            />
-          )}
-          {/* FORM FOUR = STEP THREE */}
-          {activeStep === "formFour" && (
-            <FormFour
-              stepThree={stepThree}
-              handleStepChange={handleStepChange}
-              handleOptionSelect={handleOptionSelect}
-            />
-          )}
-          {/* FORM FOUR = STEP THREE */}
-          {activeStep === "formFive" && (
-            <FormFive
-              stepThree={stepThree}
-              handleStepChange={handleStepChange}
-              handleOptionSelect={handleOptionSelect}
-            />
-          )}
-          {activeStep === "formSix" && (
-            <FormSix
-            stepThree={stepThree}
-            handleStepChange={handleStepChange}
-            handleOptionSelect={handleOptionSelect}
-            />
-          )}
-          {activeStep === "formSeven" && (
-            <FormSeven
-              stepThree={stepThree}
-              handleStepChange={handleStepChange}
-              handleOptionSelect={handleOptionSelect}
-            />
-          )}
-         
+          {activeStep === "formOne" && ( <FormOne helpSelect={helpSelect} handleStepChange={handleStepChange}/> )}
+          {activeStep === "formTwo" && (<FormTwo handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} /> )}
+          {activeStep === "formThree" && (<Commercial handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} /> )}
+          {/*------------------------------------- residential forms ------------------ */}
+          {activeStep === "formFour" && (<Residential handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect}/>)}
+          {activeStep === "formFive" && (<ResidentialFormOne handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} /> )}
 
+          {activeStep === "formSix" && ( <ResidentialFormTwo handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} />)}
+          {activeStep === "formSeven" && (<EnSuitForm handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect}/> )}
 
-          {/* check points */}
+          {/*---------------------- commercial forms ------------------ */}
+          {activeStep === "formEight" && (<CommercialFormOne handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} /> )}
+          {activeStep === "formNine" && ( <CommercialFormTwo handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} />)}
+          {activeStep === "formTen" && ( <CommercialFormThree handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect}/>)}
+          {/* How may Sq ft is? */}
+          {activeStep === "form11" && (
+            <CommercialFormFour
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+          {activeStep === "form12" && (
+            <CommercialFormFive
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+          {activeStep === "form13" && (
+            <CommercialFormSix
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+          {/*------------------------------------ check points --------------------------- */}
           {activeStep === "checkPointFormOne" && (
             <CheckPointFormOne
-              stepThree={stepThree}
               handleStepChange={handleStepChange}
               handleOptionSelect={handleOptionSelect}
             />
-          )} 
-        </section>
+          )}
 
+          {activeStep === "checkPointFormTwo" && (
+            <CheckPointFormTwo
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+
+          {activeStep === "checkPointFormThree" && (
+            <CheckPointFormThree
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+
+          {activeStep === "checkPointFormFour" && (
+            <CheckPointFormFour
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+
+          {activeStep === "checkPointFormFive" && (
+            <CheckPointFormFive
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+
+          {activeStep === "checkPointFormSix" && (
+            <CheckPointFormSix
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+
+          {activeStep === "checkPointFormSeven" && (
+            <CheckPointFormSeven
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+        </section>
 
         {/* FORM FIVE = STEP FOUR */}
         <section>{activeStep === "lastForm" && <ContactForm />}</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        {/* ------------ progress bar --------------- */}
-        <div className="italic flex items-center gap-4 sm:gap-10">
-          <div className="progress-count ">
-            <div>
-              <h4>
-                {/* {parseInt(activeStep) < 10 ? `0${activeStep}` : activeStep} */}
-                {formTags.indexOf(activeStep) + 1 < 10
-                  ? `0${formTags.indexOf(activeStep) + 1}`
-                  : formTags.indexOf(activeStep) + 1}
-              </h4>
-            </div>
-          </div>
-
-          <div className="progress-bar flex items-center">
-            <svg width="11" height="9" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="m10.407 4.5-2.555 4H3.148l-2.555-4 2.555-4h4.704l2.555 4Z"
-                fill="gold"
-                stroke="gold"
-                fillRule="evenodd"
-              ></path>
-            </svg>
-
-            {/* fill with color red when steps are clicked */}
-            <div className="progress-step  h-[2px] bg-gray-300 w-48 sm:w-[100%]]">
-              <div
-                className="active h-[2px]"
-                style={{ width: `${progressWidth}%`, backgroundColor: "gold" }}
-              ></div>
-            </div>
-
-            <svg width="11" height="9" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="m10.407 4.5-2.555 4H3.148l-2.555-4 2.555-4h4.704l2.555 4Z"
-                fill="#1D2145"
-                stroke="#EEEEF2"
-                fillRule="evenodd"
-                className=""
-              ></path>
-            </svg>
-          </div>
-
-          <div className="progress-total text-lg" style={{ opacity: 0.3 }}>
-            {" "}
-            <h4>{totalSteps}</h4>
-          </div>
-        </div>
+        {/* progress bar component*/}
       </section>
 
       {/* back button */}

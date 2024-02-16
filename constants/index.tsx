@@ -1,4 +1,3 @@
- 
 export const navLinks = [
   {
     label: "WORK",
@@ -17,7 +16,6 @@ export const navLinks = [
     url: "/contact",
   },
 ];
-
 
 export const socialLinks = [
   {
@@ -42,33 +40,6 @@ export const socialLinks = [
   },
 ];
 
-
-
-
-export const formData = [
-  {
-    tag: "default",
-  },
-  {
-    tag: "formOne",
-  },
-  {
-    tag: "formTwo",
-  },
-  {
-    tag: "formThree",
-  },
-  {
-    tag: "formFour",
-  },
-  {
-    tag: "formFive",
-  },
-  {
-    tag: "form",
-  },
-];
-
 // form 1 - how can we help
 export const helpSelect = [
   // DEFAULT
@@ -76,22 +47,12 @@ export const helpSelect = [
     id: 1,
     label: "START A PROJECT",
   },
-
-  {
-    id: 2,
-    label: "JOIN THE TEAM",
-  },
-
-  {
-    id: 3,
-    label: "DROP US A LINE",
-  },
 ];
 
 // form 2 - what type of project
 export const stepOne = [
-  // type of project
   {
+    title: "WHAT TYPE OF PROJECT?",
     id: 1,
     label: "COMMERCIAL",
   },
@@ -102,9 +63,10 @@ export const stepOne = [
   },
 ];
 
-//form3 commercial form 1
+//form3 main=> commercial form 1
 export const commercialForm = [
   {
+    title: "WHAT TYPE OF COMMERCIAL ?",
     id: 1,
     label: "Hotel ",
   },
@@ -124,10 +86,10 @@ export const commercialForm = [
   },
 ];
 
-//form4 residential form 1
+//form4 main=> residential form 1
 export const residentialForm = [
-  // budeget range option
   {
+    title: "WHAT TYPE OF REFURBISHMENT DO YOU NEED?",
     id: 1,
     label: "Full refurbishment ",
   },
@@ -147,9 +109,7 @@ export const residentialForm = [
   },
 ];
 
-//  FROM FORM 5 - 7 ARE RESIDENTIAL SECTION
-//form5-> residential subform-0ne ->Full/partialrefurbishment
-
+//  FROM FORM 5 - 7 ARE RESIDENTIAL SUB SECTION
 // form5
 export const residentialFormOne = [
   {
@@ -167,6 +127,7 @@ export const residentialFormOne = [
 // form6
 export const residentialFormTwo = [
   {
+    title: "HOW MANY BEDROOMS ARE THERE ?",
     label: "2 Bedrooms",
     id: 1,
   },
@@ -184,6 +145,7 @@ export const residentialFormTwo = [
   },
 ];
 
+// EN-SUIT FORM
 //form 7
 export const residentialFormThree = [
   {
@@ -209,7 +171,70 @@ export const residentialFormThree = [
 ];
 
 // --------------------------- COMMERCIAL FORM SECTION  cont'----------------
+//form-8 -> hotel
+export const commercialFormOne = [
+  {
+    title: "HOW MANY ROOMS ARE IN THE HOTEL ?",
+    id: 1,
+    label: "1-10",
+  },
+  {
+    title: "HOW MANY OFFICIES ARE IN THE OFFICE BLOCK ?",
+    id: 2,
+    label: "20-50",
+  },
+  {
+    title: "HOW MANY APARTMENTS ARE IN THE APARTMENTS BLOCK ?",
+    id: 3,
+    label: "50-100",
+  },
+  {
+    title: "HOW MANY SQUARE FT IS IT ?",
+    id: 4,
+    label: "100+",
+  },
+];
 
+//form-9 - form-12
+//commercial formOne - formThree all have the same options and title
+
+//form-13
+//commercial four - text field with a buttin next to it to update the state
+
+//form-14
+export const commercialFormFive = [
+  {
+    title: "HOW MANY STARS IS YOUR HOTEL ?",
+    id: 1,
+    label: "3",
+  },
+  {
+    id: 2,
+    label: "4",
+  },
+  {
+    id: 3,
+    label: "5",
+  },
+];
+
+//commercial form 2 and 3 have the same sub forms
+
+//form 16
+//commercial form seven has the commercial form six as a sub form
+export const commercialFormSix = [
+  {
+    title: "IS THIS A NEW FIT-OUT?",
+    id: 1,
+    label: "yes",
+  },
+  {
+    id: 2,
+    label: "no",
+  },
+];
+
+//--------------------------- CHECK POINT SECTION ----------------------------
 //todo: FIRST FORM CHECK POINT
 export const checkPointOne = [
   {
@@ -224,58 +249,142 @@ export const checkPointOne = [
   },
 ];
 
-// form 6->
-export const stepTwo = [
-  // budeget range option
+//todo: SECOND FORM CHECK POINT
+export const checkPointTwo = [
   {
+    title: "ARE ANY INTERIOR DESIGN SERVICES REQUIRED ?",
     id: 1,
-    label: "15k - 30k ",
+    label: "yes",
   },
 
   {
     id: 2,
-    label: "30k - 50k",
-  },
-
-  {
-    id: 3,
-    label: "50k - 75k",
-  },
-  {
-    id: 4,
-    label: "75k - 100k",
-  },
-
-  {
-    id: 5,
-    label: "100k",
+    label: "no",
   },
 ];
 
-// form four
-export const stepThree = [
-  // How did you hear about us
+//todo: THIRD FORM CHECK POINT
+export const checkPointThree = [
   {
+    title: "WILL PLANNING PERMISSION BE REQUIRED FOR ANY OF THE WORK ?",
     id: 1,
-    label: "AWWWARDS",
+    label: "yes",
   },
 
   {
     id: 2,
-    label: "FRIEND REFERRAL",
+    label: "no",
+  },
+];
+
+//todo: FOURTH FORM CHECK POINT
+export const checkPointFour = [
+  {
+    title: "WHEN WOULD YOU LIKE TO START ?",
+    id: 1,
+    label: "Asap",
+  },
+  {
+    id: 2,
+    label: " 4 weeks",
+  },
+  {
+    id: 3,
+    label: " 8 weeks",
+  },
+  {
+    id: 4,
+    label: " 12 weeks",
+  },
+  {
+    id: 5,
+    label: "within 1year",
+  },
+];
+
+//todo: FIFTH FORM CHECK POINT
+
+export const checkPointFive = [
+  // budeget range
+
+  {
+    title: "BUDGET RANGE",
+
+    id: 1,
+    label: "£25k-£50k",
+  },
+
+  {
+    id: 2,
+    label: "£50k-£100k",
   },
 
   {
     id: 3,
-    label: "WE DID A PROJECT",
+    label: "£100k-£200",
   },
   {
     id: 4,
-    label: "GOOGLE",
+    label: "£200k-£350k",
   },
 
   {
     id: 5,
-    label: "ARTICLE",
+    label: "£500k-£750k",
+  },
+
+  {
+    id: 6,
+    label: "£750k-£1M",
+  },
+
+  {
+    id: 7,
+    label: "£1M-£1.5M",
+  },
+
+  {
+    id: 8,
+    label: "£1.5M+",
   },
 ];
+
+//todo: SIX FORM CHECK POINT
+export const checkPointSix = [
+  {
+    title: "WHAT RANGE WOULD YOU LIKE YOUR WORK TO BE CARRIED OUT?",
+    id: 1,
+    label: "Low end",
+  },
+  {
+    id: 2,
+    label: "Medium",
+  },
+  {
+    id: 3,
+    label: "High",
+  },
+];
+
+//todo: SEVEN FORM CHECK POINT
+export const checkPointSeven = [
+  {
+    title: "WHERE DID YOU HEAR ABOUT LUXE TRANSFORMATIONS ?",
+    id: 1,
+    label: "Google",
+  },
+  {
+    id: 2,
+    label: "Social media",
+  },
+  {
+    id: 3,
+    label: "Referral from friend",
+  },
+  {
+    id: 4,
+    label: "Other",
+  },
+];
+
+// contact form should display last

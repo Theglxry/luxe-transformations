@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import { AOSInit } from "@/libs/Aos";
-
-
-
-
-// const inter = Inter({ subsets: ["latin"] });
+import ReduxProvider from "@/libs/state/reduxProvider";
 
 export const metadata: Metadata = {
-  title: "Luxe-Transformation",
+  title: "DEBUG-Luxe-Transformation",
   description: "luxe transformation landing page",
 };
 
@@ -21,11 +16,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`relative overflow-hidden h-screen text-white w-full md:p-2 font-MyFont`}>
-      <AOSInit />
-        <Header />
-       {children}
-   </body>
-   </html>
+      <body
+        className={`relative overflow-hidden h-screen text-white w-full md:p-2 font-MyFont`}
+      >
+        <ReduxProvider>
+          <AOSInit />
+          <Header />
+          {children}
+        </ReduxProvider>
+      </body>
+    </html>
   );
 }

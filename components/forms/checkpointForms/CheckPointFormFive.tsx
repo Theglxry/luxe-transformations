@@ -1,35 +1,26 @@
-import { residentialFormOne, residentialFormThree } from "@/constants";
-import { YellowButton } from "../button/YellowButton";
+import { checkPointFive } from "@/constants";
+import { FormProps } from "@/types";
+import { YellowButton } from "../../button/YellowButton";
 
-// Define the type for each item in helpSelectItems
-export interface HelpSelectItem {
-  id: number;
-  label: string;
-}
-
-interface FormOneProps {
-  stepThree: HelpSelectItem[];
-  handleStepChange: (step: string) => void;
-  handleOptionSelect: (option: string) => void;
-}
-
-const FormSeven = ({
-  stepThree,
+ 
+const CheckPointFormFive = ({
   handleStepChange,
   handleOptionSelect,
-}: FormOneProps) => {
+}: FormProps) => {
   return (
     <div className="flex flex-col gap-10 text-center" data-aos="fade-left">
-      <h1 className="bold text-4xl xl:text-7xl">HOW MANY EN-SUITS ?</h1>
+      <h1 className="bold text-4xl xl:text-7xl">
+    {checkPointFive[0].title}
+      </h1>
       {/* OPTIONS */}
       <div className="flex sm:flex-wrap flex-col sm:flex-row   sm:gap-10 justify-center items-center">
-        {residentialFormThree.map((item, index) => (
+        {checkPointFive.map((item, index) => (
           <div key={index} className="mb-4 relative">
             <div
               // type="button"
               className="contact-bg thin flex  items-center gap-2 text-lg xl:text-3xl   px-12 py-3 xl:py-6 text-white rounded-full relative"
               onClick={() => {
-                handleStepChange("checkPointFormOne");
+                handleStepChange("checkPointFormSix");
                 handleOptionSelect(item.label);
               }}
             >
@@ -37,7 +28,7 @@ const FormSeven = ({
                 <YellowButton />
               </span>
 
-              {item.id}
+              {item.label}
             </div>
           </div>
         ))}
@@ -46,4 +37,4 @@ const FormSeven = ({
   );
 };
 
-export default FormSeven;
+export default CheckPointFormFive;

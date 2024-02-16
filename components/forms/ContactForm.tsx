@@ -2,7 +2,6 @@ import React from "react";
 
 const ContactForm: React.FC = () => {
   return (
-
     <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-5 md:px-36">
       <div className="content w-full flex flex-col xl:flex-row gap-5 xl:gap-24">
         <div>
@@ -63,7 +62,6 @@ const ContactForm: React.FC = () => {
                 placeholder="Your message here...."
                 className="contact-bg w-full md:min-h-[200px] rounded-md px-6 py-3 text-base focus:outline-none"
               ></textarea>
-
               <button
                 type="submit"
                 className="regular bg-yellow-600 rounded-full w-[100px] h-[100px] md:w-[270px] md:h-[200px] flex items-center justify-center"

@@ -1,54 +1,36 @@
 import { commercialForm } from "@/constants";
-import { YellowButton } from "../button/YellowButton";
+import { YellowButton } from "../../button/YellowButton";
+import { FormProps } from "@/types";
 
-// Define the type for each item in helpSelectItems
-export interface HelpSelectItem {
-  id: number;
-  label: string;
-}
+const FormThree = ({ handleStepChange, handleOptionSelect }: FormProps) => {
+  const getNextForm = (index: number) => {
+    switch (index) {
+      case 0:
+        return "formEight";
+      case 1:
+        return "formNine";
+      case 2:
+        return "formTen";
+      case 3:
+        return "form11";
 
-interface FormOneProps {
-  stepTwo: HelpSelectItem[];
-  handleStepChange: (step: string) => void;
-  handleOptionSelect: (option: string) => void;
-}
-
-
-
-
-const FormThree = ({
-  stepTwo,
-  handleStepChange,
-  handleOptionSelect,
-}: FormOneProps) => {
-
-  // const getNextForm = (index: number) => {
-  //   switch (index) {
-  //     case 0:
-  //       return "formThree";
-  //     case 1:
-  //       return "formFour";
-  //     default:
-  //       return "";
-  //   }
-  // };
-
-
-
-
+      default:
+        return "";
+    }
+  };
 
   return (
     <div className="flex flex-col gap-10 text-center" data-aos="fade-left">
-      <h1 className="bold text-5xl xl:text-7xl"> COMMERCIAL </h1>
+      <h1 className="bold text-4xl xl:text-7xl">{commercialForm[0].title} </h1>
       {/* OPTIONS */}
       <div className="flex sm:flex-wrap flex-col sm:flex-row   sm:gap-10 justify-center items-center">
         {commercialForm.map((item, index) => (
           <div key={index} className="mb-4 relative">
             <div
-              // type="button"
               className="contact-bg thin flex  items-center gap-2 text-lg xl:text-3xl  px-12 py-3 xl:py-6 text-white rounded-full relative"
               onClick={() => {
-                handleStepChange("lastForm");
+                const nextForm = getNextForm(index);
+                handleStepChange(nextForm);
                 handleOptionSelect(item.label);
               }}
             >
@@ -61,6 +43,10 @@ const FormThree = ({
           </div>
         ))}
       </div>
+
+
+
+      
     </div>
   );
 };
