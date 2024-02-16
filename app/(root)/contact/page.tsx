@@ -14,17 +14,13 @@ import {
   Residential,
   ResidentialFormOne,
   ResidentialFormTwo,
-
   EnSuitForm,
-
   CommercialFormOne,
   CommercialFormTwo,
   CommercialFormThree,
   CommercialFormFour,
   CommercialFormFive,
   CommercialFormSix,
- 
-
   CheckPointFormOne,
   CheckPointFormTwo,
   CheckPointFormThree,
@@ -34,28 +30,18 @@ import {
   CheckPointFormSeven,
   ContactForm,
 } from "@/components/forms";
+import { useState } from "react";
 
 const page = () => {
-  //-------- using REDUX to manage state ------------
-  // Define types for activeStep and selectedOptions
-  const dispatch = useDispatch();
-  const activeStep = useSelector(
-    (state: RootState) => state.formReducer.activeStep
-  );
-  const selectedOptions = useSelector(
-    (state: RootState) => state.formReducer.selectedOptions
-  );
   const formTags = [
     "formOne",
     "formTwo",
     "formThree",
 
-
     "formFour",
     "formFive",
     "formSix",
     "formSeven",
-
 
     "formEight",
     "formNine",
@@ -74,7 +60,20 @@ const page = () => {
     "lastForm",
   ];
 
-  const handleOptionSelect = (option: string) => {
+  const dispatch = useDispatch();
+  const activeStep = useSelector(
+    (state: RootState) => state.formReducer.activeStep
+  );
+  const selectedOptions = useSelector(
+    (state: RootState) => state.formReducer.selectedOptions
+  );
+  const [questionsAndAnswers, setQuestionsAndAnswers] = useState<
+    { question: string; answer: string }[]
+  >([]);
+
+  const handleOptionSelect = (option: string, title: string) => {
+    const newQuestionAndAnswer = { question: title, answer: option };
+    setQuestionsAndAnswers([...questionsAndAnswers, newQuestionAndAnswer]);
     dispatch(setSelectedOptions([...selectedOptions, option]));
   };
 
@@ -82,35 +81,27 @@ const page = () => {
     dispatch(setActiveStep(step));
   };
 
-
   //-------------progress bar------------
-  const totalSteps = 5;
-  const progressWidth = (formTags.indexOf(activeStep) / (totalSteps - 1)) * 100;
-
-
-
-
+  // const totalSteps = 5;
+  // const progressWidth = (formTags.indexOf(activeStep) / (totalSteps - 1)) * 100;
 
   //----------------- prev button -------------
   const handleBackButtonClick = () => {
     const currentIndex = formTags.indexOf(activeStep);
-  
+
     // Navigate to the previous form if not at the beginning
     if (currentIndex > 0) {
       const prevStep = formTags[currentIndex - 1];
       dispatch(setActiveStep(prevStep));
-  
 
       // Remove the last selected option
       const updatedOptions = [...selectedOptions];
-      updatedOptions.pop(); 
+      updatedOptions.pop();
       dispatch(setSelectedOptions(updatedOptions));
     }
-  
 
     console.log(currentIndex);
   };
-  
 
   return (
     <section className="bg-black relative  overflow-hidden rounded-3xl w-full h-full  md:px-4 z-0">
@@ -131,20 +122,70 @@ const page = () => {
 
         <section className="w-full ">
           {/* FORM ONE = DEFALUT DISPLAY */}
-          {activeStep === "formOne" && ( <FormOne helpSelect={helpSelect} handleStepChange={handleStepChange}/> )}
-          {activeStep === "formTwo" && (<FormTwo handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} /> )}
-          {activeStep === "formThree" && (<Commercial handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} /> )}
+          {activeStep === "formOne" && (
+            <FormOne
+              helpSelect={helpSelect}
+              handleStepChange={handleStepChange}
+            />
+          )}
+          {activeStep === "formTwo" && (
+            <FormTwo
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+          {activeStep === "formThree" && (
+            <Commercial
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
           {/*------------------------------------- residential forms ------------------ */}
-          {activeStep === "formFour" && (<Residential handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect}/>)}
-          {activeStep === "formFive" && (<ResidentialFormOne handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} /> )}
+          {activeStep === "formFour" && (
+            <Residential
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+          {activeStep === "formFive" && (
+            <ResidentialFormOne
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
 
-          {activeStep === "formSix" && ( <ResidentialFormTwo handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} />)}
-          {activeStep === "formSeven" && (<EnSuitForm handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect}/> )}
+          {activeStep === "formSix" && (
+            <ResidentialFormTwo
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+          {activeStep === "formSeven" && (
+            <EnSuitForm
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
 
           {/*---------------------- commercial forms ------------------ */}
-          {activeStep === "formEight" && (<CommercialFormOne handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} /> )}
-          {activeStep === "formNine" && ( <CommercialFormTwo handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} />)}
-          {activeStep === "formTen" && ( <CommercialFormThree handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect}/>)}
+          {activeStep === "formEight" && (
+            <CommercialFormOne
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+          {activeStep === "formNine" && (
+            <CommercialFormTwo
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
+          {activeStep === "formTen" && (
+            <CommercialFormThree
+              handleStepChange={handleStepChange}
+              handleOptionSelect={handleOptionSelect}
+            />
+          )}
           {/* How may Sq ft is? */}
           {activeStep === "form11" && (
             <CommercialFormFour
@@ -215,7 +256,6 @@ const page = () => {
           )}
         </section>
 
-        {/* FORM FIVE = STEP FOUR */}
         <section>{activeStep === "lastForm" && <ContactForm />}</section>
 
         {/* progress bar component*/}
