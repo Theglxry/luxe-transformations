@@ -1,14 +1,8 @@
 import { stepOne } from "@/constants";
 import { YellowButton } from "../button/YellowButton";
 import { FormProps } from "@/types";
- 
 
-
-const FormTwo = ({
-  handleStepChange,
-  handleOptionSelect,
-}: FormProps) => {
-
+const FormTwo = ({ handleStepChange, handleOptionSelect }: FormProps) => {
   const getNextForm = (index: number) => {
     switch (index) {
       case 0:
@@ -20,14 +14,12 @@ const FormTwo = ({
     }
   };
 
-
   return (
     <div className="flex flex-col gap-10 text-center" data-aos="fade-left">
+      {/* question */}
       <h1 className="bold text-4xl xl:text-7xl">{stepOne[0].title}</h1>
-      {/* OPTIONS */}
+      {/* options */}
       <div className="flex sm:flex-wrap flex-col sm:flex-row   sm:gap-10 justify-center items-center">
-       
-       
         {stepOne.map((item, index) => (
           <div key={index} className="mb-4 relative">
             <div
@@ -43,13 +35,9 @@ const FormTwo = ({
               </span>
               {item.label}
             </div>
-      
           </div>
         ))}
       </div>
-
-
-
     </div>
   );
 };
