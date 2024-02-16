@@ -5,7 +5,7 @@ import { AOSInit } from "@/libs/Aos";
 import ReduxProvider from "@/libs/state/reduxProvider";
 
 export const metadata: Metadata = {
-  title: "DEBUG-Luxe-Transformation",
+  title: "Luxe-Transformation",
   description: "luxe transformation landing page",
 };
 

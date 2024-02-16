@@ -82,11 +82,16 @@ const page = () => {
     dispatch(setActiveStep(step));
   };
 
+
   //-------------progress bar------------
   const totalSteps = 5;
   const progressWidth = (formTags.indexOf(activeStep) / (totalSteps - 1)) * 100;
 
-  //----------------- prev button
+
+
+
+
+  //----------------- prev button -------------
   const handleBackButtonClick = () => {
     const currentIndex = formTags.indexOf(activeStep);
   
@@ -98,19 +103,13 @@ const page = () => {
 
       // Remove the last selected option
       const updatedOptions = [...selectedOptions];
-      updatedOptions.pop(); // Remove the last element
+      updatedOptions.pop(); 
       dispatch(setSelectedOptions(updatedOptions));
     }
   
+
     console.log(currentIndex);
   };
-  
-  
-
-
-
-
-
   
 
   return (

@@ -1,6 +1,10 @@
 import React from "react";
 
 const ContactForm: React.FC = () => {
+
+
+
+  
   return (
     <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-5 md:px-36">
       <div className="content w-full flex flex-col xl:flex-row gap-5 xl:gap-24">
