@@ -1,7 +1,12 @@
-// export interface HelpSelectItem {
-//     id: number;
-//     label: string;
-//   }
+ export interface FormData {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
+  company: string;
+  deadline: string;
+  message: string;
+}
   
 export  interface FormProps {
     // stepThree: HelpSelectItem[];
@@ -13,16 +18,4 @@ export  interface FormProps {
 
 
 
-
-
-
-// export interface HelpSelectItem {
-//   id: number;
-//   label: string;
-// }
-
-// interface FormOneProps {
-//   stepThree: HelpSelectItem[];
-//   handleStepChange: (step: string) => void;
-//   handleOptionSelect: (option: string) => void;
-// }
+ 
