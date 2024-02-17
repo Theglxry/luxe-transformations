@@ -16,16 +16,15 @@ const CommercialFormFour = ({
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    //form validation  
     if (textareaValue.trim() === "") {
       alert("Please fill in the textarea.");
       return;
     }
-    //form submission
+    const title = commercialFormOne[3].title;
     handleStepChange("form13");
-    handleOptionSelect(textareaValue);
+    handleOptionSelect(textareaValue, title);
   };
-
+  
 
 
   return (

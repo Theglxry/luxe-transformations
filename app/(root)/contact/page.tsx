@@ -73,20 +73,24 @@ const page = () => {
   >([]);
  
 
-  const handleOptionSelect = (option: string, title?: string) => {
-    // Check if title is undefined
-    if (title === undefined) {
-      // Handle the case where title is undefined, for example:
-      console.error("Title is undefined for option:", option);
-      return; // Optionally, return or throw an error
-    }
   
-    // Now, title is guaranteed to be a string
-    const newQuestionAndAnswer = { question: title, answer: option };
+
+  const handleOptionSelect = (option: string, title?: string) => {
+     if (title === undefined) {
+       console.error("Title is undefined for option:", option);
+      return;  
+    }
+     const newQuestionAndAnswer = { question: title, answer: option };
     setQuestionsAndAnswers([...questionsAndAnswers, newQuestionAndAnswer]);
     dispatch(setSelectedOptions([...selectedOptions, option]));
   };
   
+
+
+
+
+
+
   // console.log(questionsAndAnswers , activeStep);
   
   // const [handleOptionSelect] = useAppLogic()
