@@ -34,7 +34,7 @@ const CommercialFormFour = ({
           {commercialFormOne[3].title}
         </h1>
         {/* OPTIONS */}
-        <div className="flex sm:flex-wrap flex-col   sm:gap-10 justify-center items-center">
+        <div className="flex sm:flex-wrap flex-col  gap-4  sm:gap-10 justify-center items-center">
           <textarea placeholder="fill in a number...." className="contact-bg w-1/2 text-center md:min-h-[200px] rounded-md px-6 py-3 text-base focus:outline-none"
            value={textareaValue} onChange={handleTextareaChange} required> </textarea>
 
