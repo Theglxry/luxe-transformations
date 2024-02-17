@@ -66,6 +66,7 @@ export const stepOne = [
   },
 
   {
+    title: "WHAT TYPE OF PROJECT?",
     id: 2,
     label: "RESIDENTIAL",
   },
@@ -76,23 +77,25 @@ export const commercialForm = [
   {
     title: "WHAT TYPE OF COMMERCIAL ?",
     id: 1,
-    label: "Hotel ",
+    label: "Hotel",
   },
-
   {
+    title: "WHAT TYPE OF COMMERCIAL ?",
     id: 2,
     label: "Office block",
   },
-
   {
+    title: "WHAT TYPE OF COMMERCIAL ?",
     id: 3,
-    label: "Aparmtnet  block",
+    label: "Apartment block",
   },
   {
+    title: "WHAT TYPE OF COMMERCIAL ?",
     id: 4,
-    label: "Restaurant/Francise/Others",
+    label: "Restaurant/Franchise/Others",
   },
 ];
+
 
 //form4 main=> residential form 1
 export const residentialForm = [
@@ -103,15 +106,18 @@ export const residentialForm = [
   },
 
   {
+    title: "WHAT TYPE OF REFURBISHMENT DO YOU NEED?",
     id: 2,
     label: "Partial refurbishment",
   },
 
   {
+    title: "WHAT TYPE OF REFURBISHMENT DO YOU NEED?",
     id: 3,
     label: "Loft conversion",
   },
   {
+    title: "WHAT TYPE OF REFURBISHMENT DO YOU NEED?",
     id: 4,
     label: "Loft Extension",
   },
@@ -127,6 +133,7 @@ export const residentialFormOne = [
   },
 
   {
+    title: "WHAT KIND OF PROPERTY",
     id: 2,
     label: "House",
   },
@@ -140,14 +147,17 @@ export const residentialFormTwo = [
     id: 1,
   },
   {
+    title: "HOW MANY BEDROOMS ARE THERE ?",
     label: "3 Bedrooms",
     id: 2,
   },
   {
+    title: "HOW MANY BEDROOMS ARE THERE ?",
     label: "4 Bedrooms",
     id: 3,
   },
   {
+    title: "HOW MANY BEDROOMS ARE THERE ?",
     label: "5 Bedrooms",
     id: 4,
   },
@@ -162,18 +172,22 @@ export const residentialFormThree = [
     id: 1,
   },
   {
+    title:"HOW MANY EN-SUITS ?",
     label: "2",
     id: 2,
   },
   {
+    title:"HOW MANY EN-SUITS ?",
     label: "3",
     id: 3,
   },
   {
+    title:"HOW MANY EN-SUITS ?",
     label: "4",
     id: 4,
   },
   {
+    title:"HOW MANY EN-SUITS ?",
     label: "5",
     id: 5,
   },
@@ -218,10 +232,12 @@ export const commercialFormFive = [
     label: "3",
   },
   {
+    title: "HOW MANY STARS IS YOUR HOTEL ?",
     id: 2,
     label: "4",
   },
   {
+    title: "HOW MANY STARS IS YOUR HOTEL ?",
     id: 3,
     label: "5",
   },
@@ -238,6 +254,7 @@ export const commercialFormSix = [
     label: "yes",
   },
   {
+    title: "IS THIS A NEW FIT-OUT?",
     id: 2,
     label: "no",
   },
@@ -253,6 +270,7 @@ export const checkPointOne = [
   },
 
   {
+    title: "ARE ARCHITECTURE SERVICES REQUIRED ?",
     id: 2,
     label: "no",
   },
@@ -267,6 +285,7 @@ export const checkPointTwo = [
   },
 
   {
+    title: "ARE ARCHITECTURE SERVICES REQUIRED ?",
     id: 2,
     label: "no",
   },
@@ -281,6 +300,7 @@ export const checkPointThree = [
   },
 
   {
+    title: "ARE ARCHITECTURE SERVICES REQUIRED ?",
     id: 2,
     label: "no",
   },
@@ -294,18 +314,22 @@ export const checkPointFour = [
     label: "Asap",
   },
   {
+    title: "ARE ARCHITECTURE SERVICES REQUIRED ?",
     id: 2,
     label: " 4 weeks",
   },
   {
+    title: "ARE ARCHITECTURE SERVICES REQUIRED ?",
     id: 3,
     label: " 8 weeks",
   },
   {
+    title: "ARE ARCHITECTURE SERVICES REQUIRED ?",
     id: 4,
     label: " 12 weeks",
   },
   {
+    title: "ARE ARCHITECTURE SERVICES REQUIRED ?",
     id: 5,
     label: "within 1year",
   },
@@ -324,35 +348,42 @@ export const checkPointFive = [
   },
 
   {
+    title: "BUDGET RANGE",
     id: 2,
     label: "£50k-£100k",
   },
 
   {
+    title: "BUDGET RANGE",
     id: 3,
     label: "£100k-£200",
   },
   {
+    title: "BUDGET RANGE",
     id: 4,
     label: "£200k-£350k",
   },
 
   {
+    title: "BUDGET RANGE",
     id: 5,
     label: "£500k-£750k",
   },
 
   {
+    title: "BUDGET RANGE",
     id: 6,
     label: "£750k-£1M",
   },
 
   {
+    title: "BUDGET RANGE",
     id: 7,
     label: "£1M-£1.5M",
   },
 
   {
+    title: "BUDGET RANGE",
     id: 8,
     label: "£1.5M+",
   },
@@ -366,10 +397,12 @@ export const checkPointSix = [
     label: "Low end",
   },
   {
+    title: "WHAT RANGE WOULD YOU LIKE YOUR WORK TO BE CARRIED OUT?",
     id: 2,
     label: "Medium",
   },
   {
+    title: "WHAT RANGE WOULD YOU LIKE YOUR WORK TO BE CARRIED OUT?",
     id: 3,
     label: "High",
   },
@@ -383,14 +416,17 @@ export const checkPointSeven = [
     label: "Google",
   },
   {
+    title: "WHERE DID YOU HEAR ABOUT LUXE TRANSFORMATIONS ?",
     id: 2,
     label: "Social media",
   },
   {
+    title: "WHERE DID YOU HEAR ABOUT LUXE TRANSFORMATIONS ?",
     id: 3,
     label: "Referral from friend",
   },
   {
+    title: "WHERE DID YOU HEAR ABOUT LUXE TRANSFORMATIONS ?",
     id: 4,
     label: "Other",
   },

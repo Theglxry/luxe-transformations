@@ -92,10 +92,9 @@ const page = () => {
 
     dispatch(setSelectedOptions([...selectedOptions, option]));
   };
+console.log(questionsAndAnswers);
 
-  // console.log(questionsAndAnswers);
-
-
+  
 
   const handleStepChange = (step: string) => {
     dispatch(setActiveStep(step));

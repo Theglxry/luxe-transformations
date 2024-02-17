@@ -33,7 +33,6 @@ const FormThree = ({ handleStepChange, handleOptionSelect }: FormProps) => {
                 handleStepChange(nextForm);
                 // handleOptionSelect(item.label, item.title);
                 handleOptionSelect(item.label, item.title || "");  
-
               }}
             >
               <span>
