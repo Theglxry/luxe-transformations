@@ -60,7 +60,7 @@ const page = () => {
     "lastForm",
   ];
 
-  
+
   const dispatch = useDispatch();
   const activeStep = useSelector(
     (state: RootState) => state.formReducer.activeStep
@@ -277,7 +277,7 @@ const page = () => {
             <Image
               src="/icons/arrow-hex-1.svg"
               alt="Arrow icon with hexagon tip"
-              className="w-6 h-3  sm:w-[30px] sm:h-[30px]"
+              className="w-6 h-6  sm:w-[30px] sm:h-[30px]"
               width={30}
               height={30}
             />
