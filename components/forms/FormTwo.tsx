@@ -26,7 +26,7 @@ const FormTwo = ({ handleStepChange, handleOptionSelect }: FormProps) => {
                 const nextForm = getNextForm(index);
                 handleStepChange(nextForm);
                 handleOptionSelect(item.label, item.title || "");  
-
+                
               }}
             >
               <span>

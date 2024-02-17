@@ -3,11 +3,14 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 interface StepState {
   activeStep: string; 
   selectedOptions: string[];  
+  questionsAndAnswers:{ question: string, answer: string }[], 
+  
 }
 
 const initialState: StepState = {
   activeStep: "formOne",  
-  selectedOptions: [],    
+  selectedOptions: [],   
+  questionsAndAnswers:[], 
 };
 
 const formSlice = createSlice({
@@ -20,8 +23,12 @@ const formSlice = createSlice({
     setSelectedOptions(state, action: PayloadAction<string[]>) {
       state.selectedOptions = action.payload; 
     },
+
+    setQuestionsAndAnswers(state, action: PayloadAction< { question: string; answer: string }[]> ) {
+      state.questionsAndAnswers = action.payload; 
+    },
   },
 });
 
-export const { setActiveStep, setSelectedOptions } = formSlice.actions;
+export const { setActiveStep, setSelectedOptions, setQuestionsAndAnswers } = formSlice.actions;
 export default formSlice.reducer;

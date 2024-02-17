@@ -1,13 +1,27 @@
 import { FormData } from "@/types";
 import axios from "axios";
 import { useState } from "react";
+
+import useAppLogic from "./useAppLogic";
+import { useSelector } from "react-redux";
+import { RootState } from "@/libs/state/store";
 // import useAppLogic from "./useAppLogic";
 
 const useAxios = (): [
+  
   FormData,
   (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
   (e: React.FormEvent<HTMLFormElement>) => void
 ] => {
+
+  const questionsAndAnswers = useSelector(
+    (state: RootState) => state.formReducer.questionsAndAnswers
+  );
+
+
+
+
+
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -27,8 +41,10 @@ const useAxios = (): [
       ...formData,
       [name]: value,
     });
-    console.log(formData);
+    // console.log(formData);
   };
+
+ 
 
  
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -42,20 +58,20 @@ const useAxios = (): [
       company: formData.company,
       deadline: formData.deadline,
       message: formData.message,
-    //   pass in the array of questions and answers from the handleclick
-    //   question:  ,
+      question: questionsAndAnswers,
+
     };
 
-    console.log("Combined data:", data);
+    console.log("outside", questionsAndAnswers, data);
 
-    axios
-      .post("https://luxe-transformations-be.vercel.app/api/v1/contact", data)
-      .then((response) => {
-        console.log("Submission successful");
-      })
-      .catch((error) => {
-        console.error("Error submitting form:", error);
-      });
+    // axios
+    //   .post("https://luxe-transformations-be.vercel.app/api/v1/contact", data)
+    //   .then((response) => {
+    //     console.log("Submission successful");
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error submitting form:", error);
+    //   });
   };
 
   return [formData, handleInputChange, handleSubmit];

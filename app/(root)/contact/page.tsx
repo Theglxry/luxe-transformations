@@ -2,6 +2,7 @@
 import {
   setActiveStep,
   setSelectedOptions,
+  setQuestionsAndAnswers,
 } from "@/libs/state/features/FormSlice";
 import { helpSelect } from "@/constants";
 import { useDispatch, useSelector } from "react-redux";
@@ -60,17 +61,23 @@ const page = () => {
     "lastForm",
   ];
 
-
   const dispatch = useDispatch();
   const activeStep = useSelector(
     (state: RootState) => state.formReducer.activeStep
   );
+
   const selectedOptions = useSelector(
     (state: RootState) => state.formReducer.selectedOptions
   );
-  const [questionsAndAnswers, setQuestionsAndAnswers] = useState<
-    { question: string; answer: string }[]
-  >([]);
+
+  const questionsAndAnswers = useSelector(
+    (state: RootState) => state.formReducer.questionsAndAnswers
+  );
+
+  // const [questionsAndAnswers, setQuestionsAndAnswers] = useState<
+  //   { question: string; answer: string }[]
+  // >([]);
+  // setQuestionsAndAnswers([...questionsAndAnswers, newQuestionAndAnswer]);
 
   const handleOptionSelect = (option: string, title?: string) => {
     if (title === undefined) {
@@ -78,17 +85,27 @@ const page = () => {
       return;
     }
     const newQuestionAndAnswer = { question: title, answer: option };
-    setQuestionsAndAnswers([...questionsAndAnswers, newQuestionAndAnswer]);
+
+    dispatch(
+      setQuestionsAndAnswers([...questionsAndAnswers, newQuestionAndAnswer])
+    );
+
     dispatch(setSelectedOptions([...selectedOptions, option]));
   };
 
-  // console.log(questionsAndAnswers , activeStep);
+  // console.log(questionsAndAnswers);
+
 
 
   const handleStepChange = (step: string) => {
     dispatch(setActiveStep(step));
   };
 
+
+
+
+
+  
   //----------------- prev button -------------
   const handleBackButtonClick = () => {
     const currentIndex = formTags.indexOf(activeStep);
@@ -106,6 +123,8 @@ const page = () => {
 
     console.log(currentIndex);
   };
+
+
 
   return (
     <section className="bg-black relative  overflow-hidden rounded-3xl w-full h-full  md:px-4 z-0">

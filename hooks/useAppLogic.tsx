@@ -64,7 +64,7 @@ const useAppLogic = () => {
     dispatch(setSelectedOptions([...selectedOptions, option]));
   };
 
-  console.log(questionsAndAnswers, activeStep);
+  // console.log(questionsAndAnswers, activeStep);
 
   const handleStepChange = (step: string) => {
     dispatch(setActiveStep(step));
@@ -88,7 +88,7 @@ const useAppLogic = () => {
       dispatch(setSelectedOptions(updatedOptions));
     }
 
-    console.log(currentIndex);
+    // console.log(currentIndex);
   };
 
   return [
