@@ -47,6 +47,14 @@ export const helpSelect = [
     id: 1,
     label: "START A PROJECT",
   },
+  {
+    id: 1,
+    label: "JOIN THE TEAM",
+  },
+  {
+    id: 1,
+    label: "LEAVE A NOTE",
+  },
 ];
 
 // form 2 - what type of project
