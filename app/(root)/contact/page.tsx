@@ -31,7 +31,6 @@ import {
   ContactForm,
 } from "@/components/forms";
 import { useState } from "react";
-import useAppLogic from "@/hooks/useAppLogic";
 
 const page = () => {
   const formTags = [
@@ -71,35 +70,23 @@ const page = () => {
   const [questionsAndAnswers, setQuestionsAndAnswers] = useState<
     { question: string; answer: string }[]
   >([]);
- 
-
-  
 
   const handleOptionSelect = (option: string, title?: string) => {
-     if (title === undefined) {
-       console.error("Title is undefined for option:", option);
-      return;  
+    if (title === undefined) {
+      console.error("Title is undefined for option:", option);
+      return;
     }
-     const newQuestionAndAnswer = { question: title, answer: option };
+    const newQuestionAndAnswer = { question: title, answer: option };
     setQuestionsAndAnswers([...questionsAndAnswers, newQuestionAndAnswer]);
     dispatch(setSelectedOptions([...selectedOptions, option]));
   };
-  
-
-
-
-
-
 
   // console.log(questionsAndAnswers , activeStep);
-  
-  // const [handleOptionSelect] = useAppLogic()
+
 
   const handleStepChange = (step: string) => {
     dispatch(setActiveStep(step));
   };
-
- 
 
   //----------------- prev button -------------
   const handleBackButtonClick = () => {
@@ -118,11 +105,6 @@ const page = () => {
 
     console.log(currentIndex);
   };
-
-
-
-
-
 
   return (
     <section className="bg-black relative  overflow-hidden rounded-3xl w-full h-full  md:px-4 z-0">

@@ -135,8 +135,6 @@
 .btn:hover, .btn:focus, .btn:active {
   -webkit-transform: scale(1.1); 
   transform: scale(1.1);   
-  /* transition: background-size 0.5s; */
-  /* background-size: 120%;  */
   -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }

@@ -17,7 +17,7 @@ const CommercialFormThree = ({
         {commercialFormOne.map((item, index) => (
           <div key={index} className="btn mb-4 relative">
             <div
-              className="contact-bg thin flex  items-center gap-2 text-lg xl:text-3xl px-12 py-3 xl:py-6 text-white rounded-full relative"
+              className="contact-bg hover:bg-gray-800 thin flex  items-center gap-2 text-lg xl:text-3xl px-12 py-3 xl:py-6 text-white rounded-full relative"
               onClick={() => {
                 handleStepChange("formSeven");
                 // handleOptionSelect(item.label , item.title);

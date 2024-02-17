@@ -25,7 +25,7 @@ const FormOne = ({
         {helpSelect.map((item, index) => (
           <div key={index} className="btn mb-4 text-center relative">
             <div
-              className="contact-bg light text-center  cursor-pointer flex items-center gap-2 text-lg xl:text-3xl px-12 py-3 xl:py-6 text-white rounded-full relative"
+              className="contact-bg hover:bg-gray-800 light text-center  cursor-pointer flex items-center gap-2 text-lg xl:text-3xl px-12 py-3 xl:py-6 text-white rounded-full relative"
               onClick={() => {
                 handleStepChange("formTwo");
               }}
