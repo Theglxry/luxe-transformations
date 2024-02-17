@@ -1,11 +1,12 @@
 import { FormData } from "@/types";
 import axios from "axios";
 import { useState } from "react";
-
-
+// import useAppLogic from "./useAppLogic";
 
 const useAxios = (): [
-  FormData,(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,(e: React.FormEvent<HTMLFormElement>) => void
+  FormData,
+  (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
+  (e: React.FormEvent<HTMLFormElement>) => void
 ] => {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
@@ -27,10 +28,9 @@ const useAxios = (): [
       [name]: value,
     });
     console.log(formData);
-    
   };
 
-  
+ 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     //data for submission
@@ -42,11 +42,11 @@ const useAxios = (): [
       company: formData.company,
       deadline: formData.deadline,
       message: formData.message,
-      questions:  
-
-
+    //   pass in the array of questions and answers from the handleclick
+    //   question:  ,
     };
 
+    console.log("Combined data:", data);
 
     axios
       .post("https://luxe-transformations-be.vercel.app/api/v1/contact", data)

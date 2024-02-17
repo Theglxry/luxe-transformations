@@ -78,7 +78,7 @@ export default function Home() {
       </section>
 
       {/* pencil */}
-      <Link href={"contact"}>
+      <Link href={"contact"} className="">
         <div className="bg-yellow-600 absolute  top-[80%] lg:top-[85%] right-2 sm:right-10  rounded-full  z-10 ">
           <Image 
         //   src="/images/svg/pencil.svg" 

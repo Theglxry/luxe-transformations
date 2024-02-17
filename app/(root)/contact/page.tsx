@@ -31,6 +31,7 @@ import {
   ContactForm,
 } from "@/components/forms";
 import { useState } from "react";
+import useAppLogic from "@/hooks/useAppLogic";
 
 const page = () => {
   const formTags = [
@@ -70,20 +71,31 @@ const page = () => {
   const [questionsAndAnswers, setQuestionsAndAnswers] = useState<
     { question: string; answer: string }[]
   >([]);
+ 
 
-  const handleOptionSelect = (option: string, title: string) => {
+  const handleOptionSelect = (option: string, title?: string) => {
+    // Check if title is undefined
+    if (title === undefined) {
+      // Handle the case where title is undefined, for example:
+      console.error("Title is undefined for option:", option);
+      return; // Optionally, return or throw an error
+    }
+  
+    // Now, title is guaranteed to be a string
     const newQuestionAndAnswer = { question: title, answer: option };
     setQuestionsAndAnswers([...questionsAndAnswers, newQuestionAndAnswer]);
     dispatch(setSelectedOptions([...selectedOptions, option]));
   };
+  
+  // console.log(questionsAndAnswers , activeStep);
+  
+  // const [handleOptionSelect] = useAppLogic()
 
   const handleStepChange = (step: string) => {
     dispatch(setActiveStep(step));
   };
 
-  //-------------progress bar------------
-  // const totalSteps = 5;
-  // const progressWidth = (formTags.indexOf(activeStep) / (totalSteps - 1)) * 100;
+ 
 
   //----------------- prev button -------------
   const handleBackButtonClick = () => {
@@ -103,11 +115,16 @@ const page = () => {
     console.log(currentIndex);
   };
 
+
+
+
+
+
   return (
     <section className="bg-black relative  overflow-hidden rounded-3xl w-full h-full  md:px-4 z-0">
-      <section className="w-full h-full  pt-32  sm:pt-10 xl:px-40 flex flex-col items-center justify-between">
+      <section className="w-full h-full  mt-[12rem] sm:mt-0  sm:pt-10 xl:px-40 flex flex-col items-center justify-between">
         {/* selected options */}
-        <div className="flex overflow-x-hidden sm:flex-wrap items-center  gap-5">
+        <div className="hidden  sm:flex flex-wrap items-center  gap-5">
           {selectedOptions.map((option, index) => (
             <button
               type="button"

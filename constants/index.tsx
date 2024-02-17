@@ -149,6 +149,7 @@ export const residentialFormTwo = [
 //form 7
 export const residentialFormThree = [
   {
+    title:"HOW MANY EN-SUITS ?",
     label: "1",
     id: 1,
   },

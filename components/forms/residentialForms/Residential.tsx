@@ -35,13 +35,14 @@ const FormFour = ({
     </h1>
     <div className="flex sm:flex-wrap flex-col sm:flex-row   sm:gap-10 justify-center items-center">
       {residentialForm.map((item, index) => (
-        <div key={index} className="mb-4 relative">
+        <div key={index} className="btn mb-4 relative">
           <div
             className="contact-bg thin flex  items-center gap-2 text-lg xl:text-3xl   px-12 py-3 xl:py-6 text-white rounded-full relative"
             onClick={() => {
               const nextForm = getNextForm(index);
                 handleStepChange(nextForm);
-              handleOptionSelect(item.label);
+               handleOptionSelect(item.label, item.title || "");  
+
             }}
           >
             <span>
