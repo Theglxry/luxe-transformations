@@ -32,7 +32,6 @@ import {
   ContactForm,
 } from "@/components/forms";
 import { useState } from "react";
-import useAxios from "@/hooks/useAxios";
 
 const page = () => {
   const [visitedSteps, setVisitedSteps] = useState<string[]>([]);
@@ -63,7 +62,6 @@ const page = () => {
 
     dispatch(setSelectedOptions([...selectedOptions, option]));
   };
-  // console.log(questionsAndAnswers);
 
   const handleStepChange = (step: string) => {
     setVisitedSteps([...visitedSteps, step]);
@@ -94,7 +92,7 @@ const page = () => {
       <section className="relative bg-black w-full h-full  overflow-hidden  rounded-3xl   sm:pt-10 xl:px-40 flex flex-col items-center justify-between  mx-auto my-auto">
         {/* selected options */}{" "}
         {/* <div className="hidden  sm:flex flex-wrap items-center gap-5 sm:mt-16 md:mt-0 border-2 border-red-500"> */}
-        <div className="scroll mt-24 md:mt-10 w-[350px] md:w-4/5  flex md:flex-wrap items-center justify-center gap-5 z-50  overflow-x-auto cursor-grab md:cursor-pointer">
+        <div className="scroll mt-24 md:mt-0 w-[350px] md:w-4/5  flex md:flex-wrap items-center justify-center gap-5 z-50  overflow-x-auto cursor-grab md:cursor-pointer">
           {selectedOptions.map((option, index) => (
             <button
               type="button"
@@ -106,8 +104,9 @@ const page = () => {
             </button>
           ))}
         </div>{" "}
-        {/* <section className=" w-full h-full  mt-[12rem] sm:mt-0  sm:pt-10 xl:px-40 flex flex-col items-center justify-between z-50"> */}
-        <section className="w-full sm:w-4/5  sm:h-3/6 absolute top-[60%] sm:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2    flex flex-col items-center justify-between ">
+
+
+        <section className="w-full sm:w-4/5  sm:h-3/6 absolute top-[55%] sm:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-between ">
           <section className="w-full h-full flex flex-col items-center justify-center">
             {activeStep === "formOne" && (
               <FormOne
@@ -267,7 +266,6 @@ const page = () => {
           </div>
         </div>
       </section>
- 
     </>
   );
 };

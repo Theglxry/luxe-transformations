@@ -18,7 +18,7 @@ const FormOne = ({
    }: FormOneProps) => {
   return (
     <div className="flex flex-col gap-10 text-center">
-      <h1 className="bold text-2xl sm:text-4xl xl:text-7xl" data-aos="fade-up-right">
+      <h1 className="bold text-4xl xl:text-7xl" data-aos="fade-up-right">
         HOW CAN WE HELP?{" "}
       </h1>
       <div className="flex sm:flex-wrap flex-col sm:flex-row sm:gap-10 justify-center items-center">
