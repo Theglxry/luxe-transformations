@@ -9,7 +9,7 @@ const CheckPointFormSeven = ({
 }: FormProps) => {
   return (
     <div className="flex flex-col gap-10 text-center" data-aos="fade-left">
-      <h1 className="bold text-xl sm:text-4xl xl:text-7xl">
+      <h1 className="bold text-4xl xl:text-7xl">
       WHERE DID YOU HEAR ABOUT LUXE TRANSFORMATIONS ?
       </h1>
       {/* OPTIONS */}

@@ -21,7 +21,7 @@ const FormOne = ({
       <h1 className="bold text-4xl xl:text-7xl" data-aos="fade-up-right">
         HOW CAN WE HELP?{" "}
       </h1>
-      <div className="flex sm:flex-wrap flex-col sm:flex-row sm:gap-10 justify-center items-center">
+      <div className="flex flex-wrap flex-col sm:flex-row sm:gap-10 justify-center items-center">
         {helpSelect.map((item, index) => (
           <div key={index} className="btn mb-4 text-center relative">
             <div
