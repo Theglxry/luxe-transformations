@@ -4,16 +4,18 @@ import {
 import { YellowButton } from "../../button/YellowButton";
 import { FormProps } from "@/types";
 
+
+
 const CommercialFormFive = ({
   handleStepChange,
   handleOptionSelect,
 }: FormProps) => {
   return (
     <div className="flex flex-col gap-10 text-center" data-aos="fade-left">
-      <h1 className="bold text-2xl sm:text-4xl xl:text-7xl">
+      <h1 className="bold text-4xl xl:text-7xl">
         {commercialFormFive[0].title}
       </h1>
-      <div className="flex flex-wrap flex-row   sm:gap-10 justify-center items-center">
+      <div className="flex flex-wrap flex-row gap-5 sm:gap-10 justify-center items-center">
         {commercialFormFive.map((item, index) => (
           <div key={index} className="btn mb-4 relative">
             <div
@@ -33,6 +35,10 @@ const CommercialFormFive = ({
         ))}
       </div>
     </div>
+
+
+
+
 
     // <div className="flex flex-col gap-10 text-center" data-aos="fade-left">
     //   <h1 className="bold  text-2xl sm:text-4xl xl:text-7xl">
