@@ -92,7 +92,7 @@ const page = () => {
       <section className="relative bg-black w-full h-full  overflow-hidden  rounded-3xl   sm:pt-10 xl:px-40 flex flex-col items-center justify-between  mx-auto my-auto">
         {/* selected options */}{" "}
         {/* <div className="hidden  sm:flex flex-wrap items-center gap-5 sm:mt-16 md:mt-0 border-2 border-red-500"> */}
-        <div className="scroll mt-24 md:mt-0 w-[350px] md:w-4/5  flex md:flex-wrap items-center justify-center gap-5 z-50  overflow-x-auto cursor-grab md:cursor-pointer">
+        <div className="scroll mt-24 md:mt-0 w-[350px] md:w-4/5  flex md:flex-wrap items-center justify-center gap-5 z-0  overflow-x-auto cursor-grab md:cursor-pointer">
           {selectedOptions.map((option, index) => (
             <button
               type="button"
