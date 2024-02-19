@@ -129,8 +129,8 @@
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .btn:hover, .btn:focus, .btn:active {
   -webkit-transform: scale(1.1); 
@@ -140,6 +140,22 @@
 }
 
 
- 
-
-
+@media (max-width:768px){
+  .scroll {
+    margin: 4px, 4px;
+    padding: 4px;
+    /* background-color: #08c708; */
+    /* border-bottom: 1px solid rgb(70, 66, 66); */
+    /* width: 500px;  */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    /* scrollbar-color: rgb(245, 237, 237); */
+    scrollbar-arrow-color: aquamarine;
+  }
+  
+  .scroll:hover {
+  /* scrollbar-width: 0; */
+  scrollbar-highlight-color: aqua;
+  }
+} 

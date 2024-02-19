@@ -9,10 +9,8 @@ const useAxios = (): [
   (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
   () => Promise<void> // Change return type to a function that handles form submission
 ] => {
-  const questionsAndAnswers = useSelector(
-    (state: RootState) => state.formReducer.questionsAndAnswers
-  );
-
+  const questionsAndAnswers = useSelector((state: RootState) => state.formReducer.questionsAndAnswers);
+  
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -48,24 +46,10 @@ const useAxios = (): [
     console.log("outside", data);
 
     try {
-      const response = await axios.post(
-        "https://luxe-transformations-be.vercel.app/api/v1/contact",
-        data
-      );
+      const response = await axios.post("https://luxe-transformations-be.vercel.app/api/v1/contact", data);
       console.log("Submission successful");
       // Navigate to success page
       window.location.href = "/success";
-
-      // Clear form fields
-      setFormData({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        company: "",
-        deadline: "",
-        message: "",
-      });
     } catch (error) {
       console.error("Error submitting form:", error);
     }
@@ -75,3 +59,4 @@ const useAxios = (): [
 };
 
 export default useAxios;
+

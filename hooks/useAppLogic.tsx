@@ -1,103 +1,97 @@
-import {
+  
+  
+  import {
   setActiveStep,
   setSelectedOptions,
+  setQuestionsAndAnswers,
 } from "@/libs/state/features/FormSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { helpSelect } from "@/constants";
 import { RootState } from "@/libs/state/store";
 import { useState } from "react";
 
-const useAppLogic = () => {
-  const formTags = [
-    "formOne",
-    "formTwo",
-    "formThree",
 
-    "formFour",
-    "formFive",
-    "formSix",
-    "formSeven",
 
-    "formEight",
-    "formNine",
-    "formTen",
-    "form11",
-    "form12",
-    "form13",
 
-    "checkPointFormOne",
-    "checkPointFormThree",
-    "checkPointFormFour",
-    "checkPointFormFive",
-    "checkPointFormSix",
-    "checkPointFormSeven",
 
-    "lastForm",
-  ];
+
+ const useAppLogic = () => {
+  const [visitedSteps, setVisitedSteps] = useState<string[]>([]);  
+ 
+
   const dispatch = useDispatch();
   const activeStep = useSelector(
     (state: RootState) => state.formReducer.activeStep
   );
+
   const selectedOptions = useSelector(
     (state: RootState) => state.formReducer.selectedOptions
   );
-  const [questionsAndAnswers, setQuestionsAndAnswers] = useState<
-    { question: string; answer: string }[]
-  >([]);
 
-  // const handleOptionSelect = (option: string, title: string) => {
-  //   const newQuestionAndAnswer = { question: title, answer: option };
-  //   setQuestionsAndAnswers([...questionsAndAnswers, newQuestionAndAnswer]);
-  //   dispatch(setSelectedOptions([...selectedOptions, option]));
-  // };
+  const questionsAndAnswers = useSelector(
+    (state: RootState) => state.formReducer.questionsAndAnswers
+  );
+
+ 
+
 
   const handleOptionSelect = (option: string, title?: string) => {
-    // Check if title is undefined
     if (title === undefined) {
-      // Handle the case where title is undefined, for example:
       console.error("Title is undefined for option:", option);
-      return; // Optionally, return or throw an error
+      return;
     }
-
-    // Now, title is guaranteed to be a string
     const newQuestionAndAnswer = { question: title, answer: option };
-    setQuestionsAndAnswers([...questionsAndAnswers, newQuestionAndAnswer]);
+
+    dispatch(
+      setQuestionsAndAnswers([...questionsAndAnswers, newQuestionAndAnswer])
+    );
+
     dispatch(setSelectedOptions([...selectedOptions, option]));
   };
+  // console.log(questionsAndAnswers);
 
-  // console.log(questionsAndAnswers, activeStep);
+
 
   const handleStepChange = (step: string) => {
+    setVisitedSteps([...visitedSteps, step]);
     dispatch(setActiveStep(step));
   };
 
-  //-------------progress bar------------
-  // const totalSteps = 5;
-  // const progressWidth = (formTags.indexOf(activeStep) / (totalSteps - 1)) * 100;
 
+
+  //----------------- prev button -------------
   const handleBackButtonClick = () => {
-    const currentIndex = formTags.indexOf(activeStep);
+    const visitedIndex = visitedSteps.indexOf(activeStep);
 
-    // Navigate to the previous form if not at the beginning
-    if (currentIndex > 0) {
-      const prevStep = formTags[currentIndex - 1];
+    if (visitedIndex > 0) {
+      const prevStep = visitedSteps[visitedIndex - 1];
       dispatch(setActiveStep(prevStep));
 
-      // Remove the last selected option
+      const updatedVisitedSteps = visitedSteps.slice(0, visitedIndex);
+      setVisitedSteps(updatedVisitedSteps);
+
       const updatedOptions = [...selectedOptions];
       updatedOptions.pop();
       dispatch(setSelectedOptions(updatedOptions));
     }
-
-    // console.log(currentIndex);
   };
 
-  return [
-    selectedOptions,
-    questionsAndAnswers,
-    handleOptionSelect,
-    handleStepChange,
-    handleBackButtonClick,
-  ];
-};
 
-export default useAppLogic;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   return  [handleBackButtonClick, handleStepChange,handleOptionSelect]
+ }
+ 
+ export default useAppLogic
