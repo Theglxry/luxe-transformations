@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -68,7 +69,6 @@ export default function Home() {
             </div>
           </div>
 
-
           {/* blurb shadow background cirlce */}
           <div
             className="absolute top-50 sm:top-0  sm:h-[50vw] sm:w-[60vw] z-0 rounded-full bg-gradient-radial from-gray-600 via-transparent to-transparent opacity-100  lg:top-10 sm:left-48 lg:left-0 ml-[-20rem]  "
@@ -78,19 +78,31 @@ export default function Home() {
       </section>
 
       {/* pencil */}
-      <Link href={"contact"} className="">
-        <div className="bg-yellow-600 absolute  top-[80%] lg:top-[85%] right-2 sm:right-10  rounded-full  z-10 ">
-          <Image 
-        //   src="/images/svg/pencil.svg" 
-          src="/icons/pencil.svg"
-          alt="pencil" 
-          width={100}
-          height={100}
-
-/>
-          
+      <Link
+        href="/contact"
+        className="animated-wrapper absolute top-[80%] lg:top-[80%] right-2 sm:right-10 rounded-full z-10"
+      >
+        <div className="animated-btn bg-yellow-600 rounded-full">
+          <span className="btn-container">
+            <Image
+              className="pen-1"
+              src="/icons/pencil.svg"
+              alt="pencil"
+              width={100}
+              height={100}
+            />
+            <Image
+              className="pen-2"
+              src="/icons/pencil.svg"
+              alt="pencil"
+              width={100}
+              height={100}
+            />
+          </span>
         </div>
       </Link>
     </main>
   );
 }
+
+ 

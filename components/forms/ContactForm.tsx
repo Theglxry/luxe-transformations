@@ -1,14 +1,17 @@
 // import useAxios from "@/app/(root)/contact/hooks/useAxios";
 import useAxios from "@/hooks/useAxios";
-
+import { useState } from "react";
 
 const ContactForm: React.FC = () => {
   const [formData, handleInputChange, handleSubmit] = useAxios();
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    handleSubmit();  
+    setIsSubmitting(true);
+    await handleSubmit();
+    setIsSubmitting(false);
   };
 
   return (
@@ -22,13 +25,13 @@ const ContactForm: React.FC = () => {
           </div>
 
           <div className="thin text-xl w-full ">
-            <form onSubmit={onSubmit} className="space-y-5">
+            <form onSubmit={onSubmit} className="space-y-5 ">
               <div className="flex gap-2 sm:gap-5 max-tablet:flex-col">
                 <input
                   type="text"
                   name="firstName"
                   placeholder="First Name *"
-                  className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                  className="contact-bg w-full p-2 sm:p-4 tracking-widest rounded-md focus:outline-none"
                   required
                   value={formData.firstName}
                   onChange={handleInputChange}
@@ -38,7 +41,7 @@ const ContactForm: React.FC = () => {
                   type="text"
                   name="lastName"
                   placeholder="Last Name *"
-                  className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                  className="contact-bg w-full p-2 sm:p-4 tracking-widest rounded-md focus:outline-none"
                   required
                   value={formData.lastName}
                   onChange={handleInputChange}
@@ -50,7 +53,7 @@ const ContactForm: React.FC = () => {
                   type="text"
                   name="phone"
                   placeholder="Phone [optional] "
-                  className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                  className="contact-bg w-full p-2 sm:p-4  tracking-widest rounded-md focus:outline-none"
                   value={formData.phone}
                   onChange={handleInputChange}
                 />
@@ -58,7 +61,7 @@ const ContactForm: React.FC = () => {
                   type="text"
                   name="email"
                   placeholder="Email*"
-                  className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                  className="contact-bg w-full p-2 sm:p-4 tracking-widest rounded-md focus:outline-none"
                   required
                   value={formData.email}
                   onChange={handleInputChange}
@@ -70,7 +73,7 @@ const ContactForm: React.FC = () => {
                   type="text"
                   name="company"
                   placeholder="Company*"
-                  className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                  className="contact-bg w-full p-2 sm:p-4 tracking-widest rounded-md focus:outline-none"
                   required
                   value={formData.company}
                   onChange={handleInputChange}
@@ -79,7 +82,7 @@ const ContactForm: React.FC = () => {
                   type="text"
                   name="deadline"
                   placeholder="Dealine in weeks*"
-                  className="contact-bg w-full p-2 sm:p-4 rounded-md focus:outline-none"
+                  className="contact-bg w-full p-2 sm:p-4 tracking-widest rounded-md focus:outline-none"
                   required
                   value={formData.deadline}
                   onChange={handleInputChange}
@@ -90,15 +93,16 @@ const ContactForm: React.FC = () => {
                 <textarea
                   name="message"
                   placeholder="Your message here...."
-                  className="contact-bg w-full md:min-h-[200px] rounded-md px-6 py-3 text-base focus:outline-none"
+                  className="contact-bg w-full md:min-h-[200px] tracking-[0.3rem] rounded-md px-6 py-3 text-md focus:outline-none"
                   value={formData.message}
                   onChange={handleInputChange}
                 ></textarea>
                 <button
                   type="submit"
-                  className="regular bg-yellow-600 rounded-full w-[100px] h-[100px] md:w-[270px] md:h-[200px] flex items-center justify-center"
+                  disabled={isSubmitting}
+                  className="regular bg-yellow-600 tracking-widest rounded-full w-[100px] h-[100px] md:w-[270px] md:h-[200px] flex items-center justify-center"
                 >
-                  SUBMIT
+                  {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
               </div>
             </form>

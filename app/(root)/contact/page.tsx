@@ -104,8 +104,6 @@ const page = () => {
             </button>
           ))}
         </div>{" "}
-
-
         <section className="w-full sm:w-4/5  sm:h-3/6 absolute top-[55%] sm:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-between ">
           <section className="w-full h-full flex flex-col items-center justify-center">
             {activeStep === "formOne" && (
@@ -248,17 +246,24 @@ const page = () => {
         </section>
         {/* back button */}
         <div
-          className="step-back absolute bottom-20 sm:bottom-10 left-5 sm:left-10 border p-3 sm:p-10 rounded-full"
+          className="arrow-main absolute bottom-20 sm:bottom-10 left-5 sm:left-10 border py-6 sm:px-6 sm:py-8 rounded-full"
           data-state="1"
           onClick={handleBackButtonClick}
         >
-          <div className=" transform rotate-180">
-            <i className="icon"></i>
-            <span>
+          <div className="arrow-wrapper ">
+            <span className="arrow-span">
               <Image
                 src="/icons/arrow-hex-1.svg"
                 alt="Arrow icon with hexagon tip"
-                className="w-6 h-6  sm:w-[30px] sm:h-[30px]"
+                className="arr-1 w-10 h-6 sm:w-[20px] sm:h-[20px] a-btn-1"
+                width={30}
+                height={30}
+              />
+
+              <Image
+                src="/icons/arrow-hex-1.svg"
+                alt="Arrow icon with hexagon tip"
+                className="arr-2 w-10 h-6 sm:w-[20px] sm:h-[20px] a-btn-2"
                 width={30}
                 height={30}
               />

@@ -105,10 +105,12 @@
 
   transition: background-position 0.2s ease-in-out;
 }
+
+
+
 .popUpWord:hover {
   background-position: 100%;
 }
-
 
 .sec-bg {
   background: rgb(29, 33, 69);
@@ -122,40 +124,103 @@
   background: #212121;
 }
 
- 
-.btn {
-  display: inline-block;
-  vertical-align: middle;
+/* .btn {
+  transition-duration: 0.5s;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
 }
-.btn:hover, .btn:focus, .btn:active {
-  -webkit-transform: scale(1.1); 
-  transform: scale(1.1);   
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  padding: 30px 60px;
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+} */
+
+/* for selected options */
+@media (max-width: 768px) {
+  .scroll {
+    margin: 4px, 4px;
+    padding: 4px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+}
+
+.animated-wrapper {
+  cursor: pointer;
+}
+
+.animated-btn {
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.pen-1,
+.pen-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pen-2 {
+  transform: translate(-100%, -100%);
+}
+
+.animated-btn:hover .pen-1 {
+  transform: translate(100%, 100%);
+}
+
+.animated-btn:hover .pen-2 {
+  transform: translate(0, 0);
+}
+
+.animated-btn:hover {
+  transform: scale(1.2);
   -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
+ 
+/* arrow animation */
+.arrow-main {
+  transition: transform 0.3s ease-in-out;
+}
+.arrow-wrapper {
+  cursor: pointer;
+  overflow: hidden;
+}
 
-@media (max-width:768px){
-  .scroll {
-    margin: 4px, 4px;
-    padding: 4px;
-    /* background-color: #08c708; */
-    /* border-bottom: 1px solid rgb(70, 66, 66); */
-    /* width: 500px;  */
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    /* scrollbar-color: rgb(245, 237, 237); */
-    scrollbar-arrow-color: aquamarine;
-  }
-  
-  .scroll:hover {
-  /* scrollbar-width: 0; */
-  scrollbar-highlight-color: aqua;
-  }
-} 
+.arrow-wrapper .arrow-span {
+  display: flex;
+  width: 200%;
+  transition: 0.25s ease-in-out;
+}
+
+.arrow-wrapper .arr-1,
+.arrow-wrapper .arr-2 {
+  flex: 1 0 50%;
+}
+
+.arrow-main:hover {
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+.arrow-main:hover .arrow-span {
+  transform: translateX(-50%);
+}
