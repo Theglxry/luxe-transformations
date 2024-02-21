@@ -80,7 +80,7 @@ export default function Home() {
       {/* pencil */}
       <Link
         href="/contact"
-        className="animated-wrapper absolute top-[80%] lg:top-[80%] right-2 sm:right-10 rounded-full z-10"
+        className="animated-wrapper absolute top-[80%] lg:top-[85%] right-2 sm:right-10 rounded-full z-10"
       >
         <div className="animated-btn bg-yellow-600 rounded-full">
           <span className="btn-container">
