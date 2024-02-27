@@ -4,11 +4,11 @@ import allCases from "../../public/icons/all-cases.svg";
 import Image from "next/image";
 import Link from "next/link";
 
-// declare module "react" {
-//   interface CSSProperties {
-//     "--i"?: string | number;
-//   }
-// }
+declare module "react" {
+  interface CSSProperties {
+    "--i"?: string | number;
+  }
+}
 
 const OurProjects = () => {
   return (
@@ -87,7 +87,7 @@ const OurProjects = () => {
             <div className="sticky-btn flex justify-center md:justify-start">
               <div className="all-cases w-3/4 border items-center justify-center md:justify-start text-black  px-6 py-3 md:px-6 md:py-3 lg:px-10 bg-white rounded-full text-sm">
                 <div className=" flex items-center justify-center gap-5">
-                  {/* <div className="wave text-base uppercase">
+                  <div className="wave text-base uppercase">
                     <span style={{ "--i": 1 }}>A</span>
                     <span style={{ "--i": 2 }}>l</span>
                     <span style={{ "--i": 3 }}>l</span>
@@ -97,7 +97,8 @@ const OurProjects = () => {
                     <span style={{ "--i": 7 }}>s</span>
                     <span style={{ "--i": 8 }}>e</span>
                     <span style={{ "--i": 9 }}>s</span>
-                  </div> */}
+                  </div>
+
 
                   <div className="all-cases-arrow flex items-center">
                     <Image
