@@ -26,6 +26,8 @@ const OurProjects = () => {
         </div>
       </div>
 
+
+
       <section className="case-studies">
         <div className="project-wrappper tab-br flex flex-col md:flex-row justify-between border-t-2 md:border-t">
           <div className="projects w-full md:w-3/4">
@@ -37,6 +39,10 @@ const OurProjects = () => {
                 <div className="cases-img w-full p-5 md:pt-10 lg:p-10 md:order-2 ">
                   <Image src={cases.img} alt="" className="w-full h-full" />
                 </div>
+
+
+
+
 
                 <div className="project-details tab-br w-full border-b-2  md:border-b-0 md:border-l md:border-r flex flex-col gap-10 md:justify-between p-5 md:pt-10 lg:p-10 md:order-1">
                   <div className="p-top w-full flex flex-col gap-10 ">
@@ -73,6 +79,9 @@ const OurProjects = () => {
             ))}
           </div>
 
+
+
+
           {/* Container div for the sticky button */}
           <Link
             href="/"
@@ -81,11 +90,12 @@ const OurProjects = () => {
             <div className="sticky-btn flex justify-center md:justify-start">
               <div className="all-cases w-3/4 border items-center justify-center md:justify-start text-black  px-6 py-3 md:px-6 md:py-3 lg:px-10 bg-white rounded-full text-sm">
                 <div className=" flex items-center justify-center gap-5">
+                 
                   <div className="wave text-base uppercase">
                     <span style={{ "--i": 1 } as any}>A</span>
                     <span style={{ "--i": 2 } as any}>l</span>
                     <span style={{ "--i": 3 } as any}>l</span>
-                    <span style={{ "--i": 4 } as any}>&nbsp;</span>
+                    <span style={{ "--i": 4 }}>&nbsp;</span>
                     <span style={{ "--i": 5 } as any}>C</span>
                     <span style={{ "--i": 6 } as any}>a</span>
                     <span style={{ "--i": 7 } as any}>s</span>
@@ -93,7 +103,7 @@ const OurProjects = () => {
                     <span style={{ "--i": 9 } as any}>s</span>
                   </div>
 
-                  {/* <div className="all-cases-arrow flex items-center">
+                  <div className="all-cases-arrow flex items-center">
                     <Image
                       src={allCases}
                       alt="arrow-1"
@@ -108,28 +118,6 @@ const OurProjects = () => {
                       width={20}
                       height={20}
                     />
-                  </div> */}
-                  <div className="c-base-ico-wrapper">
-                    <div className="c-base-ico">
-                      <Image
-                        src={allCases}
-                        alt="arrow-2"
-                        className="arrow-2 o-img"
-                        width={20}
-                        height={20}
-                        loading="eager"
-                      />
-                    </div>
-                    <div className="c-base-ico is__hover">
-                      <Image
-                        src={allCases}
-                        alt="arrow-2"
-                        className="arrow-2 o-img"
-                        width={20}
-                        height={20}
-                        loading="eager"
-                      />
-                    </div>
                   </div>
                 </div>
               </div>
