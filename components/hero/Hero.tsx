@@ -24,7 +24,7 @@ const Hero = () => {
         <h1 className="floral-reg text-5xl  md:text-6xl lg:text-8xl xl:text-9xl mb-8 whitespace-nowrap">
           CRAFTING <br /> LUXURY SPACES
         </h1>
-        <div className="w-full flex flex-col lg:flex-row gap-5 md:gap-10 lg:gap-3 xl:gap-10 md:h-auto">
+        <div className="w-full flex flex-col lg:flex-row gap-5 md:gap-10 lg:gap-3 xl:gap-5 md:h-auto">
           <Image src={heroImg1} alt="hero image" className="md:w-full h-auto rounded-2xl" />
 
 
