@@ -102,7 +102,7 @@ const OurProjects = () => {
                   <div className="all-cases-arrow flex items-center">
                     <Image
                       src={allCases}
-                      alt="arrow-1"
+                      alt=""
                       className="arrow-1"
                       width={20}
                       height={20}
@@ -110,7 +110,7 @@ const OurProjects = () => {
                     <Image
                       src={allCases}
                       alt="arrow-2"
-                      className="arrow-2"
+                      className=""
                       width={20}
                       height={20}
                     />
