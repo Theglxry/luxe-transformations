@@ -3,11 +3,11 @@ import Image from "next/image";
 
 
 
-// declare module "react" {
-//   interface CSSProperties {
-//     "--i"?: string | number;
-//   }
-// }
+declare module "react" {
+  interface CSSProperties {
+    "--i"?: string | number;
+  }
+}
 
 
 
@@ -28,7 +28,7 @@ const Allcases = () => {
         <div className="w-full flex items-center justify-start md:justify-center text-black">
           <button className="all-cases hoveer:px-14 flex items-center gap-5 bg-white px-12 py-3 md:px-6 md:py-3 lg:px-12 lg:py-3 rounded-full text-sm xl:text-xl">
            {/* See All Case Studies */}
-           {/* <div className="wave text-base uppercase">
+           <div className="wave text-base uppercase">
                     <span style={{ "--i": 1 }}>See</span>
                     <span style={{ "--i": 4 }}>&nbsp;</span>
                     <span style={{ "--i": 5 }}>All</span>
@@ -36,7 +36,7 @@ const Allcases = () => {
                     <span style={{ "--i": 8 }}>Cases</span>
                     <span style={{ "--i": 4 }}>&nbsp;</span>
                     <span style={{ "--i": 7 }}>Studies</span>
-                  </div> */}
+                  </div>
 
             <div>
               <Image src={allCases} alt="" className="all-cases-arrow" width={20} height={20} />

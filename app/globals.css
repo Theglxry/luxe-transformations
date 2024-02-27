@@ -377,7 +377,7 @@
 
 .arrow-2 {
   opacity: 0;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .all-cases:hover .arrow-1 {
