@@ -6,27 +6,27 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
+            <!-- <path
               className="handle-a"
               fillRule="evenodd"
               clipRule="evenodd"
               d="M12.2601 16.0778C12.1641 16.1738 12.2321 16.3379 12.3679 16.3379V16.3379C12.4073 16.3379 12.4452 16.3226 12.4736 16.2953L14.9293 13.9292L17.3586 11.4999C17.4027 11.4558 17.4215 11.3924 17.4085 11.3314V11.3314C17.3781 11.1886 17.2015 11.1364 17.0983 11.2396L12.2601 16.0778Z"
-              stroke="white"
+              stroke="red"
               strokeWidth="2"
-            />
-            <path
+            /> -->
+            <!-- <path
               className="tip-a"
               fillRule="evenodd"
               clipRule="evenodd"
               d="M14.9293 13.9292L12.5735 15.5735L16.5735 11.5735L14.9293 13.9292Z"
-              fill="white"
-            />
+              fill="red"
+            /> -->
             <path
               className="handle-b"
               fillRule="evenodd"
               clipRule="evenodd"
               d="M27.4142 29.9237C26.6332 30.7047 26.6332 31.9711 27.4142 32.7521L43.5938 48.9316C43.8613 49.1992 44.1993 49.3854 44.5684 49.4685L50.8933 50.8933L49.4685 44.5685C49.3854 44.1993 49.1992 43.8613 48.9316 43.5938L32.7521 27.4142C31.971 26.6332 30.7047 26.6332 29.9237 27.4142L27.4142 29.9237Z"
-              stroke="white"
+              stroke="goldenrod"
               strokeWidth="2"
             />
             <path
@@ -34,6 +34,6 @@
               fillRule="evenodd"
               clipRule="evenodd"
               d="M49.7919 50.1349L45 49L49 45L49.7919 50.1349Z"
-              fill="white"
+              fill="goldenrod"
             />
           </svg>

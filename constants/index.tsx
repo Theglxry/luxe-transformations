@@ -1,3 +1,29 @@
+import heroImg1 from "../public/images/balcony.svg";
+import heroImg2 from "../public/images/plants.png";
+import heroImg3 from "../public/images/View.png";
+import img1 from "../public/images/img1.png";
+import img2 from "../public/images/img2.png";
+import img3 from "../public/images/img3.png";
+import img4 from "../public/images/img4.png";
+import img5 from "../public/images/img5.png";
+import review1 from "../public/images/review1.png";
+import review2 from "../public/images/review2.png";
+import review3 from "../public/images/review3.png";
+import gallery1 from "../public/images/gallery1.png";
+import gallery2 from "../public/images/gallery2.png";
+import gallery3 from "../public/images/gallery3.png";
+import peakLuxe1 from "../public/images/peak-luxe1.jpg";
+import peakLuxe2 from "../public/images/peak-luxe2.jpg";
+import peakLuxe3 from "../public/images/peak-luxe3.jpg";
+import whatsapp from "../public/icons/whastapp.svg";
+import tiktok from "../public/icons/tiktok.svg";
+import instagram from "../public/icons/instagram.svg";
+import facebook from "../public/icons/facebook.svg";
+
+
+
+
+
 export const navLinks = [
   {
     label: "WORK",
@@ -19,27 +45,314 @@ export const navLinks = [
 
 export const socialLinks = [
   {
-    label: "LINKEDIN",
+    label: "WHATSAPP",
     url: "#",
+    img:whatsapp ,
   },
   {
     label: "INSTAGRAM",
     url: "#",
+    img:tiktok ,
+
   },
   {
     label: "TWITTER",
     url: "#",
+    img:instagram ,
+
   },
   {
     label: "BEHANCE",
     url: "#",
+    img:facebook ,
+
   },
   {
     label: "DRIBBLE",
     url: "#",
+    // remove later
+    img:tiktok,
   },
 ];
 
+export const heroImages = [
+  {
+    id: 1,
+    desc: "balcony image",
+    url: heroImg1,
+    width: "70px",
+  },
+
+  {
+    id: 2,
+    desc: "balcony image",
+    url: heroImg2,
+    width: "100px",
+  },
+
+  {
+    id: 3,
+    desc: "balcony image",
+    url: heroImg3,
+    width: "50px",
+  },
+];
+
+
+export const tabs = [
+  {
+    id: 1,
+    title: "Commercial",
+    items: [
+      { id: "01", label: "Franchisee Renovation Services" },
+      { id: "02", label: "Hotel Renovation Solutions" },
+      { id: "03", label: "Restaurant Renovation" },
+      { id: "04", label: "Bar Renovation Services" },
+      { id: "05", label: "Retail Space Refurbishment" },
+      { id: "06", label: "Office Space Renovation" },
+    ],
+  },
+
+  {
+    id: 2,
+    title: "Residential",
+    items: [
+      { id: "01", label: "Luxury Home Renovation" },
+      { id: "02", label: "Apartment Renovation Solutions" },
+      { id: "03", label: "Bathroom Renovations" },
+      { id: "04", label: "Mansion Renovation" },
+      { id: "05", label: "Kitchen Renovation" },
+      { id: "06", label: "Home renovations" },
+    ],
+  },
+];
+
+
+export const brandPerks = [
+  {
+    id: 1,
+    top: "10 million +",
+    bottom: "Enhanced Property",
+    time: "200"
+  },
+
+  {
+    id: 2,
+    top: "420%",
+    bottom: "Enhanced Comfort",
+    time: "600"
+
+  },
+
+  {
+    id: 3,
+    top: "420%",
+    bottom: "Improved Safety",
+    time: "1000"
+
+  },
+  {
+    id: 4,
+    top: "10 million +",
+    bottom: "Enhanced Property",
+    time: "1000"
+
+  },
+
+  {
+    id: 5,
+    top: "420%",
+    bottom: "Enhanced Comfort",
+    time: "1000"
+
+  },
+
+  {
+    id: 6,
+    top: "420%",
+    bottom: "Improved Safety",
+    time: "6000"
+
+  },
+  {
+    id: 7,
+    top: "420%",
+    bottom: "Improved Safety",
+    time: "7000"
+
+  },
+];
+
+export const caseStudies = [
+  {
+    id: 1,
+    title: "Lift Foils",
+    year: "22",
+    desc: "E-commerce for Lift eFoil, featuring cutting-edge technology including a powerful battery, specially designed and durable board, advanced propulsion system, high-performance carbon fiber hydrofoil components, and a convenient Bluetooth hand controller for the ultimate watersports experience.",
+    type: "Interface & Website",
+    img: img1,
+  },
+  {
+    id: 2,
+    title: "Lift Foils",
+    year: "22",
+    desc: "E-commerce for Lift eFoil, featuring cutting-edge technology including a powerful battery, specially designed and durable board, advanced propulsion system, high-performance carbon fiber hydrofoil components, and a convenient Bluetooth hand controller for the ultimate watersports experience.",
+    type: "Interface & Website",
+    img: img2,
+  },
+  {
+    id: 3,
+    title: "Lift Foils",
+    year: "22",
+    desc: "E-commerce for Lift eFoil, featuring cutting-edge technology including a powerful battery, specially designed and durable board, advanced propulsion system, high-performance carbon fiber hydrofoil components, and a convenient Bluetooth hand controller for the ultimate watersports experience.",
+    type: "Interface & Website",
+    img: img3,
+  },
+  {
+    id: 4,
+    title: "Lift Foils",
+    year: "22",
+    desc: "E-commerce for Lift eFoil, featuring cutting-edge technology including a powerful battery, specially designed and durable board, advanced propulsion system, high-performance carbon fiber hydrofoil components, and a convenient Bluetooth hand controller for the ultimate watersports experience.",
+    type: "Interface & Website",
+    img: img4,
+  },
+  {
+    id: 5,
+    title: "Lift Foils",
+    year: "22",
+    desc: "E-commerce for Lift eFoil, featuring cutting-edge technology including a powerful battery, specially designed and durable board, advanced propulsion system, high-performance carbon fiber hydrofoil components, and a convenient Bluetooth hand controller for the ultimate watersports experience.",
+    type: "Interface & Website",
+    img: img5,
+  },
+];
+
+export const customerReviews = [
+  {
+    id: 1,
+    img: review1,
+  },
+
+  {
+    id: 2,
+    img: review2,
+  },
+
+  {
+    id: 3,
+    img: review3,
+  },
+  {
+    id: 4,
+    img: review1,
+  },
+
+  {
+    id: 5,
+    img: review2,
+  },
+
+  {
+    id: 6,
+    img: review3,
+  },
+  {
+    id: 7,
+    img: review1,
+  },
+];
+
+export const ourProcess = [
+{
+  id: 1,
+  items: [
+    { id: "1", label: "Initial Consultation",padding:'10px'},
+    { id: "2", label: "Design Development", padding:'14px'},
+    { id: "3", label: "Design Refinement" , padding:'18px'},
+    { id: "4", label: "Material Selection", padding: '21px' },
+  ],
+},
+
+{
+  id: 2,
+  items: [
+    { id: "1", label: "Construction Planning", },
+    { id: "2", label: "Construction Execution" },
+    { id: "3", label: "Quality Control" },
+    { id: "4", label: "Final Inspection" },
+  ],
+},
+];
+
+export const gallery = [
+  {
+    id: 1,
+    img: gallery1,
+  },
+
+  {
+    id: 2,
+    img: gallery2,
+  },
+
+  {
+    id: 3,
+    img: gallery3,
+  },
+  {
+    id: 4,
+    img: gallery1,
+  },
+
+  {
+    id: 5,
+    img: gallery2,
+  },
+
+  {
+    id: 6,
+    img: gallery3,
+  },
+]
+
+export const exquisiteElegance = [
+  {
+    id: 1,
+    img:peakLuxe1,
+  },
+
+  {
+    id: 2,
+    img:peakLuxe2,
+  },
+
+  {
+    id: 3,
+    img: peakLuxe3,
+  },
+  {
+    id: 4,
+    img:  peakLuxe1,
+  },
+
+  // {
+  //   id: 5,
+  //   img:  peakLuxe1,
+  // },
+
+  // {
+  //   id: 6,
+  //   img:  peakLuxe1,
+  // },
+]
+
+export const footerLinks = [
+
+]
+
+
+
+
+//--------------------------------------------------------- CONTACT PAGE ---------------------------------------------------------
 // form 1 - how can we help
 export const helpSelect = [
   // DEFAULT
@@ -95,7 +408,6 @@ export const commercialForm = [
     label: "Restaurant/Franchise/Others",
   },
 ];
-
 
 //form4 main=> residential form 1
 export const residentialForm = [
@@ -167,27 +479,27 @@ export const residentialFormTwo = [
 //form 7
 export const residentialFormThree = [
   {
-    title:"HOW MANY EN-SUITS ?",
+    title: "HOW MANY EN-SUITS ?",
     label: "1",
     id: 1,
   },
   {
-    title:"HOW MANY EN-SUITS ?",
+    title: "HOW MANY EN-SUITS ?",
     label: "2",
     id: 2,
   },
   {
-    title:"HOW MANY EN-SUITS ?",
+    title: "HOW MANY EN-SUITS ?",
     label: "3",
     id: 3,
   },
   {
-    title:"HOW MANY EN-SUITS ?",
+    title: "HOW MANY EN-SUITS ?",
     label: "4",
     id: 4,
   },
   {
-    title:"HOW MANY EN-SUITS ?",
+    title: "HOW MANY EN-SUITS ?",
     label: "5",
     id: 5,
   },

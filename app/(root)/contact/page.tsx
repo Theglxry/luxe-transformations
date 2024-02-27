@@ -87,11 +87,9 @@ const page = () => {
   };
 
   return (
-    // <section className="bg-black relative  overflow-hidden rounded-3xl w-full h-full  md:px-4">
     <>
       <section className="relative bg-black w-full h-full  overflow-hidden  rounded-3xl   sm:pt-10 xl:px-40 flex flex-col items-center justify-between  mx-auto my-auto">
         {/* selected options */}{" "}
-        {/* <div className="hidden  sm:flex flex-wrap items-center gap-5 sm:mt-16 md:mt-0 border-2 border-red-500"> */}
         <div className="scroll mt-24 md:mt-0 w-[350px] md:w-4/5  flex md:flex-wrap items-center justify-center gap-5 z-0  overflow-x-auto cursor-grab md:cursor-pointer">
           {selectedOptions.map((option, index) => (
             <button
@@ -104,6 +102,9 @@ const page = () => {
             </button>
           ))}
         </div>{" "}
+
+
+  
         <section className="w-full sm:w-4/5  sm:h-3/6 absolute top-[55%] sm:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-between ">
           <section className="w-full h-full flex flex-col items-center justify-center">
             {activeStep === "formOne" && (
@@ -244,6 +245,10 @@ const page = () => {
 
           {/* progress bar component */}
         </section>
+
+
+
+        
         {/* back button */}
         <div
           className="arrow-main absolute bottom-20 sm:bottom-10 left-5 sm:left-10 border py-6 sm:px-6 sm:py-8 rounded-full"
