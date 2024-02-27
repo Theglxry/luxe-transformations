@@ -45,7 +45,7 @@ const Tabs: React.FC = () => {
                 key={tab.id}
                 className="flex flex-col gap-5 sm:gap-10 md:flex-row uppercase"
               >
-                {/*-------------- first 3 (commercails) -----------*/}
+                {/*--------------(commercails)-----------*/}
                 <div className="flex w-full gap-10">
                   <div className="w-full flex flex-col">
                     {tab.items.slice(0, 3).map((item, index) => (
@@ -69,7 +69,7 @@ const Tabs: React.FC = () => {
 
 
 
-                {/*---------------- second 3 (residentials) ------------*/}
+                {/*----------------(residentials)------------*/}
                 <div className="flex w-full  gap-10">
                   <div className="w-full flex flex-col">
                     {tab.items.slice(3, 6).map((item, index) => (
