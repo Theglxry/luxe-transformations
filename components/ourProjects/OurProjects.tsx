@@ -85,7 +85,7 @@ const OurProjects = () => {
                     <span style={{ "--i": 1 } as any}>A</span>
                     <span style={{ "--i": 2 } as any}>l</span>
                     <span style={{ "--i": 3 } as any}>l</span>
-                    <span style={{ "--i": 4 }}>&nbsp;</span>
+                    <span style={{ "--i": 4 } as any}>&nbsp;</span>
                     <span style={{ "--i": 5 } as any}>C</span>
                     <span style={{ "--i": 6 } as any}>a</span>
                     <span style={{ "--i": 7 } as any}>s</span>
