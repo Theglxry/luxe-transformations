@@ -28,9 +28,9 @@ const Hero = () => {
           <Image src={heroImg1} alt="hero image" className="md:w-full h-auto rounded-2xl" />
 
 
-          <div className="flex gap-2 w-full md:gap-10 lg:gap-3 xl:gap-10 xl:w-4/5">
-          <Image src={heroImg2} alt="hero image" className="w-1/2 lg:w-60 xl:w-full h-auto rounded-2xl" />
-          <Image src={heroImg3} alt="hero image" className="w-1/2  lg:w-60 xl:w-full h-auto rounded-2xl" />
+          <div className="flex gap-2 w-full md:gap-10 lg:gap-3 xl:w-4/5">
+          <Image src={heroImg2} alt="hero image" className="w-1/2 h-auto rounded-2xl" />
+          <Image src={heroImg3} alt="hero image" className="w-1/2 h-auto rounded-2xl" />
           {/* <Image src={heroImg2} alt="hero image" className="w-full lg:w-60 xl:w-full h-auto rounded-2xl" />
           <Image src={heroImg3} alt="hero image" className="w-full  lg:w-60 xl:w-full h-auto rounded-2xl" /> */}
           </div>

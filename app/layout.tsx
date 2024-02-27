@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`relative h-screen text-white w-full md:p-4 md:px-8 font-MyFont overflow-x-hidden`}
+        className={`relative h-screen text-white w-full md:p-4 md:px-4 font-MyFont overflow-x-hidden`}
       >
         <ReduxProvider>
           <AOSInit />
