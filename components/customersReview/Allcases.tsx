@@ -1,6 +1,16 @@
 import allCases from "../../public/icons/all-cases.svg";
 import Image from "next/image";
 
+
+
+declare module "react" {
+  interface CSSProperties {
+    "--i"?: string | number;
+  }
+}
+
+
+
 const Allcases = () => {
   return (
     <div className="w-ful flex flex-col gap-10 md:mt-20  xl:mt-40 md:flex-row">
@@ -19,34 +29,13 @@ const Allcases = () => {
           <button className="all-cases hoveer:px-14 flex items-center gap-5 bg-white px-12 py-3 md:px-6 md:py-3 lg:px-12 lg:py-3 rounded-full text-sm xl:text-xl">
            {/* See All Case Studies */}
            <div className="wave text-base uppercase">
-                    <span style={{ "--i": 1 } as any}>See</span>
-                    {/* <span style={{ "--i": 2 } as any}>e</span> */}
-                    {/* <span style={{ "--i": 3 } as any}>e</span> */}
-
+                    <span style={{ "--i": 1 }}>See</span>
                     <span style={{ "--i": 4 }}>&nbsp;</span>
-
-                    <span style={{ "--i": 5 } as any}>All</span>
-                    {/* <span style={{ "--i": 6 } as any}>l</span> */}
-                    {/* <span style={{ "--i": 7 } as any}>l</span> */}
-
+                    <span style={{ "--i": 5 }}>All</span>
                     <span style={{ "--i": 4 }}>&nbsp;</span>
-
-                    <span style={{ "--i": 8 } as any}>Cases</span>
-                    {/* <span style={{ "--i": 9 } as any}>a</span> */}
-                    {/* <span style={{ "--i": 5 } as any}>s</span> */}
-                    {/* <span style={{ "--i": 6 } as any}>e</span> */}
-
+                    <span style={{ "--i": 8 }}>Cases</span>
                     <span style={{ "--i": 4 }}>&nbsp;</span>
-
-                    <span style={{ "--i": 7 } as any}>Studies</span>
-                    {/* <span style={{ "--i": 8 } as any}>t</span> */}
-                    {/* <span style={{ "--i": 9 } as any}>u</span> */}
-                    {/* <span style={{ "--i": 7 } as any}>d</span> */}
-                    {/* <span style={{ "--i": 8 } as any}>i</span> */}
-                    {/* <span style={{ "--i": 9 } as any}>e</span> */}
-                    {/* <span style={{ "--i": 7 } as any}>s</span> */}
-
-
+                    <span style={{ "--i": 7 }}>Studies</span>
                   </div>
 
             <div>

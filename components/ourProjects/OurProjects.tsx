@@ -110,7 +110,7 @@ const OurProjects = () => {
                     <Image
                       src={allCases}
                       alt="arrow-2"
-                      className=""
+                      className="arrow-2"
                       width={20}
                       height={20}
                     />
