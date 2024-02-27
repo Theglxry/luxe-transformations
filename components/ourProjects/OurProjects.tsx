@@ -4,6 +4,12 @@ import allCases from "../../public/icons/all-cases.svg";
 import Image from "next/image";
 import Link from "next/link";
 
+declare module "react" {
+  interface CSSProperties {
+    "--i"?: string | number;
+  }
+}
+
 const OurProjects = () => {
   return (
     <section className="w-full mb-28">
@@ -26,8 +32,6 @@ const OurProjects = () => {
         </div>
       </div>
 
-
-
       <section className="case-studies">
         <div className="project-wrappper tab-br flex flex-col md:flex-row justify-between border-t-2 md:border-t">
           <div className="projects w-full md:w-3/4">
@@ -39,10 +43,6 @@ const OurProjects = () => {
                 <div className="cases-img w-full p-5 md:pt-10 lg:p-10 md:order-2 ">
                   <Image src={cases.img} alt="" className="w-full h-full" />
                 </div>
-
-
-
-
 
                 <div className="project-details tab-br w-full border-b-2  md:border-b-0 md:border-l md:border-r flex flex-col gap-10 md:justify-between p-5 md:pt-10 lg:p-10 md:order-1">
                   <div className="p-top w-full flex flex-col gap-10 ">
@@ -79,9 +79,6 @@ const OurProjects = () => {
             ))}
           </div>
 
-
-
-
           {/* Container div for the sticky button */}
           <Link
             href="/"
@@ -90,17 +87,16 @@ const OurProjects = () => {
             <div className="sticky-btn flex justify-center md:justify-start">
               <div className="all-cases w-3/4 border items-center justify-center md:justify-start text-black  px-6 py-3 md:px-6 md:py-3 lg:px-10 bg-white rounded-full text-sm">
                 <div className=" flex items-center justify-center gap-5">
-                 
                   <div className="wave text-base uppercase">
-                    <span style={{ "--i": 1 } as any}>A</span>
-                    <span style={{ "--i": 2 } as any}>l</span>
-                    <span style={{ "--i": 3 } as any}>l</span>
-                    <span style={{ "--i": 4 }as any}>&nbsp;</span>
-                    <span style={{ "--i": 5 } as any}>C</span>
-                    <span style={{ "--i": 6 } as any}>a</span>
-                    <span style={{ "--i": 7 } as any}>s</span>
-                    <span style={{ "--i": 8 } as any}>e</span>
-                    <span style={{ "--i": 9 } as any}>s</span>
+                    <span style={{ "--i": 1 }}>A</span>
+                    <span style={{ "--i": 2 }}>l</span>
+                    <span style={{ "--i": 3 }}>l</span>
+                    <span style={{ "--i": 4 }}>&nbsp;</span>
+                    <span style={{ "--i": 5 }}>C</span>
+                    <span style={{ "--i": 6 }}>a</span>
+                    <span style={{ "--i": 7 }}>s</span>
+                    <span style={{ "--i": 8 }}>e</span>
+                    <span style={{ "--i": 9 }}>s</span>
                   </div>
 
                   <div className="all-cases-arrow flex items-center">
