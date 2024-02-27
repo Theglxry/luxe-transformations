@@ -333,16 +333,7 @@ export const exquisiteElegance = [
     id: 4,
     img:  peakLuxe1,
   },
-
-  // {
-  //   id: 5,
-  //   img:  peakLuxe1,
-  // },
-
-  // {
-  //   id: 6,
-  //   img:  peakLuxe1,
-  // },
+ 
 ]
 
 export const footerLinks = [
