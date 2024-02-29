@@ -35,8 +35,8 @@ const ServiceHoverComp: React.FC = () => {
 
 
       {/* tab indicator */}
-      <div className="">
-
+      <div className="tab-bg w-36 h-2 rounded-full ">
+         <div className="w-1/2 h-full bg-white rounded-full"></div>
       </div>
     </div>
 
