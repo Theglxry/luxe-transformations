@@ -7,6 +7,7 @@ import WorkHoverComponent from "../hoveredComp/WorkHoverComponent";
 import StudioHoverComponent from "../hoveredComp/StudioHoverComponent";
 import ContactHoverComponent from "../hoveredComp/ContactHoverComponent";
 import ServiceHoverComp from "../hoveredComp/ServiceHoverComp";
+import Gallery from "@/components/gallery/Gallery";
 
 interface NavProps {
   toggleMenu: () => void;
@@ -69,7 +70,10 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
 
         {/* nav links */}
         {/* <nav className="absolute inset-x-0 flex items-center top-[15%] sm:top-[10%] md:top-8 xl:top-24 justify-center flex-1 gap-10 text-white"> */}
-        <nav className="absolute inset-x-0 flex items-center top-40 justify-center flex-1 gap-10 text-white">
+        <div className="relative w-full flex flex-col gap-10 xl:pt-40 px-10">
+
+        {/* <nav className="absolute inset-x-0 flex items-center top-40 justify-center flex-1 gap-10 text-white"> */}
+        <nav className="flex items-center justify-center flex-1 gap-10 text-white">
           {/* <ul className="relative flex flex-col md:flex-row items-center md:gap-10 lg:gap-20  border w-[80%]"> */}
           <ul className="relative flex items-center justify-evenly w-[80%]">
 
@@ -112,9 +116,13 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
         </nav>
 
         {/* <section className="absolute top-[50%]   left-1/2  transform -translate-x-1/2 -translate-y-1/2 w-full px-10 flex items-center justify-center"> */}
-        <section className="absolute  inset-0 flex items-center justify-center sm:static sm:translate-x-0 sm:translate-y-0 sm:flex-none sm:justify-start lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-[80%]">
-
-          <div className="w-full">
+        {/* <section className="absolute  inset-0 flex items-center justify-center sm:static sm:translate-x-0 sm:translate-y-0 sm:flex-none sm:justify-start lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-[80%]"> */}
+       
+       
+       
+       
+        <section className="flex items-center justify-center">
+          <div className="w-full flex justify-center">
             {/* Render components for nav links that don't need to be hovered */}
             {activeIndex !== null && (
               <>
@@ -140,6 +148,20 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
             )}
           </div>
         </section>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </>
   );

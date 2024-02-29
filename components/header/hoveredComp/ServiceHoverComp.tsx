@@ -13,7 +13,7 @@ const ServiceHoverComp: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Commercial");
 
   return (
-    <div className="w-full flex flex-col gap-10 items-center">
+    <div className="relative w-full flex flex-col gap-10 items-center">
       <div className="relative w-full mb-10">
         <div className="absolute left-[36%]  w-full ">
           <RenovationServicesType
