@@ -41,14 +41,20 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
         }`}
       >
         <Link href={"/"}>
-          <div className="absolute top-10 w-24 h-24 md:w-[10rem] md:h-auto left-4 lg:left-4  lg:w-auto">
-            <Image src="/icons/logo.svg" alt="logo" width={100} height={100} />
+          {/* <div className="absolute top-10 w-24 h-24 md:w-[10rem] md:h-auto left-4 lg:left-4  lg:w-auto"> */}
+          <div className="absolute top-10 left-10   ">
+            <Image src="/icons/logo.svg" alt="logo" width={200} height={100} />
           </div>
         </Link>
 
+
+
+
+
         {/* close button*/}
         <button
-          className="right-5 sm:right-10 md:right-5 xl:right-10 absolute  xl:top-10 w-30 md:h-30 cursor-pointer z-50 border-2 rounded-full"
+          // className="right-5 sm:right-10 md:right-5 xl:right-10 absolute  xl:top-10 w-30 md:h-30 cursor-pointer z-50 border-2 rounded-full"
+          className="right-10 absolute top-10 p-4 cursor-pointer z-50 border-2 rounded-full"
           onClick={(e) => {
             e.stopPropagation();
             toggleMenu();
@@ -57,8 +63,13 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
           <Image src="/icons/closeNav.svg" alt="menu" width={40} height={40} />
         </button>
 
+
+
+
+
         {/* nav links */}
-        <nav className="absolute inset-x-0 flex items-center top-[15%] sm:top-[10%] md:top-8 xl:top-24 justify-center flex-1 gap-10 text-white">
+        {/* <nav className="absolute inset-x-0 flex items-center top-[15%] sm:top-[10%] md:top-8 xl:top-24 justify-center flex-1 gap-10 text-white"> */}
+        <nav className="absolute inset-x-0 flex items-center top-40 justify-center flex-1 gap-10 text-white">
           <ul className="relative flex flex-col md:flex-row items-center md:gap-10 lg:gap-20">
             {navLinks.map((link, index) => (
               <>
@@ -66,7 +77,6 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
                   key={index}
                   className={`floral-reg relative flex items-center text-center gap-2 xl:text-6xl`}
                   onMouseEnter={() => handleMouseEnter(index)}
-                  // onMouseLeave={handleMouseLeave}
                   onClick={handleNavLinkClick}
                 >
                   <Link href={link.url} className="">
@@ -99,7 +109,7 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
           </ul>
         </nav>
 
-        <section className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-10 flex items-center justify-center">
+        <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-10 flex items-center justify-center">
           <div className="w-full">
             {/* Render components for nav links that don't need to be hovered */}
             {activeIndex !== null && (

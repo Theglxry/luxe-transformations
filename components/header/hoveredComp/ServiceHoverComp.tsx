@@ -15,7 +15,7 @@ const ServiceHoverComp: React.FC = () => {
   return (
     <div className="w-full flex flex-col gap-10 items-center">
       <div className="relative w-full mb-10">
-        <div className="absolute left-1/3  w-full ">
+        <div className="absolute left-[36%]  w-full ">
           <RenovationServicesType
             tabs={tabs}
             activeTab={activeTab}
