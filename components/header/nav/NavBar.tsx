@@ -70,12 +70,14 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
         {/* nav links */}
         {/* <nav className="absolute inset-x-0 flex items-center top-[15%] sm:top-[10%] md:top-8 xl:top-24 justify-center flex-1 gap-10 text-white"> */}
         <nav className="absolute inset-x-0 flex items-center top-40 justify-center flex-1 gap-10 text-white">
-          <ul className="relative flex flex-col md:flex-row items-center md:gap-10 lg:gap-20">
+          {/* <ul className="relative flex flex-col md:flex-row items-center md:gap-10 lg:gap-20  border w-[80%]"> */}
+          <ul className="relative flex items-center justify-evenly w-[80%]">
+
             {navLinks.map((link, index) => (
               <>
                 <li
                   key={index}
-                  className={`floral-reg relative flex items-center text-center gap-2 xl:text-6xl`}
+                  className={`floral-reg relative flex items-center text-center justify-center gap-2 xl:text-6xl`}
                   onMouseEnter={() => handleMouseEnter(index)}
                   onClick={handleNavLinkClick}
                 >
@@ -110,7 +112,7 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
         </nav>
 
         {/* <section className="absolute top-[50%]   left-1/2  transform -translate-x-1/2 -translate-y-1/2 w-full px-10 flex items-center justify-center"> */}
-        <section className="absolute inset-0 flex items-center justify-center sm:static sm:translate-x-0 sm:translate-y-0 sm:flex-none sm:justify-start lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-[80%]">
+        <section className="absolute  inset-0 flex items-center justify-center sm:static sm:translate-x-0 sm:translate-y-0 sm:flex-none sm:justify-start lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-[80%]">
 
           <div className="w-full">
             {/* Render components for nav links that don't need to be hovered */}
