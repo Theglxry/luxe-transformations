@@ -5,9 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 // import { usePathname } from "next/navigation";
-import Nav from "./Nav";
+// import NavB from "./Nav";
+import NavBar from "./nav/NavBar";
+import MobileMenu from "./nav/MobileMenu";
 
-const NavBar: React.FC = () => {
+const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,9 +18,12 @@ const NavBar: React.FC = () => {
 
   return (
     <header
-      className="absolute flex items-center left-0 justify-between px-10 w-full z-50"
+      // className="absolute flex items-center left-0 justify-between px-10 w-full z-50 border" 
+      className="absolute left-0 mx-auto w-full z-50" 
       data-aos="fade-down"
     >
+      <div className="relative flex items-center justify-between"> 
+
       {/* home logo */}
       <Link href={"/"}>
         <div className="absolute left-5 md:left-16 top-10 w-24 h-24 md:w-[10rem] md:h-auto   lg:w-auto">
@@ -36,11 +41,19 @@ const NavBar: React.FC = () => {
       </button>
 
       {/* nav section */}
-      <Nav toggleMenu={toggleMenu} isOpen={isOpen} />
+      {/* <Nav toggleMenu={toggleMenu} isOpen={isOpen} /> */}
+      
+      <NavBar toggleMenu={toggleMenu} isOpen={isOpen} />
+
+
+
+
+       <MobileMenu toggleMenu={toggleMenu} isOpen={isOpen}  />
+      </div>
     </header>
   );
 };
 
-export default NavBar;
+export default Header;
 
 

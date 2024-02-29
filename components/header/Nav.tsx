@@ -67,6 +67,9 @@ const Nav = ({ toggleMenu, isOpen }: NavProps) => {
           </ul>
         </nav>
 
+
+
+
         {/* social links */}
         <div className="absolute inset-x-0 flex items-center top-[60%] justify-center flex-1 text-black boder-2 border-green-400">
           <ul className="thin flex items-center gap-5 sm:gap-10  sm:text-2xl">
@@ -89,15 +92,7 @@ const Nav = ({ toggleMenu, isOpen }: NavProps) => {
         ></div>
       </div>
 
-      {/* overlay */}
-      {/* <div
-  className={`absolute left-0 bg-blue-400 w-[90%] h-screen m-auto rounded-3xl top-0  transition-all duration-1000 ease-in-out opacity-100 transform ${
-    isOpen ? "top-full" : "top-0"
-  }`}
-></div>
-  */}
-
-      {/* <div className={`absolute bg-black left-0 w-full h-screen m-auto rounded-3xl top-0 z-0 transition-all duration-500 ease-in-out transform ${isOpen ? "" : "hidden"}`}></div> */}
+     
     </>
   );
 };

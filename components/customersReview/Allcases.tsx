@@ -13,7 +13,7 @@ declare module "react" {
 
 const Allcases = () => {
   return (
-    <div className="w-ful flex flex-col gap-10 md:mt-20  xl:mt-40 md:flex-row">
+    <div className="w-ful flex flex-col gap-10 md:mt-20  xl:mt-40 md:flex-row" data-aos="fade-right">
       <div className="w-full">
         <p className=" lg:text-2xl xl:text-4xl">
           Our process seamlessly guides your project from concept to completion.
@@ -24,8 +24,8 @@ const Allcases = () => {
         </p>
       </div>
 
-      <div className="sticky-btn tab-br w-full lg:w-1/2 flex-col-reverse md:order-first">
-        <div className="w-full flex items-center justify-start md:justify-center text-black">
+      <div className="tab-br w-full lg:w-1/2  flex-col-reverse md:order-first" data-aos="fade-right">
+        <div className="w-full flex items-center justify-center text-black">
           <button className="all-cases hoveer:px-14 flex items-center gap-5 bg-white px-12 py-3 md:px-6 md:py-3 lg:px-12 lg:py-3 rounded-full text-sm xl:text-xl">
            {/* See All Case Studies */}
            <div className="wave text-base uppercase whitespace-nowrap">

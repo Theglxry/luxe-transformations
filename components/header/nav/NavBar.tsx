@@ -1,0 +1,126 @@
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { navLinks, socialLinks } from "@/constants";
+import Tabs from "@/components/renovationServices/Tabs";
+import WorkHoverComponent from "../hoveredComp/WorkHoverComponent";
+import StudioHoverComponent from "../hoveredComp/StudioHoverComponent";
+import ContactHoverComponent from "../hoveredComp/ContactHoverComponent";
+import ServiceHoverComp from "../hoveredComp/ServiceHoverComp";
+
+interface NavProps {
+  toggleMenu: () => void;
+  isOpen: boolean;
+}
+
+const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const handleNavLinkClick = () => {
+    // Close the navigation when a navLink is clicked
+    toggleMenu();
+  };
+
+  const handleMouseEnter = (index: number) => {
+    setActiveIndex(index);
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveIndex(null);
+    setDropdownVisible(false);
+  };
+
+  return (
+    <>
+      <div
+        className={`w-full h-screen flex flex-col items-center bg-black rounded-3xl fixed top-0 left-0 z-50 transition-all duration-1000 ease-in-out  transform sm:border-x-8 border-white ${
+          isOpen ? "translate-y-0" : "hidden"
+        }`}
+      >
+        <Link href={"/"}>
+          <div className="absolute top-10 w-24 h-24 md:w-[10rem] md:h-auto left-4 lg:left-4  lg:w-auto">
+            <Image src="/icons/logo.svg" alt="logo" width={100} height={100} />
+          </div>
+        </Link>
+
+        {/* close button*/}
+        <button
+          className="right-5 sm:right-10 md:right-5 xl:right-10 absolute  xl:top-10 w-30 md:h-30 cursor-pointer z-50 border-2 rounded-full"
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleMenu();
+          }}
+        >
+          <Image src="/icons/closeNav.svg" alt="menu" width={40} height={40} />
+        </button>
+
+        {/* nav links */}
+        <nav className="absolute inset-x-0 flex items-center top-[15%] sm:top-[10%] md:top-8 xl:top-24 justify-center flex-1 gap-10 text-white">
+          <ul className="relative flex flex-col md:flex-row items-center md:gap-10 lg:gap-20">
+            {navLinks.map((link, index) => (
+              <>
+                <li
+                  key={index}
+                  className={`floral-reg relative flex items-center text-center gap-2 xl:text-6xl`}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  // onMouseLeave={handleMouseLeave}
+                  onClick={handleNavLinkClick}
+                >
+                  <Link href={link.url} className="">
+                    <div
+                      className={`flex items-center justify-center px-6 py-2  ${
+                        activeIndex === index
+                          ? "light-gray rounded-full"
+                          : ""
+                      } `}
+                    >
+                      <div
+                        className="flex items-center justify-center gap-2 pt-2"
+                        style={{ justifyContent: "center" }}
+                      >
+                        <p>{link.label}</p>
+                        {activeIndex === index && (
+                          <span>
+                            <Image
+                              src={"/icons/tabs-arrow.svg"}
+                              alt=""
+                              width={30}
+                              height={30}
+                            />
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </Link>
+                </li>
+              </>
+            ))}
+          </ul>
+        </nav>
+
+        <section className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-5 flex items-center justify-center">
+          <div className="w-full ">
+            {isDropdownVisible && activeIndex !== null && (
+              <>
+                {navLinks[activeIndex].label === "WORK" && (
+                  <WorkHoverComponent />
+                )}
+                {navLinks[activeIndex].label === "SERVICES" && <ServiceHoverComp />}
+                {navLinks[activeIndex].label === "STUDIO" && (
+                  <StudioHoverComponent />
+                )}
+                {navLinks[activeIndex].label === "CONTACT" && (
+                  <ContactHoverComponent />
+                )}
+              </>
+            )}
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default NavBar;

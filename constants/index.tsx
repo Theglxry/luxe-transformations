@@ -43,6 +43,10 @@ export const navLinks = [
   },
 ];
 
+
+
+
+
 export const socialLinks = [
   {
     label: "WHATSAPP",
@@ -101,7 +105,7 @@ export const heroImages = [
 
 export const tabs = [
   {
-    id: 1,
+    id: "1",
     title: "Commercial",
     items: [
       { id: "01", label: "Franchisee Renovation Services" },
@@ -114,7 +118,7 @@ export const tabs = [
   },
 
   {
-    id: 2,
+    id: "2",
     title: "Residential",
     items: [
       { id: "01", label: "Luxury Home Renovation" },

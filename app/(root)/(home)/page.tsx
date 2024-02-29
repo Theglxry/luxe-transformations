@@ -44,7 +44,7 @@ export default function Home() {
         <OurProjects />
       </section>
 
-      <section className="w-full  px-5 md:px-10  bg-white">
+      <section className="w-full  px-5 md:px-10  bg-white ">
         <OurJourney />
       </section>
 
