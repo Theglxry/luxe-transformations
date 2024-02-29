@@ -358,8 +358,8 @@
 }
 
 .all-cases:hover .wave span {
-  animation: animate 1s ease-in-out;
-  animation-delay: calc(0.05s * var(--i));
+  animation: animate 0.5s ease-in-out;
+  animation-delay: calc(0.02s * var(--i));
   perspective: 1000px;
   transform-style: preserve-3d;
   transform: rotateX(-60deg);
