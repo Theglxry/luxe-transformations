@@ -109,7 +109,9 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
           </ul>
         </nav>
 
-        <section className="absolute top-[60%]  left-1/2  transform -translate-x-1/2 -translate-y-1/2 w-full px-10 flex items-center justify-center">
+        {/* <section className="absolute top-[50%]   left-1/2  transform -translate-x-1/2 -translate-y-1/2 w-full px-10 flex items-center justify-center"> */}
+        <section className="absolute inset-0 flex items-center justify-center sm:static sm:translate-x-0 sm:translate-y-0 sm:flex-none sm:justify-start lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-[80%]">
+
           <div className="w-full">
             {/* Render components for nav links that don't need to be hovered */}
             {activeIndex !== null && (
