@@ -12,9 +12,10 @@ interface NavProps {
   toggleMenu: () => void;
   isOpen: boolean;
 }
+const defaultIndex = navLinks.findIndex((link) => link.label === "WORK");
 
 const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(defaultIndex);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const handleNavLinkClick = () => {
@@ -71,9 +72,7 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
                   <Link href={link.url} className="">
                     <div
                       className={`flex items-center justify-center px-6 py-2  ${
-                        activeIndex === index
-                          ? "light-gray rounded-full"
-                          : ""
+                        activeIndex === index ? "light-gray rounded-full" : ""
                       } `}
                     >
                       <div
@@ -100,14 +99,23 @@ const NavBar = ({ toggleMenu, isOpen }: NavProps) => {
           </ul>
         </nav>
 
-        <section className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-5 flex items-center justify-center">
-          <div className="w-full ">
-            {isDropdownVisible && activeIndex !== null && (
+        <section className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-10 flex items-center justify-center">
+          <div className="w-full">
+            {/* Render components for nav links that don't need to be hovered */}
+            {activeIndex !== null && (
               <>
                 {navLinks[activeIndex].label === "WORK" && (
                   <WorkHoverComponent />
                 )}
-                {navLinks[activeIndex].label === "SERVICES" && <ServiceHoverComp />}
+              </>
+            )}
+
+            {/* Render components for nav links with hovered content */}
+            {isDropdownVisible && activeIndex !== null && (
+              <>
+                {navLinks[activeIndex].label === "SERVICES" && (
+                  <ServiceHoverComp />
+                )}
                 {navLinks[activeIndex].label === "STUDIO" && (
                   <StudioHoverComponent />
                 )}

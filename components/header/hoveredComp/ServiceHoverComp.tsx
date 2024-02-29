@@ -13,7 +13,7 @@ const ServiceHoverComp: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Commercial");
 
   return (
-    <div className="w-full flex flex-col gap-10 items-center px-10">
+    <div className="w-full flex flex-col gap-10 items-center">
       <div className="relative w-full mb-10">
         <div className="absolute left-1/3  w-full ">
           <RenovationServicesType
@@ -33,14 +33,15 @@ const ServiceHoverComp: React.FC = () => {
         )}
       </div>
 
-
       {/* tab indicator */}
       <div className="tab-bg w-36 h-2 rounded-full ">
-         <div className="w-1/2 h-full bg-white rounded-full"></div>
+        <div
+          className={`w-1/2 h-full bg-white rounded-full ${
+            activeTab === "Commercial" ? "float-left" : "float-right"
+          }`}
+        ></div>
       </div>
     </div>
-
-
   );
 };
 
