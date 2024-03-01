@@ -54,7 +54,8 @@ const Tabs: React.FC = () => {
                 className="flex flex-col gap-5 sm:gap-10 md:flex-row uppercase"
               >
                 {/*--------------(commercails)-----------*/}
-                <div className="flex w-full gap-10">
+                <div className="flex w-full gap-10"
+                >
                   <div className="relative w-full flex flex-col ">
                     {tab.items.slice(0, 3).map((item, index) => (
                       <div
@@ -82,6 +83,10 @@ const Tabs: React.FC = () => {
                     ))}
                   </div>
                 </div>
+
+
+
+
 
                 {/*----------------(residentials)------------*/}
                 <div className="flex w-full  gap-10">

@@ -42,13 +42,23 @@ const Header: React.FC = () => {
 
       {/* nav section */}
       {/* <Nav toggleMenu={toggleMenu} isOpen={isOpen} /> */}
-      
-      <NavBar toggleMenu={toggleMenu} isOpen={isOpen} />
+      {/* Mobile menu */}
+
+
+      <div className="lg:hidden">
+          <MobileMenu toggleMenu={toggleMenu} isOpen={isOpen} />
+        </div>
+
+        {/* Navigation bar */}
+        <div className="hidden lg:block">
+          <NavBar toggleMenu={toggleMenu} isOpen={isOpen} />
+        </div>
 
 
 
 
-       <MobileMenu toggleMenu={toggleMenu} isOpen={isOpen}  />
+
+
       </div>
     </header>
   );

@@ -80,62 +80,7 @@
   font-family: "CustomFont8", sans-serif;
 }
 
-/* fill button background on hero */
-/* .button {
-  letter-spacing: 1px;
-  color: white;
-  line-height: 100%;
-  -webkit-transition: border-color 0.35s ease, background 0.35s ease;
-  transition: border-color 0.35s ease, background 0.35s ease;
-}
-
-.button:before {
-  background-color: rgb(60, 64, 94);
-  content: "";
-  display: block;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-
-.button:hover:before {
-  top: 0;
-}
-
-.button:hover {
-  color: #fff;
-  transition: 0.25s;
-}
-
-.button:after {
-  position: absolute;
-  right: 2.34375rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%) translateX(50%);
-  -ms-transform: translateY(-50%) translateX(50%);
-  transform: translateY(-50%) translateX(50%);
-  font-size: 1.75em;
-} */
-
-/* nav links hover background change */
-/* .popUpWord {
-  color: transparent;
-  background-image: linear-gradient(90deg, black 50%, goldenrod 50%);
-  background-position: 0;
-  background-size: 200% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  transition: background-position 1s ease-in-out;
-}
-
-.popUpWord:hover {
-  background-position: 100%;
-} */
+ 
 
 .sec-bg {
   background: rgb(29, 33, 69);
@@ -161,7 +106,9 @@
   border-color: 
   #9b9999;
 }
-
+.ad-cards{
+  background-color: #EDEDED;
+}
 .contact-bg {
   background: #212121;
 }
@@ -384,18 +331,7 @@
 .all-cases-arrow {
   position: relative;
 }
-/* .arrow-1 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  transform: translateY(0) translateX(0);
-} */
-
-/* .arrow-2 {
-  opacity: 0;
-  position: absolute;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  transform: translateY(100%) translateX(-100%);
-} */
+ 
 .arrow-1 {
   opacity: 1;
   transform-style: preserve-3d;
@@ -404,12 +340,11 @@
 
 .arrow-2 {
   opacity: 0;
-  /* border: 2px solid red; */
 }
 
 .all-cases:hover .arrow-1 {
   opacity: 0;
-  /* transform: translateY(-100%) translateX(100%); */
+  
 
   transform: scale(1.1);
   transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
@@ -418,7 +353,7 @@
 
 .all-cases:hover .arrow-2 {
   opacity: 1;
-  /* transform: translateY(0) translateX(0); */
+ 
   transform: translate3d(0%, 0%, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg)
     rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
 }

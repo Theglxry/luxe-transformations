@@ -20,10 +20,6 @@ import tiktok from "../public/icons/tiktok.svg";
 import instagram from "../public/icons/instagram.svg";
 import facebook from "../public/icons/facebook.svg";
 
-
-
-
-
 export const navLinks = [
   {
     label: "WORK",
@@ -31,7 +27,7 @@ export const navLinks = [
   },
   {
     label: "SERVICES",
-    url: "#",
+    url: "/services",
   },
   {
     label: "STUDIO",
@@ -43,39 +39,32 @@ export const navLinks = [
   },
 ];
 
-
-
-
-
 export const socialLinks = [
   {
     label: "WHATSAPP",
     url: "#",
-    img:whatsapp ,
+    img: whatsapp,
   },
   {
     label: "INSTAGRAM",
     url: "#",
-    img:tiktok ,
-
+    img: tiktok,
   },
   {
     label: "TWITTER",
     url: "#",
-    img:instagram ,
-
+    img: instagram,
   },
   {
     label: "BEHANCE",
     url: "#",
-    img:facebook ,
-
+    img: facebook,
   },
   {
     label: "DRIBBLE",
     url: "#",
     // remove later
-    img:tiktok,
+    img: tiktok,
   },
 ];
 
@@ -101,7 +90,6 @@ export const heroImages = [
     width: "50px",
   },
 ];
-
 
 export const tabs = [
   {
@@ -131,59 +119,52 @@ export const tabs = [
   },
 ];
 
-
 export const brandPerks = [
   {
     id: 1,
     top: "10 million +",
     bottom: "Enhanced Property",
-    time: "200"
+    time: "200",
   },
 
   {
     id: 2,
     top: "420%",
     bottom: "Enhanced Comfort",
-    time: "600"
-
+    time: "600",
   },
 
   {
     id: 3,
     top: "420%",
     bottom: "Improved Safety",
-    time: "1000"
-
+    time: "1000",
   },
   {
     id: 4,
     top: "10 million +",
     bottom: "Enhanced Property",
-    time: "1000"
-
+    time: "1000",
   },
 
   {
     id: 5,
     top: "420%",
     bottom: "Enhanced Comfort",
-    time: "1000"
-
+    time: "1000",
   },
 
   {
     id: 6,
     top: "420%",
     bottom: "Improved Safety",
-    time: "6000"
-
+    time: "6000",
   },
   {
     id: 7,
     top: "420%",
     bottom: "Improved Safety",
-    time: "7000"
-
+    time: "7000",
   },
 ];
 
@@ -266,25 +247,25 @@ export const customerReviews = [
 ];
 
 export const ourProcess = [
-{
-  id: 1,
-  items: [
-    { id: "1", label: "Initial Consultation",padding:'10px'},
-    { id: "2", label: "Design Development", padding:'14px'},
-    { id: "3", label: "Design Refinement" , padding:'18px'},
-    { id: "4", label: "Material Selection", padding: '21px' },
-  ],
-},
+  {
+    id: 1,
+    items: [
+      { id: "1", label: "Initial Consultation", padding: "10px" },
+      { id: "2", label: "Design Development", padding: "14px" },
+      { id: "3", label: "Design Refinement", padding: "18px" },
+      { id: "4", label: "Material Selection", padding: "21px" },
+    ],
+  },
 
-{
-  id: 2,
-  items: [
-    { id: "1", label: "Construction Planning", },
-    { id: "2", label: "Construction Execution" },
-    { id: "3", label: "Quality Control" },
-    { id: "4", label: "Final Inspection" },
-  ],
-},
+  {
+    id: 2,
+    items: [
+      { id: "1", label: "Construction Planning" },
+      { id: "2", label: "Construction Execution" },
+      { id: "3", label: "Quality Control" },
+      { id: "4", label: "Final Inspection" },
+    ],
+  },
 ];
 
 export const gallery = [
@@ -316,17 +297,17 @@ export const gallery = [
     id: 6,
     img: gallery3,
   },
-]
+];
 
 export const exquisiteElegance = [
   {
     id: 1,
-    img:peakLuxe1,
+    img: peakLuxe1,
   },
 
   {
     id: 2,
-    img:peakLuxe2,
+    img: peakLuxe2,
   },
 
   {
@@ -335,17 +316,103 @@ export const exquisiteElegance = [
   },
   {
     id: 4,
-    img:  peakLuxe1,
+    img: peakLuxe1,
   },
- 
-]
+];
 
-export const footerLinks = [
+export const footerLinks = [];
 
-]
+//_________________________________________SERViCE PAGE _________________________________________
+export const adCards = [
+  {
+    id: 1,
+    img: "/icons/01.svg",
+    title: "Enhanced Property Value",
+    desc: "Renovations and refurbishments can significantly increase the value of your property, providing a high return on investment.",
+  },
 
+  {
+    id: 2,
+    img: "/icons/02.svg",
+    title: "Enhanced Comfort",
+    desc: "Improvements to your home can enhance comfort levels, making it a more enjoyable and functional space for you and your family.",
+  },
 
+  {
+    id: 3,
+    img: "/icons/03.svg",
+    title: "Energy Efficiency",
+    desc: "Upgrades such as insulation, energy-efficient appliances, and windows can help reduce energy consumption and lower utility bills.",
+  },
+  {
+    id: 4,
+    img: "/icons/04.svg",
+    title: "Personalization",
+    desc: "Allow you to personalize your home to suit your unique style and preferences, creating a space that truly reflects your personality.",
+  },
 
+  {
+    id: 5,
+    img: "/icons/05.svg",
+    title: "Extended Lifespan",
+    desc: "Refurbishments work can help prolong the lifespan of your home's components, saving you money on costly repairs in the long run.",
+  },
+  {
+    id: 6,
+    img: "/icons/06.svg",
+    title: "Improved Safety",
+    desc: "Upgrades to electrical, plumbing, and structural systems can improve the safety and security of your home.",
+  },
+];
+
+export const serviceProcess = [
+  {
+    id: 1,
+    left: "Initial Consultation",
+    right:
+      "We meet with you to discuss your goals, budget, and timeline for the project, and to understand your vision.",
+  },
+  {
+    id: 2,
+    left: "Design Development",
+    right:"Our team begins to develop conceptual designs and plans based on your requirements and preferences."},
+  {
+    id: 3,
+    left: "Design Refinement",
+    right:
+      " We work closely with you to refine the initial designs, making any necessary adjustments or revisions."
+  },
+  {
+    id: 4,
+    left: "Material Selection",
+    right:
+      "You choose materials, finishes, and fixtures for your project from our curated selections, ensuring they align with your vision.",
+  },
+  {
+    id: 5,
+    left: "Construction Planning",
+    right:
+      "Our team develops a detailed construction plan and schedule for the project, outlining key milestones and deadlines.",
+  },
+  {
+    id: 6,
+    left: "Construction Execution",
+    right:
+      "Skilled craftsmen carry out the construction work according to the plan, with precision and attention to detail.",
+  },
+  {
+    id: 7,
+    left: "Quality Control",
+    right:
+      "Skilled craftsmen carry out the construction work according to the plan, with precision and attention to detail.",
+  },
+  {
+    id: 8,
+    left: "Final Inspection",
+    right:
+      "Skilled craftsmen carry out the construction work according to the plan, with precision and attention to detail.",
+  },
+];
 
 //--------------------------------------------------------- CONTACT PAGE ---------------------------------------------------------
 // form 1 - how can we help

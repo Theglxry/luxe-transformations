@@ -3,6 +3,7 @@ import Image from "next/image"
 
  
 
+
 const ExquisiteElegance = () => {
   return (
     <div className="w-full mb-16 md:mb-28">

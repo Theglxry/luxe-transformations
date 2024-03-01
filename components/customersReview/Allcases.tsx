@@ -26,7 +26,7 @@ const Allcases = () => {
 
       <div className="tab-br w-full lg:w-1/2  flex-col-reverse md:order-first" data-aos="fade-right">
         <div className="w-full flex items-center justify-center text-black">
-          <button className="all-cases hoveer:px-14 flex items-center gap-5 bg-white px-12 py-3 md:px-6 md:py-3 lg:px-12 lg:py-3 rounded-full text-sm xl:text-xl">
+          <button className="all-cases hover:px-14 flex items-center gap-5 bg-white px-12 py-3 md:px-6 md:py-3 lg:px-12 lg:py-3 rounded-full text-sm xl:text-xl">
            {/* See All Case Studies */}
            <div className="wave text-base uppercase whitespace-nowrap">
                     <span style={{ "--i": 1 }}>See</span>

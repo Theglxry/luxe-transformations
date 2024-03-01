@@ -32,6 +32,9 @@ const OurProjects = () => {
         </div>
       </div>
 
+
+
+
       <section className="case-studies">
         <div className="project-wrappper tab-br flex flex-col md:flex-row justify-between border-t-2 md:border-t">
           <div className="projects w-full md:w-3/4">
@@ -44,9 +47,7 @@ const OurProjects = () => {
                   <Image src={cases.img} alt="" className="w-full h-full" />
                 </div>
 
-
                 <div className="project-details tab-br w-full border-b-2  md:border-b-0 md:border-l md:border-r flex flex-col gap-10 md:justify-between p-5 md:pt-10 lg:p-10 md:order-1">
-                 
                   <div className="p-top w-full flex flex-col gap-10 ">
                     <div className="flex justify-between gap-5">
                       <div className="flex gap-5">
@@ -54,12 +55,9 @@ const OurProjects = () => {
                           {cases.title}
                         </h1>
 
-
                         <p>
                           <sup className="text-gray-300">'{cases.year}</sup>
                         </p>
-
-                        
                       </div>
 
                       <div className="project-arrow ">
@@ -70,9 +68,6 @@ const OurProjects = () => {
                         />
                       </div>
                     </div>
-
-
-
 
                     <div>
                       <p className="font-thin  w-4/5 text-xs md:w-full lg:text-base xl:w-2/3">

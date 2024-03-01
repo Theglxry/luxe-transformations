@@ -7,17 +7,7 @@ import heroImg3 from "../../public/images/hero3.jpg";
 
 import { heroLogos } from "./index";
 
-
-
-
-
-
-
 const Hero = () => {
-
-
-
-  
   return (
     <section className="hero-section relative w-full h-full mb-28">
       <div className="hero-section flex flex-col  mb-10 md:mb-20">
@@ -25,24 +15,32 @@ const Hero = () => {
           CRAFTING <br /> LUXURY SPACES
         </h1>
         <div className="w-full flex flex-col lg:flex-row gap-5 md:gap-10 lg:gap-3 xl:gap-5 md:h-auto">
-          <Image src={heroImg1} alt="hero image" className="md:w-full h-auto rounded-2xl" />
-
+          <Image
+            src={heroImg1}
+            alt="hero image"
+            className="md:w-full h-auto rounded-2xl"
+          />
 
           <div className="flex gap-2 w-full md:gap-10 lg:gap-5 xl:w-4/5">
-          <Image src={heroImg2} alt="hero image" className="w-1/2 h-auto rounded-2xl" />
-          <Image src={heroImg3} alt="hero image" className="w-1/2 h-auto rounded-2xl" />
+            <Image
+              src={heroImg2}
+              alt="hero image"
+              className="w-1/2 h-auto rounded-2xl"
+            />
+            <Image
+              src={heroImg3}
+              alt="hero image"
+              className="w-1/2 h-auto rounded-2xl"
+            />
           </div>
         </div>
       </div>
-
-
 
       {/* infinite play slide */}
       <div className="companies tab-br w-full pb-1 lg:px-10  md:pb-5 border-b-2  gap-2 flex items-center lg:gap-16 overflow-hidden">
         <h1 className="text-gray-400 font-semibold text-[8px] sm:text-xs md:text-sm lg:text-lg md:w-36 uppercase whitespace-nowrap">
           Trusted by
         </h1>
-
 
         <div className="slider-wrapper w-full flex items-center h-auto">
           <div className="slider w-full m-auto overflow-hidden">
@@ -52,22 +50,19 @@ const Hero = () => {
             >
               {heroLogos.map((img, idx) => (
                 <div key={idx} className="slide w-full">
-                  <Image src={img.url} alt=""  className="logos min-w-[50px] md:min-w-[100px]" />
+                  <Image
+                    src={img.url}
+                    alt=""
+                    className="logos min-w-[50px] md:min-w-[100px]"
+                  />
                 </div>
               ))}
-              
             </div>
           </div>
         </div>
-
-
       </div>
 
-
-
-
-
-{/* pencil */}
+      {/* pencil */}
       <Link
         href="/contact"
         className="animated-wrapper float-right mt-5 rounded-full z-10"

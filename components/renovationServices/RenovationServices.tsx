@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import Tabs from "./Tabs";
 import RenovationServicesType from "./RenovationServicesType";
 import RenovationServicesLinks from "./RenovationServicesLinks";
 import { tabs } from "@/constants/index";
@@ -17,9 +16,7 @@ const RenovationServices: React.FC = () => {
     <div className="w-full mb-28">
       <h1 className="text-xl md:text-5xl mb-8">RENOVATION SERVICES</h1>
 
-      {/* <div>
-        <Tabs />
-      </div> */}
+    
 
       <div className="w-full flex flex-col gap-10">
         <RenovationServicesType

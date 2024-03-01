@@ -1,6 +1,10 @@
+//  main app layout 
+
+
+
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/header/Header";
+// import Header from "@/components/header/Header";
 import { AOSInit } from "@/libs/Aos";
 import ReduxProvider from "@/libs/state/reduxProvider";
 
@@ -18,10 +22,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`relative h-screen text-white w-full md:p-4 md:px-4 font-MyFont overflow-x-hidden`}
+
+
+        // className={`relative h-screen text-white w-full font-MyFont overflow-x-hidden`}
+
       >
         <ReduxProvider>
           <AOSInit />
-          <Header />
+          {/* <Header /> */}
           {children}
         </ReduxProvider>
       </body>

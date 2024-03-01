@@ -8,8 +8,7 @@ const Success: React.FC = () => {
        data-aos="fade-bottom"
        data-aos-delay="300"
        >
-
-
+        
         <h1 className="bold text-6xl sm:text-9xl md:text-[10rem] text-yellow-600 ">SUCCESS</h1>
         <p className="regular text-xl text-gray-300 leading-10">Thanks for your message, we’ll be in touch within 24 hours.</p>
 
