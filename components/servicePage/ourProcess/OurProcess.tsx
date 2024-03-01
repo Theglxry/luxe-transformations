@@ -20,19 +20,18 @@ const OurProcess = () => {
                 From concept <br /> to completion{" "}
               </p>
 
-              <p className="flex flex-col">
+              <p>
                 Embark on a journey with us as we turn your vision into reality.
                 From the initial concept to the final touches, our meticulous
                 process ensures every.
-                <span>
-                  {" "}
+             
                   detail is carefully considered and executed. With a focus on
                   communication, quality, and timeliness, we guide you through
                   each stage of the project, guaranteeing exceptional results
                   that exceed expectations. Experience the seamless transition
                   from concept to completion with our dedicated team by your
                   side.{" "}
-                </span>
+              
               </p>
             </div>
 

@@ -1,11 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import heroImg1 from "../../public/images/balcony.png";
-import heroImg2 from "../../public/images/hero2.jpg";
-import heroImg3 from "../../public/images/hero3.jpg";
-
 import { heroLogos } from "../../hero/index";
+
+
 
 const ServiceHero = () => {
   return (

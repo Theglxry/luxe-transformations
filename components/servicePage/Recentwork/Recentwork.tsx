@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import allCases from "../../public/icons/service-white-arr.svg";
+
 
 const Recentwork = () => {
   return (
@@ -9,7 +9,7 @@ const Recentwork = () => {
 
       <div className="w-full flex flex-col gap-5">
         {/* top */}
-        <div className="w-full flex md:gap-10">
+        <div className="w-full flex gap-2 md:gap-10">
           <Image
             src={"/images/img1.png"}
             alt=""
@@ -40,14 +40,14 @@ const Recentwork = () => {
           <Image
             src={"/images/peak-luxe1.png"}
             alt=""
-            className="w-1/2  xl:w-full h-[400px] rounded-2xl"
+            className="w-1/2 h-[200px] xl:w-full lg:h-[400px] rounded-2xl"
             width={100}
             height={100}
           />
           <Image
             src={"/images/peak-luxe1.png"}
             alt=""
-            className="w-1/2  xl:w-full lg:h-[400px] rounded-2xl"
+            className="w-1/2 h-[200px] xl:w-full lg:h-[400px] rounded-2xl"
             width={100}
             height={100}
           />
