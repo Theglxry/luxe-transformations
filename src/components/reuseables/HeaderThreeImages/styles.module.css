@@ -1,0 +1,22 @@
+.main {
+  @apply flex flex-row gap-[10px] 
+  lg:gap-[16px] xl:gap-[24px]
+    h-[240px] sm:h-[clamp(400px,calc(418/1420*100vw),700px)]
+    w-full overflow-x-scroll lg:overflow-x-hidden;
+}
+
+.main_left {
+  @apply w-[200px] min-w-[200px] sm:w-[300px] sm:min-w-[300px] lg:min-w-[auto] lg:basis-[calc(667/1420*100vw)] sm:h-full bg-gray-900 rounded-[8px] overflow-hidden;
+}
+
+.main_middle {
+  @apply w-[200px] min-w-[200px] sm:w-[300px] sm:min-w-[300px] lg:min-w-[auto] lg:flex-1  sm:h-full bg-gray-900 rounded-[8px] overflow-hidden;
+}
+
+.main_right {
+  @apply w-[200px] min-w-[200px] sm:w-[300px] sm:min-w-[300px] lg:min-w-[auto] lg:flex-1  sm:h-full bg-gray-900 rounded-[8px] overflow-hidden;
+}
+
+.main img {
+  @apply w-full h-full object-cover;
+}

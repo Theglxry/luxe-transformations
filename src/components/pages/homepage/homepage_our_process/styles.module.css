@@ -1,0 +1,38 @@
+.main {
+  @apply py-[20px] sm:py-[30px] xl:py-[60px];
+}
+
+.processes {
+  @apply w-full flex flex-wrap;
+}
+
+.process {
+  @apply rounded-[100px] bg-white flex items-center
+  gap-[6px] xl:gap-[12px] pl-[5px]
+  
+  pr-[15px]
+  xl:pr-[30px]
+
+  w-fit 
+  h-[45px]
+  min-w-[284px];
+}
+
+.process_badge {
+  @apply text-[14px] bg-[#3D3D3D] rounded-[50%] flex items-center justify-center
+ text-white;
+
+  width: clamp(25px, calc(30 / 1420 * 100vw), 30px);
+  height: clamp(25px, calc(30 / 1420 * 100vw), 30px);
+}
+
+.process_text {
+  font-size: clamp(12px, calc(14 / 1420 * 100vw), 14px);
+}
+
+.processes_parent {
+  @apply flex-1 min-h-[300px] flex flex-col gap-[5px] sm:gap-[16px] px-[7px] xs:px-[15px] py-[15px]  relative;
+}
+.processes_parent h3 {
+  @apply font-normal mb-[10px] sm:mb-0 text-[clamp(20px,calc(20/1420*100vw),50px)]  text-white;
+}

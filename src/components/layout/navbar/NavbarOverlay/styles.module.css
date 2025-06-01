@@ -1,0 +1,18 @@
+.main_button {
+  @apply flex-1  text-white 
+   px-[16px] lg:px-[26px] overflow-hidden
+  flex items-center justify-center gap-[8px] sm:gap-[16px]
+  
+  h-[clamp(47px,calc(90/1420*100vw),200px)];
+
+  border-radius: clamp(27px, calc(100 / 1420 * 100vw), 200px);
+}
+
+.main_button small {
+  @apply text-inherit p-0 m-0 font-floral-serif mb-[-5px]
+
+  text-[30px] 
+  md:text-[clamp(16px,calc(30/1420*100vw),100px)] 
+  xl:text-[clamp(16px,calc(40/1420*100vw),100px)] 
+  leading-[1];
+}

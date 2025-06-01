@@ -1,0 +1,155 @@
+.main {
+  @apply py-[20px] sm:py-[30px] xl:py-[60px] overflow-x-hidden;
+}
+
+.project_count {
+  @apply w-full flex mb-[20px] lg:mb-[48px]  flex-col items-end justify-center;
+}
+
+.project_count_inner {
+  @apply py-[5px];
+
+  width: clamp(200px, calc(419 / 1420 * 100vw), 1000px);
+}
+
+.project_count_line {
+  @apply border-b-[5px] border-[#ffffff] py-[5px];
+  width: clamp(200px, calc(419 / 1420 * 100vw), 1000px);
+}
+
+.project_count span {
+  @apply text-white font-archivo leading-[1.3] font-normal;
+  font-size: clamp(14px, calc(14 / 1420 * 100vw), 50px);
+}
+
+.projects_container {
+  @apply block lg:flex flex-row justify-end;
+  border-top: 1px solid #494747;
+}
+.projects_container_left {
+  @apply hidden lg:block flex-1 pt-[40px] xl:pt-[50px];
+}
+
+.projects {
+  @apply w-full
+  lg:w-[clamp(500px,calc(964/1420*100vw),3000px)]
+ 
+  border-l-0
+  sm:border-l-[1px] border-[#494747];
+}
+
+.sticky_container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40px;
+  left: 0;
+}
+
+.project {
+  @apply w-full   flex 
+  flex-col-reverse
+  sm:flex-row
+ cursor-pointer
+  gap-[0px]
+  sm:gap-[32px]
+  mb-[32px]
+  lg:mb-auto
+
+  pt-[20px]
+  pb-[30px]
+
+  sm:pt-[0]
+  sm:pb-[0]
+
+  h-auto
+  sm:h-[clamp(294px,calc(567/1420*100vw),1765px)]
+  
+  border-b-[1px] sm:border-b-0 border-[#494747];
+}
+
+.project h3,
+.project h4,
+.project p,
+.project small,
+.project span {
+  @apply text-white;
+}
+
+.project h3,
+.project h4 {
+  @apply leading-[1.2] flex gap-[12px] 3xl:gap-[20px] relative;
+  font-size: clamp(35px, calc(35 / 1420 * 100vw), 100px);
+}
+
+.project h3 span,
+.project h4 span {
+  @apply leading-[1.2];
+  font-size: clamp(12px, calc(12 / 1420 * 100vw), 20px);
+}
+
+.project h4::after {
+  content: "";
+  border-bottom: solid 4px white;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+
+.project:hover h4::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.project p {
+  @apply leading-[1.45]
+  text-[#A9A9A9]
+  max-w-[90%]
+  sm:max-w-[clamp(260px,calc(260/1420*100vw),500px)];
+  font-size: clamp(14px, calc(14 / 1420 * 100vw), 40px);
+}
+
+.project small {
+  @apply mt-auto uppercase;
+  font-size: clamp(14px, calc(14 / 1420 * 100vw), 40px);
+}
+
+.project_left {
+  @apply w-full h-full flex-1 flex flex-col 
+  py-[20px] xl:py-[48px]  
+  px-0 sm:px-[20px] xl:px-[48px]
+  gap-[17px] 3xl:gap-[32px];
+}
+
+.project_left_title {
+  @apply flex w-full items-start justify-between;
+}
+
+.project_left_title_icon {
+  @apply object-contain mt-[10px];
+  width: clamp(18px, calc(22px / 1420 * 100vw), 50px);
+  height: clamp(18px, calc(22px / 1420 * 100vw), 50px);
+}
+
+.project_divider {
+  @apply hidden sm:block 
+  w-[1px] bg-[#494747] h-[full] sm:h-[120%] lg:h-full;
+}
+
+.project_right {
+  @apply w-full h-full  flex-1 
+   
+  py-[20px] xl:py-[48px];
+}
+
+.project_right_image {
+  @apply w-full h-full object-cover rounded-[14px]  overflow-hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.project:hover .project_right_image {
+  transform: scale(1.05);
+}

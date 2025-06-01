@@ -1,0 +1,39 @@
+.section {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-0 mb-[100px];
+}
+
+.section_box {
+  border: 0.3px solid #c4c4c4;
+  padding: 10px;
+  /* box-shadow: 0 -0.3px 0 0.3px #c4c4c4; */
+  @apply h-[450px] lg:h-[clamp(356px,calc(534/1420*100vw),1068px)]
+    p-[18px] sm:p-[24px] gap-[24px] flex flex-col;
+}
+
+/* Target the 1st child */
+/* .section_box:nth-child(1), */
+.section_box:nth-child(3n - 1) {
+  /* styles for the 1st child */
+  /* border-left: none;
+  border-right: none; */
+  @apply lg:border-l-0 lg:border-r-0;
+}
+
+.section_box:last-child {
+  border-right: 0.3px solid #c4c4c4;
+}
+
+.section_box_media {
+  @apply w-full h-[220px] lg:h-[clamp(178px,calc(267/1420*100vw),534px)] rounded-[12px] overflow-hidden
+  bg-gray-800;
+}
+.section_box_media img {
+  @apply w-full h-full object-cover;
+}
+
+.section_box h3 {
+  @apply line-clamp-1 font-archivo text-[clamp(18px,calc(24/1420*100vw),40px)] leading-[1.3] text-[#ffffff];
+}
+.section_box p {
+  @apply line-clamp-3 mt-[16px] font-archivo text-[clamp(16px,calc(16/1420*100vw),28px)] leading-[1.3] text-[#a9a9a9];
+}

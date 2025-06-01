@@ -1,0 +1,56 @@
+.footer_container {
+  @apply bg-primary-dark  w-full
+  py-[50px] sm:py-[80px] lg:py-[120px] px-[16px] xs:px-[30px] rounded-b-[20px];
+}
+
+.footer_inner {
+  @apply w-full mx-auto
+  flex flex-col lg:flex-row flex-wrap items-start justify-between 
+  max-w-[1420px] gap-[24px];
+
+  /* 2xl:max-w-[clamp(1200px,calc(1200/1420*100vw),1800px)]; */
+}
+
+.title_1 {
+  @apply text-white font-bold pt-[25px] md:pt-[40px] pb-[15px];
+  font-size: clamp(24px, calc(24 / 1420 * 100vw), 24px);
+}
+
+.title_2 {
+  @apply text-white pb-[6px] text-[24px];
+}
+
+.logo {
+  @apply w-[clamp(200px,calc(260/1420*100vw),260px)];
+}
+
+.socials {
+  @apply flex gap-[16px] items-center;
+}
+
+.our_info > div {
+  @apply flex items-center gap-[12px] mb-[15px];
+}
+.our_info span {
+  @apply text-white;
+  font-size: clamp(14px, calc(14 / 1420 * 100vw), 14px);
+}
+
+.linkColumn {
+  @apply flex flex-col items-start justify-start mb-[10px]
+  gap-[10px] min-w-[130px];
+}
+
+.linkColumn span {
+  @apply text-white;
+  font-size: clamp(14px, calc(14 / 1420 * 100vw), 14px);
+}
+
+.divider {
+  @apply bg-[#454545] w-full h-[1px] my-[30px] sm:my-[60px];
+}
+
+.title_3 {
+  @apply w-full text-center text-white pb-[0px];
+  font-size: clamp(14px, calc(24 / 1420 * 100vw), 16px);
+}

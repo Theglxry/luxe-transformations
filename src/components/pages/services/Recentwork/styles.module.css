@@ -1,0 +1,28 @@
+.home_container {
+  @apply py-[32px] lg:py-[60px];
+}
+
+.images_top,
+.images_bottom {
+  @apply mb-[20px] relative  overflow-x-hidden;
+}
+
+.image {
+  @apply bg-gray-400 rounded-[24px] mr-[20px]
+  overflow-hidden
+
+  w-[clamp(200px,calc(400/1420*100vw),1000px)]
+  h-[clamp(131px,calc(263/1420*100vw),654px)];
+}
+
+.image img {
+  @apply w-full h-full;
+}
+
+.images_top .image {
+  @apply translate-x-[-50%];
+}
+
+.images_bottom .image {
+  @apply translate-x-[-20%];
+}

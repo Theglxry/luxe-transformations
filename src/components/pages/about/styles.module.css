@@ -1,0 +1,27 @@
+.main {
+  @apply py-[20px] sm:py-[30px] xl:py-[60px];
+}
+
+.testimonial {
+  @apply rounded-[8px] relative bg-gray-800
+    overflow-hidden flex-1 w-full min-h-[400px];
+}
+
+.testimonial_play_overflow {
+  @apply absolute top-0 left-0  w-full h-full
+    flex items-center justify-center;
+}
+
+.testimonial_play {
+  @apply mx-auto;
+  width: clamp(30px, calc(60 / 1420 * 100vw), 120px);
+  height: clamp(30px, calc(60 / 1420 * 100vw), 120px);
+}
+
+.testimonial_play_img {
+  @apply object-contain w-full h-full;
+}
+
+.testimonial_img {
+  @apply object-cover min-h-[400px] w-full h-full rounded-[8px];
+}

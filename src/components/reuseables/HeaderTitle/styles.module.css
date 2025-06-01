@@ -1,0 +1,25 @@
+.main {
+  @apply py-[20px] md:py-[32px];
+}
+
+.h1_100px {
+  @apply font-floral-serif leading-[1];
+  font-size: clamp(60px, calc(100 / 1420 * 100vw), 500px);
+}
+
+.h1_56px {
+  @apply font-floral-serif leading-[1.1];
+  font-size: clamp(40px, calc(56 / 1420 * 100vw), 100px);
+}
+
+.description {
+  @apply font-archivo font-normal w-full leading-[calc(28/20)];
+
+  font-size: clamp(18px, calc(20 / 1420 * 100vw), 50px);
+}
+
+.titleCaptionText {
+  @apply font-archivo font-semibold text-[#DDAE31]  mb-3 leading-[calc(26/18)];
+
+  font-size: clamp(14px, calc(18 / 1420 * 100vw), 30px);
+}

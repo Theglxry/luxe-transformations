@@ -1,0 +1,39 @@
+.box_wrapper {
+  @apply lg:col-span-2 lg:flex lg:flex-col 
+  lg:justify-between 
+  text-white font-archivo;
+}
+
+.box_wrapper_inner {
+  @apply flex flex-col sm:gap-[32px] gap-[20px];
+}
+
+.box_wrapper_h4_wrapper {
+  @apply border-t border-white w-fit flex gap-6 pt-5;
+  /* @apply border-t border-white w-fit flex gap-6 pt-5; */
+}
+.box_wrapper_h4 {
+  @apply text-[clamp(24px,calc(24/1420*100vw),24px)] text-white;
+  /* @apply text-[clamp(24px,calc(24/1420*100vw),80px)] text-white; */
+}
+
+.box_wrapper .box_wrapper_h4_wrapper {
+  @apply relative;
+}
+
+/* .box_wrapper .box_wrapper_h4_wrapper::after {
+  content: "";
+  border-top: solid 4px white;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+
+.box_wrapper:hover .box_wrapper_h4_wrapper::after {
+  transform-origin: left;
+  transform: scaleX(1);
+} */

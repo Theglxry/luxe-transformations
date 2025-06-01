@@ -1,0 +1,15 @@
+.button_container {
+  @apply flex items-center justify-center m-0
+  min-w-full gap-[15px] lg:gap-[calc(15/1420*100vw)];
+
+  height: clamp(49px, calc(49 / 1420 * 100vw), 60px);
+}
+
+.button_container span {
+  font-size: clamp(14px, calc(16px / 1420 * 100vw), 50px);
+}
+.button_container image {
+  @apply object-contain;
+  width: clamp(17px, calc(17 / 1420 * 100vw), 45px);
+  height: clamp(17px, calc(17 / 1420 * 100vw), 45px);
+}

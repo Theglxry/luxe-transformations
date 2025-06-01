@@ -1,0 +1,11 @@
+.main {
+  @apply bg-white p-[0] md:px-[5px]
+
+  
+  overflow-hidden relative;
+}
+
+.main_inner {
+  @apply relative h-full w-full
+   mx-auto overflow-auto;
+}

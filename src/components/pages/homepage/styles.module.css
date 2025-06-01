@@ -1,0 +1,3 @@
+.home_container {
+  @apply px-padding-vertical-screen bg-[#0e0e0e] relative overflow-x-hidden;
+}

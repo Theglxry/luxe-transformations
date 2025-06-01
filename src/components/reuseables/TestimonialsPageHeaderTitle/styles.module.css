@@ -1,0 +1,4 @@
+.main {
+    @apply py-[20px] sm:py-[30px] xl:py-[60px] flex justify-center;
+  }
+  

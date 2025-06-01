@@ -1,0 +1,52 @@
+::-webkit-scrollbar {
+  width: 0px; /* Width of the scrollbar */
+  height: 0px;
+}
+
+.contact_form_step_wrapper {
+  @apply w-full flex-1 flex  flex-col items-center justify-center gap-[60px];
+}
+
+.contact_form_step_wrapper_h1 {
+  @apply text-[clamp(35px,calc(72/1420*100vw),120px)] leading-[1] font-tt-tunnels text-white text-center font-bold;
+}
+
+.contact_form_step_list_wrapper {
+  @apply flex gap-[20px] sm:gap-[32px] flex-wrap justify-center;
+}
+
+.contact_form_step_list_button {
+  @apply bg-[#282828] hover:bg-gray-800 rounded-[100px] 
+  
+  px-[20px]
+  sm:px-[auto]
+  w-[auto] sm:w-[clamp(200px,calc(200/1420*100vw),300px)]
+
+  /* w-[fit-content] */
+  h-[clamp(60px,calc(72/1420*100vw),108px)];
+}
+
+.contact_form_step_list_button_text {
+  @apply text-[clamp(20px,calc(20/1420*100vw),40px)] font-tt-tunnels text-white;
+}
+
+.input {
+  @apply border border-[#454545]
+  text-[#E7E7E7] p-[16px] font-archivo
+  flex-1 h-[clamp(40px,calc(56/1420*100vw),100px)] rounded-[8px] bg-[#2a2a2a];
+}
+
+.input::placeholder {
+  @apply font-archivo text-[#8A8A8A];
+}
+
+.textarea {
+  @apply border border-[#454545]
+  text-[#E7E7E7] p-[16px]    font-archivo
+  flex-1 h-[clamp(100px,calc(127/1420*100vw),200px)] rounded-[8px] bg-[#2a2a2a];
+}
+
+.input_button {
+  @apply rounded-[clamp(32px,calc(32/1420*100vw),50px)] w-[clamp(140px,calc(185/1420*100vw),555px)]   
+    h-[clamp(50px,calc(56/1420*100vw),168px)] border border-white text-white text-[16px] ml-auto;
+}

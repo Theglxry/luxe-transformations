@@ -1,0 +1,29 @@
+.main {
+  @apply py-[20px] sm:py-[30px] xl:py-[60px] mt-[48px];
+}
+.title {
+  @apply text-center w-full
+  font-floral-serif leading-[1] mb-[42px] sm:mb-[62px];
+  font-size: clamp(32px, calc(32 / 1420 * 100vw), 100px);
+}
+
+.slide_img_wrapper {
+  @apply bg-inherit 
+  mx-[20px] sm:mx-[30px] md:mx-[50px];
+
+  width: auto;
+  height: clamp(40px, calc(70 / 1420 * 100vw), 110px);
+}
+
+.slide_img_wrapper img {
+  @apply w-full h-full object-contain;
+}
+
+.slide_track_border {
+  @apply w-full 
+    h-[1px]
+    min-h-[1px] mx-auto
+    max-h-[1px]  bg-[#A9A9A9];
+
+  width: clamp(90px, calc(1294 / 1420 * 100vw), 100%);
+}

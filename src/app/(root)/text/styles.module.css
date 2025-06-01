@@ -1,0 +1,47 @@
+.main {
+  @apply py-[20px] sm:py-[30px] xl:py-[60px];
+}
+
+.processes {
+  @apply w-full flex;
+}
+
+.process {
+  @apply rounded-[100px] bg-white flex items-center
+  gap-[12px] px-[5px];
+
+  /*   
+  w-[90%]
+  lg:w-[clamp(200px,calc(284/1420*100vw),500px)]; */
+
+  /* height: clamp(45px, calc(45 / 1420 * 100vw), 60px); */
+
+  min-width: 284px;
+  padding-right: 30px;
+  width: fit-content;
+  height: 45px;
+}
+
+.process_badge {
+  @apply bg-[#3D3D3D] rounded-[50%] flex items-center justify-center
+ text-white;
+  /* 
+  width: clamp(30px, calc(35 / 1420 * 100vw), 120px);
+  height: clamp(30px, calc(35 / 1420 * 100vw), 120px); */
+
+  width: 35px;
+  height: 35px;
+}
+
+.process_text {
+  /* font-size: clamp(14px, calc(14px / 1420 * 100vw), 50px); */
+
+  font-size: 14px;
+}
+
+.processes_parent {
+  @apply flex-1 min-h-[300px] flex flex-col gap-[16px] p-[15px];
+}
+.processes_parent h3 {
+  @apply font-normal text-[clamp(20px,calc(20/1420*100vw),50px)]  text-white;
+}

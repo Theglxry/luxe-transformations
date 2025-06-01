@@ -1,0 +1,55 @@
+.main {
+  @apply py-[20px] sm:py-[30px] xl:py-[60px];
+}
+
+.button_wrapper {
+  @apply border border-[#8C8C8C] rounded-[100px]
+    flex items-center 
+    p-[4.5px]
+    3xl:p-[6px];
+
+  width: clamp(250px, calc(250 / 1420 * 100vw), 500px);
+  height: clamp(54px, calc(54 / 1420 * 100vw), 81px);
+}
+
+.button_wrapper button {
+  @apply text-white h-full flex-1 rounded-[inherit];
+  font-size: clamp(14px, calc(16 / 1420 * 100vw), 50px);
+}
+
+.active_btn {
+  @apply bg-[#282828];
+}
+
+.sub_services_wrapper {
+  @apply w-full mt-[20px] md:mt-[48px] pt-[16px] 
+  
+  block
+  sm:grid
+  grid-flow-col
+  grid-cols-[repeat(2,1fr)]
+  grid-rows-[repeat(4,1fr)]
+  gap-[8px];
+
+  grid-column-gap: calc(48 / 1420 * 100vw);
+}
+
+.sub_service {
+  @apply w-full border-b border-[#A9A9A9] flex items-center justify-start uppercase text-left
+  py-[16px];
+  gap: clamp(14px, calc(16 / 1420 * 100vw), 50px);
+  height: clamp(59px, calc(59 / 1420 * 100vw), 100px);
+  font-size: clamp(14px, calc(16 / 1420 * 100vw), 50px);
+}
+
+.sub_service small {
+  @apply text-[rgba(196,196,196,0.77)];
+}
+.sub_service span {
+  @apply text-white;
+}
+.sub_service img {
+  @apply object-contain ml-auto;
+  width: clamp(20px, calc(20 / 1420 * 100vw), 50px);
+  height: clamp(20px, calc(20 / 1420 * 100vw), 50px);
+}
